@@ -30,6 +30,28 @@ export default function AuthenticatedLayout({ header, children }) {
                                 >
                                     Dashboard
                                 </NavLink>
+                                {['admin', 'store'].includes(user.role) && (
+                                    <>
+                                        <NavLink
+                                            href={route('store.issue.index')}
+                                            active={route().current('store.issue.*')}
+                                        >
+                                            Issue
+                                        </NavLink>
+                                        <NavLink
+                                            href={route('store.stock')}
+                                            active={route().current('store.stock')}
+                                        >
+                                            Stock
+                                        </NavLink>
+                                        <NavLink
+                                            href={route('store.receipts.create')}
+                                            active={route().current('store.receipts.*')}
+                                        >
+                                            Receipts
+                                        </NavLink>
+                                    </>
+                                )}
                             </div>
                         </div>
 
@@ -134,6 +156,28 @@ export default function AuthenticatedLayout({ header, children }) {
                         >
                             Dashboard
                         </ResponsiveNavLink>
+                        {['admin', 'store'].includes(user.role) && (
+                            <>
+                                <ResponsiveNavLink
+                                    href={route('store.issue.index')}
+                                    active={route().current('store.issue.*')}
+                                >
+                                    Issue
+                                </ResponsiveNavLink>
+                                <ResponsiveNavLink
+                                    href={route('store.stock')}
+                                    active={route().current('store.stock')}
+                                >
+                                    Stock
+                                </ResponsiveNavLink>
+                                <ResponsiveNavLink
+                                    href={route('store.receipts.create')}
+                                    active={route().current('store.receipts.*')}
+                                >
+                                    Receipts
+                                </ResponsiveNavLink>
+                            </>
+                        )}
                     </div>
 
                     <div className="border-t border-gray-200 pb-1 pt-4">
