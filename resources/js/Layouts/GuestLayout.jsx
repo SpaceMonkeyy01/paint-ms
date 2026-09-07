@@ -1,4 +1,4 @@
-import ApplicationLogo, { BrandWordmark } from '@/Components/ApplicationLogo';
+import ApplicationLogo from '@/Components/ApplicationLogo';
 import { Link } from '@inertiajs/react';
 
 export default function GuestLayout({ children }) {
@@ -13,14 +13,11 @@ export default function GuestLayout({ children }) {
 
             <div className="relative w-full sm:max-w-md">
                 <Link href="/" className="mb-8 flex flex-col items-center gap-4">
-                    <span className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-lg shadow-amber-950/40">
-                        <ApplicationLogo className="h-12 w-12" />
+                    <span className="rounded-2xl bg-white px-5 py-4 shadow-lg shadow-amber-950/40">
+                        <ApplicationLogo className="h-10 w-auto" />
                     </span>
-                    <span className="flex flex-col items-center gap-1.5 text-center">
-                        <BrandWordmark size="lg" />
-                        <span className="text-xs font-medium uppercase tracking-[0.25em] text-amber-200/60">
-                            Paint Management System
-                        </span>
+                    <span className="text-xs font-medium uppercase tracking-[0.25em] text-amber-200/60">
+                        Paint Management System
                     </span>
                 </Link>
 

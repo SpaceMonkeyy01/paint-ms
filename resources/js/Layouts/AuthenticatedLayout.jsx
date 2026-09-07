@@ -1,4 +1,4 @@
-import ApplicationLogo, { BrandWordmark } from '@/Components/ApplicationLogo';
+import ApplicationLogo from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
@@ -20,13 +20,10 @@ export default function AuthenticatedLayout({ header, children }) {
                     <div className="flex h-16 justify-between">
                         <div className="flex">
                             <div className="flex shrink-0 items-center">
-                                <Link href="/" className="flex items-center gap-2.5">
-                                    <ApplicationLogo className="h-9 w-9" />
-                                    <span className="hidden leading-tight md:block">
-                                        <BrandWordmark />
-                                        <span className="mt-0.5 block text-[10px] font-medium uppercase tracking-widest text-gray-400">
-                                            Paint Management
-                                        </span>
+                                <Link href="/" className="flex items-center gap-3">
+                                    <ApplicationLogo className="h-8 w-auto" />
+                                    <span className="hidden border-l border-gray-200 pl-3 text-[10px] font-semibold uppercase leading-tight tracking-widest text-gray-400 md:block">
+                                        Paint<br />Management
                                     </span>
                                 </Link>
                             </div>
