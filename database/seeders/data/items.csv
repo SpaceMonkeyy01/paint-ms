@@ -1,0 +1,87 @@
+code,odoo_id,name,brand,manufacturer_code,conventional_name,bom_category,issue_pool,uom,density_kg_per_l,rate_per_uom,min_level,legacy_category,pantone_ref
+2239,502123,2k Nexa HS Mixing Basic Super White (P425-900) 3.5L,Nexa,900,White,Paint Mixing,Paint Mixing,Gram,1,8.7,3500,Paints / Paint Colors / 2K Paint / Nexa,Bright White
+2240,,2k Nexa Medium Pale Yellow (420-903),Nexa,903,Pale Yellow Med,Paint Mixing,Paint Mixing,Gram,,7.32,1000,,
+2269,,2K Auto Color (P420-904),Nexa,904,Transparent Black,Paint Mixing,Paint Mixing,Gram,,8.36,1000,,PANTONE Black 6 C
+2241,502125,2k Nexa Yellow Oxide (P420-905),Nexa,905,Yellow Oxide,Paint Mixing,Paint Mixing,Gram,1.076,9.04,1000,Paints / Paint Colors / 2K Paint / Nexa,PANTONE 125 C
+2242,502126,2k Nexa Red Oxide (P420-907),Nexa,907,Red Oxide,Paint Mixing,Paint Mixing,Gram,1.049,9.04,1000,Paints / Paint Colors / 2K Paint / Nexa,Pantone 4063 C
+2215,,2k Deep Blue (P420-926),Nexa,910,Blue Deep,Paint Mixing,Paint Mixing,Gram,,8.51,1000,,
+2243,502127,2k Nexa Violet (P420-920),Nexa,920,Violet,Paint Mixing,Paint Mixing,Gram,0.932,9.04,1000,Paints / Paint Colors / 2K Paint / Nexa,PANTONE 268 C
+2244,502128,2k Nexa HS Mixing Strong Red (P425-921),Nexa,921,Mehroon,Paint Mixing,Paint Mixing,Gram,0.939,9.04,1000,Paints / Paint Colors / 2K Paint / Nexa,PANTONE 216 C
+2290,,Super Red (P420-926),Nexa,926,Red Super,Paint Mixing,Paint Mixing,Gram,,8.36,1000,,PANTONE 185 C
+2273,502157,Blue Lake (P420-930/1L),Nexa,930,Blue Lake,Paint Mixing,Paint Mixing,Gram,0.959,10.14,1000,Paints / Paint Colors / 2K Paint / Nexa,
+2271,502155,P429-937/1L HS PALE YELLOW,Nexa,937,Lemon Yellow,Paint Mixing,Paint Mixing,Gram,0.802,9.04,1000,Paints / Paint Colors / 2K Paint / Nexa,PANTONE 102 C
+2245 / 2673,,2k Nexa HS Mixing Strong Red (P425-941),Nexa,941,Red Pure,Paint Mixing,Paint Mixing,Gram,,9.75,1000,,
+2214,502098,2k HS Jet Black (P425-950),Nexa,950,Black Jet,Paint Mixing,Paint Mixing,Gram,1.005,9.04,3000,Paints / Paint Colors / 2K Paint / Nexa,PANTONE Black 6 C
+2272,502156,P420-952/1L Autocolor Fast Blue,Nexa,952,Blue Fast,Paint Mixing,Paint Mixing,Gram,0.989,9.04,1000,Paints / Paint Colors / 2K Paint / Nexa,PANTONE 2757 C
+2253,502137,2k Nexa HS Blue Green (P425-954) 2kg,Nexa,954,Green,Paint Mixing,Paint Mixing,Gram,1.003,9.04,1000,Paints / Paint Colors / 2K Paint / Nexa,PANTONE 567 C
+2274,502158,Fast Blue (P425-957/1L),Nexa,957,Blue Fast,Paint Mixing,Paint Mixing,Gram,0.971,9.04,1000,Paints / Paint Colors / 2K Paint / Nexa,
+1370,,Auto Color Magenta (P420-960),Nexa,960,Burgandi,Paint Mixing,Paint Mixing,Gram,,6.97,1000,,
+2270,,Mixing  Basic Right P(429-973),Nexa,973,Orange,Paint Mixing,Paint Mixing,Gram,,26.09,1000,,
+2257,,P420-983/1L AUTOCOLOR,Nexa,983,Golden Yellow,Paint Mixing,Paint Mixing,Gram,,9.2,1000,,PANTONE 2428 C
+2350,502408,2K White MT 100 4L (Nippon),Nippon,100,White,Paint Mixing,Paint Mixing,Gram,1.3522,6.44,1000,Paints / Paint Colors / 2K Paint / Nippon,Bright White
+2351,502409,Black Paint MT 203 (Nippon),Nippon,203,Black,Paint Mixing,Paint Mixing,Gram,0.957,6.04,3000,Paints / Paint Colors / 2K Paint / Nippon,PANTONE Black C
+2428,,Strong Red MT 501,Nippon,501,Crimson,Paint Mixing,Paint Mixing,Gram,,12.97,1000,,PANTONE 199 C
+2429,,Spark red MT 505 (Nippon),Nippon,505,Red,Paint Mixing,Paint Mixing,Gram,,16.09,1000,,PANTONE 185 C
+2353,502411,Orange Paint MT 405 (Nippon),Nippon,405,Orange,Paint Mixing,Paint Mixing,Gram,0.938,12.42,1000,Paints / Paint Colors / 2K Paint / Nippon,PANTONE Orange 021 C
+2699,,Fresh Blue MT 803,Nippon,803,Fresh Blue,Paint Mixing,Paint Mixing,Gram,,6.93,1000,,
+2758,,Nax Premila MT 901 Cyanine Green (Nippon),Nippon,901,Cyanine Green,Paint Mixing,Paint Mixing,Gram,,8.3,1000,,Pantone 7722 C
+2754,,Nax Premila MT 507 Ruby Red (Nippon),Nippon,507,Ruby Red,Paint Mixing,Paint Mixing,Gram,,7.78,1000,,PANTONE 1955 C
+2755,,Nax Premila MT 508 Indian Red (Nippon),Nippon,508,Indian Red,Paint Mixing,Paint Mixing,Gram,,5.19,1000,,PANTONE 1675 C
+2756,,Nax Premila MT 701 Fast Violet (Nippon),Nippon,701,Fast Violet,Paint Mixing,Paint Mixing,Gram,,11.42,1000,,PANTONE 267 C
+2697,,Mapico Yellow MT 301 (Nippon),Nippon,301,Mapico Yellow,Paint Mixing,Paint Mixing,Gram,,7.78,1000,,PANTONE 117 C
+2764,,1L NAX PREMILA # MT 204 JET BLACK,Nippon,204,Jet Black,Paint Mixing,Paint Mixing,Gram,,6.04,1000,,PANTONE Black 6 C
+2525,502583,Universal White Nippon,Nippon,,Universal White,Paint Mixing,Paint Mixing,Gram,1.178,1.97,1000,Paints / Paint Colors,
+2438,502496,Vacance blue MT807 (Nippon),Nippon,807,Vacance Blue,Paint Mixing,Paint Mixing,Gram,0.957,10.27,2000,Paints / Paint Colors / 2K Paint / Nippon,PANTONE 2766 C
+502,,77,Local,,Silver,Paint Mixing,Paint Mixing,Gram,,3.59,1000,,
+520,,Base coat golden,Local,,Golden Yellow,Paint Mixing,Paint Mixing,Gram,,7.4,1000,,
+121,,black mat paint 410,Local,410,Decor-Black,Paint Mixing,Paint Mixing,Gram,,0,1000,,
+124,,pure white paint 411,Local,411,Decor-White,Paint Mixing,Paint Mixing,Gram,,0,1000,,
+2195,502079,2k Nexa Matting Agent (P565-554),Nexa,554,Nexa Matt Agent,Paint Matt agent(Matt),Paint Matt Agent,Gram,0.943,4.86,3000,Paints /  Paint Additives / Matt Agents,
+2354,502412,2K Nax Matting Agent 1L (Nippon),Nippon,2354,Nippon Matt Agent,Paint Matt agent(Matt),Paint Matt Agent,Gram,0.973,5.19,3000,Paints /  Paint Additives / Matt Agents,
+1224,,Mat Laker ICI,,,,Paint Matt agent(Matt),Paint Matt Agent,Gram,,1.65,3000,,
+1036,502350,Hardner Nexa 922,Nexa-Fast,P210-922,Hardner   922,Paint Harnder,Paint Harnder,Gram,0.967,7.14,4000,Paints /  Paint Additives / Hardeners,
+2352,502410,2K Hardner 210 Fast (Nippon),Nippon-Fast,,Rapid   210,Paint Harnder,Paint Harnder,Gram,1,5.81,5000,Paints /  Paint Additives / Hardeners,
+604,,Hardner,PU Hardner,,2k PU,Paint Harnder,Paint Harnder,Gram,,1.8,1000,,
+727,,Weston Lacker Hardner,Lacquer Hardner,,,Paint Harnder,Paint Harnder,Gram,,3.2,1000,,
+2403,,2K Hardner 210  Slow  (Nippon),Nippon-Slow,,,Paint Harnder,Paint Harnder,Gram,,4.01,2000,,
+1788,501680,2k Nexa Thinner Fast (P850-1491) 5Ltr,Nexa-Fast,,,Paint Thinner,Paint Thinner,Gram,0.816,2.11,10000,Paints /  Paint Additives / Thinners,
+2112,,600 2k Thinner 1ltr,Generic-Slow,,,Paint Thinner,Paint Thinner,Gram,,1.69,5000,,
+2355,,Acrylic Thinner 3.64L (Nippon),Nippon-Slow,,,Paint Thinner,Paint Thinner,Gram,,1.67,5000,,
+2404,,Nexa 2K Thinner Slow (P850-1493),Nexa-Slow,,,Paint Thinner,Paint Thinner,Gram,,2.11,2000,,
+2723,,2k Thinner (P850-1492) 1L,Nexa-Slow,,,Paint Thinner,Paint Thinner,Gram,,2.12,2000,,
+17,,Thinner,Local Thinner,,,Paint Thinner,Paint Thinner,Gram,,0.3,1000,,
+804,,Weldon Thinner,Weldon Thinner,,,Paint Thinner,Paint Thinner,Gram,,0.56,3000,,
+2430,502488,2k Binder NB 200 (Nippon),Nippon,,,Paint Binder(Gloss),Paint Binder,Gram,0.975,3.66,3000,Paints /  Paint Additives / Gloss Binder,
+2247,502131,2k Nexa Adjuster (P190-376) 2.5L,Nexa,,,Paint Binder(Gloss),Paint Binder,Gram,0.9476,7.41,2500,Paints / Paint Colors / 2K Paint / Nexa,
+2763,,4L NB 100 B/C BINDER,Nippon,,,Paint Binder(Gloss),Paint Binder,Gram,,3.66,3000,,
+2169,,Base Coat Binder (Q065 As 3.7 Lttr,Base Coat Binder,,,Paint Binder(Gloss),Paint Binder,Gram,,4.34,3700,,
+1003,,Plastic Primer,Generic,,,Paint Epoxy Primer,Epoxy Set,Gram,,1.18,1000,,
+2158,,Epoxy Primer (F580-7938-20),Master,,,Paint Epoxy Primer,Epoxy Set,Gram,,7.79,3400,,
+372,,1K Astar paint,Generic-1k Gobbis,,,Paint Epoxy Primer,Epoxy Set,Gram,,1.44,2000,,
+1073,,2k PU Aster,Generic-2k PU,,,Paint Epoxy Primer,Epoxy Set,Gram,,0,2000,,
+1145,,Epoxy Hardner,Master,,,Epoxy Hardner,Epoxy Set,Gram,,3.8,2000,,
+244,,Master Epoxy Thinner,Master,,,Epoxy Thinner,Epoxy Set,Gram,,0.54,3000,,
+292,,Abrasive Sand paper Roll 150',Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+289,,Emery Paper Sheet # 320,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+285,,Emery Paper Sheet # 400,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+239,,Emery Paper Sheet # 1000,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+229,,Regmar 80',Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+240,,Regmar 150',Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+514,,"Emery Paper Sheet 6"" X 9"" #2000 3m",Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+435,,Empty Box Large,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+1490,,Empty Box Small,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+937,,Disposable Glass 450ml,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+56,,Double Tape white,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+34,,Vinyl gloves,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+482,,tack cloth,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+53,,"Paper tape 1""",Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+388,,Paper Tape 2',Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+428,,Malmal Fabric,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+726,,Fiber Poteen,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+1053,,Silky cloth for paint,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+169,,yellow duster,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+8,,soft tissue,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+2268,502152,P850-1402/2.5L: SPIRIT WIPE,Nexa,,,Miscellaneous,Miscellaneous,Nos,0.716,,0,Paints / Paint Colors / 2K Paint / Nexa,
+2254,502138,2k Nexa Clearcoat Superme 625 (P190-625) 1L,Nexa,,,Miscellaneous,Miscellaneous,Nos,0.92,,0,Paints / Paint Colors / 2K Paint / Nexa,
+233,,paint remover,Generic-MISC,,,Miscellaneous,Miscellaneous,Nos,,,0,,
+246,500215,P551-1051/2.06k-PolyPak Polyester Putty,Nexa,,,Miscellaneous,Miscellaneous,Nos,,,0,Paints / Stain & Polishing / Poteen,

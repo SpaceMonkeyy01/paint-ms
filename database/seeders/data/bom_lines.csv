@@ -1,0 +1,2194 @@
+order_code,bom_category,issue_pool,allocated_qty,uom
+BS-SI-16103,Paint Epoxy Primer,Epoxy Set,418.38,Gram
+BS-SI-16103,Epoxy Thinner,Epoxy Set,88.39,Gram
+BS-SI-16103,Epoxy Hardner,Epoxy Set,82.5,Gram
+BS-SI-16103,Paint Mixing,Paint Mixing,134.47,Gram
+BS-SI-16103,Paint Matt agent(Matt),Paint Matt Agent,67.24,Gram
+BS-SI-16103,Paint Harnder,Paint Harnder,67.24,Gram
+BS-SI-16103,Paint Thinner,Paint Thinner,54.43,Gram
+BS-SI-16103,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16188,Paint Epoxy Primer,Epoxy Set,940.06,Gram
+BS-ET-16188,Epoxy Thinner,Epoxy Set,198.6,Gram
+BS-ET-16188,Epoxy Hardner,Epoxy Set,185.36,Gram
+BS-ET-16188,Paint Mixing,Paint Mixing,302.15,Gram
+BS-ET-16188,Paint Matt agent(Matt),Paint Matt Agent,151.07,Gram
+BS-ET-16188,Paint Harnder,Paint Harnder,151.07,Gram
+BS-ET-16188,Paint Thinner,Paint Thinner,122.3,Gram
+BS-ET-16188,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2501 B,Paint Epoxy Primer,Epoxy Set,2444.91,Gram
+BS-US-2501 B,Epoxy Thinner,Epoxy Set,516.53,Gram
+BS-US-2501 B,Epoxy Hardner,Epoxy Set,482.1,Gram
+BS-US-2501 B,Paint Mixing,Paint Mixing,841.96,Gram
+BS-US-2501 B,Paint Matt agent(Matt),Paint Matt Agent,261.94,Gram
+BS-US-2501 B,Paint Harnder,Paint Harnder,430.34,Gram
+BS-US-2501 B,Paint Thinner,Paint Thinner,168.39,Gram
+BS-US-2501 B,Paint Binder(Gloss),Paint Binder,168.39,Gram
+BS-US-2501 A,Paint Epoxy Primer,Epoxy Set,1948.72,Gram
+BS-US-2501 A,Epoxy Thinner,Epoxy Set,411.7,Gram
+BS-US-2501 A,Epoxy Hardner,Epoxy Set,384.26,Gram
+BS-US-2501 A,Paint Mixing,Paint Mixing,671.09,Gram
+BS-US-2501 A,Paint Matt agent(Matt),Paint Matt Agent,208.78,Gram
+BS-US-2501 A,Paint Harnder,Paint Harnder,343,Gram
+BS-US-2501 A,Paint Thinner,Paint Thinner,134.22,Gram
+BS-US-2501 A,Paint Binder(Gloss),Paint Binder,134.22,Gram
+BS-ET-15735,Paint Epoxy Primer,Epoxy Set,2425.36,Gram
+BS-ET-15735,Epoxy Thinner,Epoxy Set,512.4,Gram
+BS-ET-15735,Epoxy Hardner,Epoxy Set,478.24,Gram
+BS-ET-15735,Paint Mixing,Paint Mixing,779.55,Gram
+BS-ET-15735,Paint Matt agent(Matt),Paint Matt Agent,389.77,Gram
+BS-ET-15735,Paint Harnder,Paint Harnder,389.77,Gram
+BS-ET-15735,Paint Thinner,Paint Thinner,315.53,Gram
+BS-ET-15735,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-S.inc-16226,Paint Epoxy Primer,Epoxy Set,703.82,Gram
+BS-S.inc-16226,Epoxy Thinner,Epoxy Set,148.69,Gram
+BS-S.inc-16226,Epoxy Hardner,Epoxy Set,138.78,Gram
+BS-S.inc-16226,Paint Mixing,Paint Mixing,226.22,Gram
+BS-S.inc-16226,Paint Matt agent(Matt),Paint Matt Agent,113.11,Gram
+BS-S.inc-16226,Paint Harnder,Paint Harnder,113.11,Gram
+BS-S.inc-16226,Paint Thinner,Paint Thinner,91.56,Gram
+BS-S.inc-16226,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2505 A,Paint Epoxy Primer,Epoxy Set,3149.76,Gram
+BS-US-2505 A,Epoxy Thinner,Epoxy Set,665.44,Gram
+BS-US-2505 A,Epoxy Hardner,Epoxy Set,621.08,Gram
+BS-US-2505 A,Paint Mixing,Paint Mixing,1012.38,Gram
+BS-US-2505 A,Paint Matt agent(Matt),Paint Matt Agent,506.19,Gram
+BS-US-2505 A,Paint Harnder,Paint Harnder,506.19,Gram
+BS-US-2505 A,Paint Thinner,Paint Thinner,409.77,Gram
+BS-US-2505 A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2493,Paint Epoxy Primer,Epoxy Set,151.41,Gram
+BS-US-2493,Epoxy Thinner,Epoxy Set,31.99,Gram
+BS-US-2493,Epoxy Hardner,Epoxy Set,29.85,Gram
+BS-US-2493,Paint Mixing,Paint Mixing,52.14,Gram
+BS-US-2493,Paint Matt agent(Matt),Paint Matt Agent,16.22,Gram
+BS-US-2493,Paint Harnder,Paint Harnder,26.65,Gram
+BS-US-2493,Paint Thinner,Paint Thinner,10.43,Gram
+BS-US-2493,Paint Binder(Gloss),Paint Binder,10.43,Gram
+BS-ET-16171,Paint Epoxy Primer,Epoxy Set,909.01,Gram
+BS-ET-16171,Epoxy Thinner,Epoxy Set,192.04,Gram
+BS-ET-16171,Epoxy Hardner,Epoxy Set,179.24,Gram
+BS-ET-16171,Paint Mixing,Paint Mixing,292.17,Gram
+BS-ET-16171,Paint Matt agent(Matt),Paint Matt Agent,146.08,Gram
+BS-ET-16171,Paint Harnder,Paint Harnder,146.08,Gram
+BS-ET-16171,Paint Thinner,Paint Thinner,118.26,Gram
+BS-ET-16171,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-GL-0017,Paint Epoxy Primer,Epoxy Set,1332.94,Gram
+BS-GL-0017,Epoxy Thinner,Epoxy Set,281.61,Gram
+BS-GL-0017,Epoxy Hardner,Epoxy Set,262.83,Gram
+BS-GL-0017,Paint Mixing,Paint Mixing,428.43,Gram
+BS-GL-0017,Paint Matt agent(Matt),Paint Matt Agent,214.21,Gram
+BS-GL-0017,Paint Harnder,Paint Harnder,214.21,Gram
+BS-GL-0017,Paint Thinner,Paint Thinner,173.41,Gram
+BS-GL-0017,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16211,Paint Epoxy Primer,Epoxy Set,378.39,Gram
+BS-ET-16211,Epoxy Thinner,Epoxy Set,79.94,Gram
+BS-ET-16211,Epoxy Hardner,Epoxy Set,74.61,Gram
+BS-ET-16211,Paint Mixing,Paint Mixing,121.62,Gram
+BS-ET-16211,Paint Matt agent(Matt),Paint Matt Agent,60.81,Gram
+BS-ET-16211,Paint Harnder,Paint Harnder,60.81,Gram
+BS-ET-16211,Paint Thinner,Paint Thinner,49.23,Gram
+BS-ET-16211,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16169,Paint Epoxy Primer,Epoxy Set,126.49,Gram
+BS-ET-16169,Epoxy Thinner,Epoxy Set,26.72,Gram
+BS-ET-16169,Epoxy Hardner,Epoxy Set,24.94,Gram
+BS-ET-16169,Paint Mixing,Paint Mixing,40.66,Gram
+BS-ET-16169,Paint Matt agent(Matt),Paint Matt Agent,20.33,Gram
+BS-ET-16169,Paint Harnder,Paint Harnder,20.33,Gram
+BS-ET-16169,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16169,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2489 A,Paint Epoxy Primer,Epoxy Set,136.46,Gram
+BS-US-2489 A,Epoxy Thinner,Epoxy Set,28.83,Gram
+BS-US-2489 A,Epoxy Hardner,Epoxy Set,26.91,Gram
+BS-US-2489 A,Paint Mixing,Paint Mixing,46.99,Gram
+BS-US-2489 A,Paint Matt agent(Matt),Paint Matt Agent,14.62,Gram
+BS-US-2489 A,Paint Harnder,Paint Harnder,24.02,Gram
+BS-US-2489 A,Paint Thinner,Paint Thinner,9.4,Gram
+BS-US-2489 A,Paint Binder(Gloss),Paint Binder,9.4,Gram
+BS-US-2489 B,Paint Epoxy Primer,Epoxy Set,234.97,Gram
+BS-US-2489 B,Epoxy Thinner,Epoxy Set,49.64,Gram
+BS-US-2489 B,Epoxy Hardner,Epoxy Set,46.33,Gram
+BS-US-2489 B,Paint Mixing,Paint Mixing,80.92,Gram
+BS-US-2489 B,Paint Matt agent(Matt),Paint Matt Agent,25.17,Gram
+BS-US-2489 B,Paint Harnder,Paint Harnder,41.36,Gram
+BS-US-2489 B,Paint Thinner,Paint Thinner,16.18,Gram
+BS-US-2489 B,Paint Binder(Gloss),Paint Binder,16.18,Gram
+BS-SI-16217-D,Paint Epoxy Primer,Epoxy Set,284.6,Gram
+BS-SI-16217-D,Epoxy Thinner,Epoxy Set,60.13,Gram
+BS-SI-16217-D,Epoxy Hardner,Epoxy Set,56.12,Gram
+BS-SI-16217-D,Paint Mixing,Paint Mixing,91.48,Gram
+BS-SI-16217-D,Paint Matt agent(Matt),Paint Matt Agent,45.74,Gram
+BS-SI-16217-D,Paint Harnder,Paint Harnder,45.74,Gram
+BS-SI-16217-D,Paint Thinner,Paint Thinner,37.03,Gram
+BS-SI-16217-D,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16217-B (Bulk),Paint Epoxy Primer,Epoxy Set,1285.61,Gram
+BS-SI-16217-B (Bulk),Epoxy Thinner,Epoxy Set,271.61,Gram
+BS-SI-16217-B (Bulk),Epoxy Hardner,Epoxy Set,253.5,Gram
+BS-SI-16217-B (Bulk),Paint Mixing,Paint Mixing,413.21,Gram
+BS-SI-16217-B (Bulk),Paint Matt agent(Matt),Paint Matt Agent,206.61,Gram
+BS-SI-16217-B (Bulk),Paint Harnder,Paint Harnder,206.61,Gram
+BS-SI-16217-B (Bulk),Paint Thinner,Paint Thinner,167.25,Gram
+BS-SI-16217-B (Bulk),Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16217-A,Paint Epoxy Primer,Epoxy Set,528.96,Gram
+BS-SI-16217-A,Epoxy Thinner,Epoxy Set,111.75,Gram
+BS-SI-16217-A,Epoxy Hardner,Epoxy Set,104.3,Gram
+BS-SI-16217-A,Paint Mixing,Paint Mixing,170.02,Gram
+BS-SI-16217-A,Paint Matt agent(Matt),Paint Matt Agent,85.01,Gram
+BS-SI-16217-A,Paint Harnder,Paint Harnder,85.01,Gram
+BS-SI-16217-A,Paint Thinner,Paint Thinner,68.82,Gram
+BS-SI-16217-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-S.C-16224,Paint Epoxy Primer,Epoxy Set,786.64,Gram
+BS-S.C-16224,Epoxy Thinner,Epoxy Set,166.19,Gram
+BS-S.C-16224,Epoxy Hardner,Epoxy Set,155.11,Gram
+BS-S.C-16224,Paint Mixing,Paint Mixing,252.84,Gram
+BS-S.C-16224,Paint Matt agent(Matt),Paint Matt Agent,126.42,Gram
+BS-S.C-16224,Paint Harnder,Paint Harnder,126.42,Gram
+BS-S.C-16224,Paint Thinner,Paint Thinner,102.34,Gram
+BS-S.C-16224,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2488,Paint Epoxy Primer,Epoxy Set,200.95,Gram
+BS-US-2488,Epoxy Thinner,Epoxy Set,42.45,Gram
+BS-US-2488,Epoxy Hardner,Epoxy Set,39.62,Gram
+BS-US-2488,Paint Mixing,Paint Mixing,69.2,Gram
+BS-US-2488,Paint Matt agent(Matt),Paint Matt Agent,21.53,Gram
+BS-US-2488,Paint Harnder,Paint Harnder,35.37,Gram
+BS-US-2488,Paint Thinner,Paint Thinner,13.84,Gram
+BS-US-2488,Paint Binder(Gloss),Paint Binder,13.84,Gram
+BS-ET-16219,Paint Epoxy Primer,Epoxy Set,95.73,Gram
+BS-ET-16219,Epoxy Thinner,Epoxy Set,20.22,Gram
+BS-ET-16219,Epoxy Hardner,Epoxy Set,18.88,Gram
+BS-ET-16219,Paint Mixing,Paint Mixing,30.77,Gram
+BS-ET-16219,Paint Matt agent(Matt),Paint Matt Agent,15.38,Gram
+BS-ET-16219,Paint Harnder,Paint Harnder,15.38,Gram
+BS-ET-16219,Paint Thinner,Paint Thinner,12.45,Gram
+BS-ET-16219,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16154,Paint Epoxy Primer,Epoxy Set,58.79,Gram
+BS-ET-16154,Epoxy Thinner,Epoxy Set,11.58,Gram
+BS-ET-16154,Epoxy Hardner,Epoxy Set,17.82,Gram
+BS-ET-16154,Paint Mixing,Paint Mixing,20.62,Gram
+BS-ET-16154,Paint Matt agent(Matt),Paint Matt Agent,11.33,Gram
+BS-ET-16154,Paint Harnder,Paint Harnder,10.16,Gram
+BS-ET-16154,Paint Thinner,Paint Thinner,5.81,Gram
+BS-ET-16154,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-14719,Paint Epoxy Primer,Epoxy Set,248.77,Gram
+BS-QS-14719,Epoxy Thinner,Epoxy Set,52.56,Gram
+BS-QS-14719,Epoxy Hardner,Epoxy Set,49.05,Gram
+BS-QS-14719,Paint Mixing,Paint Mixing,79.96,Gram
+BS-QS-14719,Paint Matt agent(Matt),Paint Matt Agent,39.98,Gram
+BS-QS-14719,Paint Harnder,Paint Harnder,39.98,Gram
+BS-QS-14719,Paint Thinner,Paint Thinner,32.36,Gram
+BS-QS-14719,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-500068,Paint Epoxy Primer,Epoxy Set,1109.96,Gram
+BS-US-500068,Epoxy Thinner,Epoxy Set,234.5,Gram
+BS-US-500068,Epoxy Hardner,Epoxy Set,218.86,Gram
+BS-US-500068,Paint Mixing,Paint Mixing,382.24,Gram
+BS-US-500068,Paint Matt agent(Matt),Paint Matt Agent,118.92,Gram
+BS-US-500068,Paint Harnder,Paint Harnder,195.37,Gram
+BS-US-500068,Paint Thinner,Paint Thinner,76.45,Gram
+BS-US-500068,Paint Binder(Gloss),Paint Binder,76.45,Gram
+BS-ET-16241,Paint Epoxy Primer,Epoxy Set,94.87,Gram
+BS-ET-16241,Epoxy Thinner,Epoxy Set,20.04,Gram
+BS-ET-16241,Epoxy Hardner,Epoxy Set,18.71,Gram
+BS-ET-16241,Paint Mixing,Paint Mixing,30.49,Gram
+BS-ET-16241,Paint Matt agent(Matt),Paint Matt Agent,15.25,Gram
+BS-ET-16241,Paint Harnder,Paint Harnder,15.25,Gram
+BS-ET-16241,Paint Thinner,Paint Thinner,12.34,Gram
+BS-ET-16241,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16249,Paint Epoxy Primer,Epoxy Set,88.19,Gram
+BS-ET-16249,Epoxy Thinner,Epoxy Set,17.37,Gram
+BS-ET-16249,Epoxy Hardner,Epoxy Set,26.72,Gram
+BS-ET-16249,Paint Mixing,Paint Mixing,30.93,Gram
+BS-ET-16249,Paint Matt agent(Matt),Paint Matt Agent,16.99,Gram
+BS-ET-16249,Paint Harnder,Paint Harnder,15.25,Gram
+BS-ET-16249,Paint Thinner,Paint Thinner,8.71,Gram
+BS-ET-16249,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-286,Paint Epoxy Primer,Epoxy Set,175.94,Gram
+BS-LHET-286,Epoxy Thinner,Epoxy Set,37.17,Gram
+BS-LHET-286,Epoxy Hardner,Epoxy Set,34.69,Gram
+BS-LHET-286,Paint Mixing,Paint Mixing,56.55,Gram
+BS-LHET-286,Paint Matt agent(Matt),Paint Matt Agent,28.27,Gram
+BS-LHET-286,Paint Harnder,Paint Harnder,28.27,Gram
+BS-LHET-286,Paint Thinner,Paint Thinner,22.89,Gram
+BS-LHET-286,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-305,Paint Epoxy Primer,Epoxy Set,429.49,Gram
+BS-LHET-305,Epoxy Thinner,Epoxy Set,90.74,Gram
+BS-LHET-305,Epoxy Hardner,Epoxy Set,84.69,Gram
+BS-LHET-305,Paint Mixing,Paint Mixing,138.05,Gram
+BS-LHET-305,Paint Matt agent(Matt),Paint Matt Agent,69.02,Gram
+BS-LHET-305,Paint Harnder,Paint Harnder,69.02,Gram
+BS-LHET-305,Paint Thinner,Paint Thinner,55.88,Gram
+BS-LHET-305,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16231,Paint Epoxy Primer,Epoxy Set,1269.7,Gram
+BS-SM-16231,Epoxy Thinner,Epoxy Set,268.25,Gram
+BS-SM-16231,Epoxy Hardner,Epoxy Set,250.36,Gram
+BS-SM-16231,Paint Mixing,Paint Mixing,408.1,Gram
+BS-SM-16231,Paint Matt agent(Matt),Paint Matt Agent,204.05,Gram
+BS-SM-16231,Paint Harnder,Paint Harnder,204.05,Gram
+BS-SM-16231,Paint Thinner,Paint Thinner,165.18,Gram
+BS-SM-16231,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-S.inc-16225,Paint Epoxy Primer,Epoxy Set,1702.07,Gram
+BS-S.inc-16225,Epoxy Thinner,Epoxy Set,359.59,Gram
+BS-S.inc-16225,Epoxy Hardner,Epoxy Set,335.62,Gram
+BS-S.inc-16225,Paint Mixing,Paint Mixing,586.15,Gram
+BS-S.inc-16225,Paint Matt agent(Matt),Paint Matt Agent,182.36,Gram
+BS-S.inc-16225,Paint Harnder,Paint Harnder,299.59,Gram
+BS-S.inc-16225,Paint Thinner,Paint Thinner,117.23,Gram
+BS-S.inc-16225,Paint Binder(Gloss),Paint Binder,117.23,Gram
+BS-US-2482 B,Paint Epoxy Primer,Epoxy Set,777.53,Gram
+BS-US-2482 B,Epoxy Thinner,Epoxy Set,164.27,Gram
+BS-US-2482 B,Epoxy Hardner,Epoxy Set,153.32,Gram
+BS-US-2482 B,Paint Mixing,Paint Mixing,267.76,Gram
+BS-US-2482 B,Paint Matt agent(Matt),Paint Matt Agent,83.3,Gram
+BS-US-2482 B,Paint Harnder,Paint Harnder,136.86,Gram
+BS-US-2482 B,Paint Thinner,Paint Thinner,53.55,Gram
+BS-US-2482 B,Paint Binder(Gloss),Paint Binder,53.55,Gram
+BS-US-2482 A,Paint Epoxy Primer,Epoxy Set,555.89,Gram
+BS-US-2482 A,Epoxy Thinner,Epoxy Set,117.44,Gram
+BS-US-2482 A,Epoxy Hardner,Epoxy Set,109.61,Gram
+BS-US-2482 A,Paint Mixing,Paint Mixing,191.43,Gram
+BS-US-2482 A,Paint Matt agent(Matt),Paint Matt Agent,59.56,Gram
+BS-US-2482 A,Paint Harnder,Paint Harnder,97.84,Gram
+BS-US-2482 A,Paint Thinner,Paint Thinner,38.29,Gram
+BS-US-2482 A,Paint Binder(Gloss),Paint Binder,38.29,Gram
+BS-ET-16240,Paint Epoxy Primer,Epoxy Set,0,Gram
+BS-ET-16240,Epoxy Thinner,Epoxy Set,0,Gram
+BS-ET-16240,Epoxy Hardner,Epoxy Set,0,Gram
+BS-ET-16240,Paint Mixing,Paint Mixing,0,Gram
+BS-ET-16240,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-ET-16240,Paint Harnder,Paint Harnder,0,Gram
+BS-ET-16240,Paint Thinner,Paint Thinner,0,Gram
+BS-ET-16240,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16204,Paint Epoxy Primer,Epoxy Set,93.35,Gram
+BS-ET-16204,Epoxy Thinner,Epoxy Set,19.72,Gram
+BS-ET-16204,Epoxy Hardner,Epoxy Set,18.41,Gram
+BS-ET-16204,Paint Mixing,Paint Mixing,30.01,Gram
+BS-ET-16204,Paint Matt agent(Matt),Paint Matt Agent,15,Gram
+BS-ET-16204,Paint Harnder,Paint Harnder,15,Gram
+BS-ET-16204,Paint Thinner,Paint Thinner,12.15,Gram
+BS-ET-16204,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16207-B,Paint Epoxy Primer,Epoxy Set,466.58,Gram
+BS-ET-16207-B,Epoxy Thinner,Epoxy Set,98.57,Gram
+BS-ET-16207-B,Epoxy Hardner,Epoxy Set,92,Gram
+BS-ET-16207-B,Paint Mixing,Paint Mixing,149.97,Gram
+BS-ET-16207-B,Paint Matt agent(Matt),Paint Matt Agent,74.98,Gram
+BS-ET-16207-B,Paint Harnder,Paint Harnder,74.98,Gram
+BS-ET-16207-B,Paint Thinner,Paint Thinner,60.7,Gram
+BS-ET-16207-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-S.C-16201,Paint Epoxy Primer,Epoxy Set,560.39,Gram
+BS-S.C-16201,Epoxy Thinner,Epoxy Set,118.39,Gram
+BS-S.C-16201,Epoxy Hardner,Epoxy Set,110.5,Gram
+BS-S.C-16201,Paint Mixing,Paint Mixing,180.12,Gram
+BS-S.C-16201,Paint Matt agent(Matt),Paint Matt Agent,90.06,Gram
+BS-S.C-16201,Paint Harnder,Paint Harnder,90.06,Gram
+BS-S.C-16201,Paint Thinner,Paint Thinner,72.91,Gram
+BS-S.C-16201,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16207-A,Paint Epoxy Primer,Epoxy Set,467.06,Gram
+BS-ET-16207-A,Epoxy Thinner,Epoxy Set,98.67,Gram
+BS-ET-16207-A,Epoxy Hardner,Epoxy Set,92.1,Gram
+BS-ET-16207-A,Paint Mixing,Paint Mixing,150.12,Gram
+BS-ET-16207-A,Paint Matt agent(Matt),Paint Matt Agent,75.06,Gram
+BS-ET-16207-A,Paint Harnder,Paint Harnder,75.06,Gram
+BS-ET-16207-A,Paint Thinner,Paint Thinner,60.76,Gram
+BS-ET-16207-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16182,Paint Epoxy Primer,Epoxy Set,591.63,Gram
+BS-SI-16182,Epoxy Thinner,Epoxy Set,124.99,Gram
+BS-SI-16182,Epoxy Hardner,Epoxy Set,116.66,Gram
+BS-SI-16182,Paint Mixing,Paint Mixing,190.16,Gram
+BS-SI-16182,Paint Matt agent(Matt),Paint Matt Agent,95.08,Gram
+BS-SI-16182,Paint Harnder,Paint Harnder,95.08,Gram
+BS-SI-16182,Paint Thinner,Paint Thinner,76.97,Gram
+BS-SI-16182,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16181,Paint Epoxy Primer,Epoxy Set,94.87,Gram
+BS-SI-16181,Epoxy Thinner,Epoxy Set,20.04,Gram
+BS-SI-16181,Epoxy Hardner,Epoxy Set,18.71,Gram
+BS-SI-16181,Paint Mixing,Paint Mixing,30.49,Gram
+BS-SI-16181,Paint Matt agent(Matt),Paint Matt Agent,15.25,Gram
+BS-SI-16181,Paint Harnder,Paint Harnder,15.25,Gram
+BS-SI-16181,Paint Thinner,Paint Thinner,12.34,Gram
+BS-SI-16181,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16207-C,Paint Epoxy Primer,Epoxy Set,466.58,Gram
+BS-ET-16207-C,Epoxy Thinner,Epoxy Set,98.57,Gram
+BS-ET-16207-C,Epoxy Hardner,Epoxy Set,92,Gram
+BS-ET-16207-C,Paint Mixing,Paint Mixing,149.97,Gram
+BS-ET-16207-C,Paint Matt agent(Matt),Paint Matt Agent,74.98,Gram
+BS-ET-16207-C,Paint Harnder,Paint Harnder,74.98,Gram
+BS-ET-16207-C,Paint Thinner,Paint Thinner,60.7,Gram
+BS-ET-16207-C,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16227,Paint Epoxy Primer,Epoxy Set,94.87,Gram
+BS-ET-16227,Epoxy Thinner,Epoxy Set,20.04,Gram
+BS-ET-16227,Epoxy Hardner,Epoxy Set,18.71,Gram
+BS-ET-16227,Paint Mixing,Paint Mixing,30.49,Gram
+BS-ET-16227,Paint Matt agent(Matt),Paint Matt Agent,15.25,Gram
+BS-ET-16227,Paint Harnder,Paint Harnder,15.25,Gram
+BS-ET-16227,Paint Thinner,Paint Thinner,12.34,Gram
+BS-ET-16227,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16220,Paint Epoxy Primer,Epoxy Set,94.87,Gram
+BS-ET-16220,Epoxy Thinner,Epoxy Set,20.04,Gram
+BS-ET-16220,Epoxy Hardner,Epoxy Set,18.71,Gram
+BS-ET-16220,Paint Mixing,Paint Mixing,30.49,Gram
+BS-ET-16220,Paint Matt agent(Matt),Paint Matt Agent,15.25,Gram
+BS-ET-16220,Paint Harnder,Paint Harnder,15.25,Gram
+BS-ET-16220,Paint Thinner,Paint Thinner,12.34,Gram
+BS-ET-16220,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16199,Paint Epoxy Primer,Epoxy Set,644.1,Gram
+BS-QS-16199,Epoxy Thinner,Epoxy Set,136.08,Gram
+BS-QS-16199,Epoxy Hardner,Epoxy Set,127,Gram
+BS-QS-16199,Paint Mixing,Paint Mixing,207.02,Gram
+BS-QS-16199,Paint Matt agent(Matt),Paint Matt Agent,103.51,Gram
+BS-QS-16199,Paint Harnder,Paint Harnder,103.51,Gram
+BS-QS-16199,Paint Thinner,Paint Thinner,83.79,Gram
+BS-QS-16199,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-302,Paint Epoxy Primer,Epoxy Set,155.81,Gram
+BS-LHET-302,Epoxy Thinner,Epoxy Set,32.92,Gram
+BS-LHET-302,Epoxy Hardner,Epoxy Set,30.72,Gram
+BS-LHET-302,Paint Mixing,Paint Mixing,50.08,Gram
+BS-LHET-302,Paint Matt agent(Matt),Paint Matt Agent,25.04,Gram
+BS-LHET-302,Paint Harnder,Paint Harnder,25.04,Gram
+BS-LHET-302,Paint Thinner,Paint Thinner,20.27,Gram
+BS-LHET-302,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16213 (Bulk),Paint Epoxy Primer,Epoxy Set,445.5,Gram
+BS-SM-16213 (Bulk),Epoxy Thinner,Epoxy Set,94.12,Gram
+BS-SM-16213 (Bulk),Epoxy Hardner,Epoxy Set,87.84,Gram
+BS-SM-16213 (Bulk),Paint Mixing,Paint Mixing,143.19,Gram
+BS-SM-16213 (Bulk),Paint Matt agent(Matt),Paint Matt Agent,71.59,Gram
+BS-SM-16213 (Bulk),Paint Harnder,Paint Harnder,71.59,Gram
+BS-SM-16213 (Bulk),Paint Thinner,Paint Thinner,57.96,Gram
+BS-SM-16213 (Bulk),Paint Binder(Gloss),Paint Binder,0,Gram
+BS-S.inc-16210,Paint Epoxy Primer,Epoxy Set,155.81,Gram
+BS-S.inc-16210,Epoxy Thinner,Epoxy Set,32.92,Gram
+BS-S.inc-16210,Epoxy Hardner,Epoxy Set,30.72,Gram
+BS-S.inc-16210,Paint Mixing,Paint Mixing,50.08,Gram
+BS-S.inc-16210,Paint Matt agent(Matt),Paint Matt Agent,25.04,Gram
+BS-S.inc-16210,Paint Harnder,Paint Harnder,25.04,Gram
+BS-S.inc-16210,Paint Thinner,Paint Thinner,20.27,Gram
+BS-S.inc-16210,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16207-D,Paint Epoxy Primer,Epoxy Set,95.83,Gram
+BS-ET-16207-D,Epoxy Thinner,Epoxy Set,20.25,Gram
+BS-ET-16207-D,Epoxy Hardner,Epoxy Set,18.9,Gram
+BS-ET-16207-D,Paint Mixing,Paint Mixing,30.8,Gram
+BS-ET-16207-D,Paint Matt agent(Matt),Paint Matt Agent,15.4,Gram
+BS-ET-16207-D,Paint Harnder,Paint Harnder,15.4,Gram
+BS-ET-16207-D,Paint Thinner,Paint Thinner,12.47,Gram
+BS-ET-16207-D,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16207-E,Paint Epoxy Primer,Epoxy Set,95.83,Gram
+BS-ET-16207-E,Epoxy Thinner,Epoxy Set,20.25,Gram
+BS-ET-16207-E,Epoxy Hardner,Epoxy Set,18.9,Gram
+BS-ET-16207-E,Paint Mixing,Paint Mixing,30.8,Gram
+BS-ET-16207-E,Paint Matt agent(Matt),Paint Matt Agent,15.4,Gram
+BS-ET-16207-E,Paint Harnder,Paint Harnder,15.4,Gram
+BS-ET-16207-E,Paint Thinner,Paint Thinner,12.47,Gram
+BS-ET-16207-E,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-296,Paint Epoxy Primer,Epoxy Set,126.49,Gram
+BS-LHET-296,Epoxy Thinner,Epoxy Set,26.72,Gram
+BS-LHET-296,Epoxy Hardner,Epoxy Set,24.94,Gram
+BS-LHET-296,Paint Mixing,Paint Mixing,40.66,Gram
+BS-LHET-296,Paint Matt agent(Matt),Paint Matt Agent,20.33,Gram
+BS-LHET-296,Paint Harnder,Paint Harnder,20.33,Gram
+BS-LHET-296,Paint Thinner,Paint Thinner,16.46,Gram
+BS-LHET-296,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16202,Paint Epoxy Primer,Epoxy Set,390.54,Gram
+BS-ET-16202,Epoxy Thinner,Epoxy Set,82.51,Gram
+BS-ET-16202,Epoxy Hardner,Epoxy Set,77.01,Gram
+BS-ET-16202,Paint Mixing,Paint Mixing,125.53,Gram
+BS-ET-16202,Paint Matt agent(Matt),Paint Matt Agent,62.76,Gram
+BS-ET-16202,Paint Harnder,Paint Harnder,62.76,Gram
+BS-ET-16202,Paint Thinner,Paint Thinner,50.81,Gram
+BS-ET-16202,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16222,Paint Epoxy Primer,Epoxy Set,389.73,Gram
+BS-ET-16222,Epoxy Thinner,Epoxy Set,82.34,Gram
+BS-ET-16222,Epoxy Hardner,Epoxy Set,76.85,Gram
+BS-ET-16222,Paint Mixing,Paint Mixing,125.26,Gram
+BS-ET-16222,Paint Matt agent(Matt),Paint Matt Agent,62.63,Gram
+BS-ET-16222,Paint Harnder,Paint Harnder,62.63,Gram
+BS-ET-16222,Paint Thinner,Paint Thinner,50.7,Gram
+BS-ET-16222,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16208,Paint Epoxy Primer,Epoxy Set,125.07,Gram
+BS-ET-16208,Epoxy Thinner,Epoxy Set,24.63,Gram
+BS-ET-16208,Epoxy Hardner,Epoxy Set,37.9,Gram
+BS-ET-16208,Paint Mixing,Paint Mixing,43.86,Gram
+BS-ET-16208,Paint Matt agent(Matt),Paint Matt Agent,24.09,Gram
+BS-ET-16208,Paint Harnder,Paint Harnder,21.62,Gram
+BS-ET-16208,Paint Thinner,Paint Thinner,12.36,Gram
+BS-ET-16208,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16198-B,Paint Epoxy Primer,Epoxy Set,94.87,Gram
+BS-SM-16198-B,Epoxy Thinner,Epoxy Set,20.04,Gram
+BS-SM-16198-B,Epoxy Hardner,Epoxy Set,18.71,Gram
+BS-SM-16198-B,Paint Mixing,Paint Mixing,30.49,Gram
+BS-SM-16198-B,Paint Matt agent(Matt),Paint Matt Agent,15.25,Gram
+BS-SM-16198-B,Paint Harnder,Paint Harnder,15.25,Gram
+BS-SM-16198-B,Paint Thinner,Paint Thinner,12.34,Gram
+BS-SM-16198-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16214,Paint Epoxy Primer,Epoxy Set,290.21,Gram
+BS-SM-16214,Epoxy Thinner,Epoxy Set,61.31,Gram
+BS-SM-16214,Epoxy Hardner,Epoxy Set,57.22,Gram
+BS-SM-16214,Paint Mixing,Paint Mixing,93.28,Gram
+BS-SM-16214,Paint Matt agent(Matt),Paint Matt Agent,46.64,Gram
+BS-SM-16214,Paint Harnder,Paint Harnder,46.64,Gram
+BS-SM-16214,Paint Thinner,Paint Thinner,37.76,Gram
+BS-SM-16214,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16198-A,Paint Epoxy Primer,Epoxy Set,94.87,Gram
+BS-SM-16198-A,Epoxy Thinner,Epoxy Set,20.04,Gram
+BS-SM-16198-A,Epoxy Hardner,Epoxy Set,18.71,Gram
+BS-SM-16198-A,Paint Mixing,Paint Mixing,30.49,Gram
+BS-SM-16198-A,Paint Matt agent(Matt),Paint Matt Agent,15.25,Gram
+BS-SM-16198-A,Paint Harnder,Paint Harnder,15.25,Gram
+BS-SM-16198-A,Paint Thinner,Paint Thinner,12.34,Gram
+BS-SM-16198-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16229,Paint Epoxy Primer,Epoxy Set,155.13,Gram
+BS-ET-16229,Epoxy Thinner,Epoxy Set,30.56,Gram
+BS-ET-16229,Epoxy Hardner,Epoxy Set,47.01,Gram
+BS-ET-16229,Paint Mixing,Paint Mixing,54.4,Gram
+BS-ET-16229,Paint Matt agent(Matt),Paint Matt Agent,29.88,Gram
+BS-ET-16229,Paint Harnder,Paint Harnder,26.82,Gram
+BS-ET-16229,Paint Thinner,Paint Thinner,15.33,Gram
+BS-ET-16229,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16133,Paint Epoxy Primer,Epoxy Set,314.12,Gram
+BS-SM-16133,Epoxy Thinner,Epoxy Set,66.36,Gram
+BS-SM-16133,Epoxy Hardner,Epoxy Set,61.94,Gram
+BS-SM-16133,Paint Mixing,Paint Mixing,100.96,Gram
+BS-SM-16133,Paint Matt agent(Matt),Paint Matt Agent,50.48,Gram
+BS-SM-16133,Paint Harnder,Paint Harnder,50.48,Gram
+BS-SM-16133,Paint Thinner,Paint Thinner,40.87,Gram
+BS-SM-16133,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16212,Paint Epoxy Primer,Epoxy Set,1473.86,Gram
+BS-SM-16212,Epoxy Thinner,Epoxy Set,311.38,Gram
+BS-SM-16212,Epoxy Hardner,Epoxy Set,290.62,Gram
+BS-SM-16212,Paint Mixing,Paint Mixing,473.72,Gram
+BS-SM-16212,Paint Matt agent(Matt),Paint Matt Agent,236.86,Gram
+BS-SM-16212,Paint Harnder,Paint Harnder,236.86,Gram
+BS-SM-16212,Paint Thinner,Paint Thinner,191.74,Gram
+BS-SM-16212,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16179,Paint Epoxy Primer,Epoxy Set,1393.79,Gram
+BS-SM-16179,Epoxy Thinner,Epoxy Set,294.46,Gram
+BS-SM-16179,Epoxy Hardner,Epoxy Set,274.83,Gram
+BS-SM-16179,Paint Mixing,Paint Mixing,447.99,Gram
+BS-SM-16179,Paint Matt agent(Matt),Paint Matt Agent,223.99,Gram
+BS-SM-16179,Paint Harnder,Paint Harnder,223.99,Gram
+BS-SM-16179,Paint Thinner,Paint Thinner,181.33,Gram
+BS-SM-16179,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-301,Paint Epoxy Primer,Epoxy Set,155.81,Gram
+BS-LHET-301,Epoxy Thinner,Epoxy Set,32.92,Gram
+BS-LHET-301,Epoxy Hardner,Epoxy Set,30.72,Gram
+BS-LHET-301,Paint Mixing,Paint Mixing,50.08,Gram
+BS-LHET-301,Paint Matt agent(Matt),Paint Matt Agent,25.04,Gram
+BS-LHET-301,Paint Harnder,Paint Harnder,25.04,Gram
+BS-LHET-301,Paint Thinner,Paint Thinner,20.27,Gram
+BS-LHET-301,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-UV-16192,Paint Epoxy Primer,Epoxy Set,456.52,Gram
+BS-ET-UV-16192,Epoxy Thinner,Epoxy Set,96.45,Gram
+BS-ET-UV-16192,Epoxy Hardner,Epoxy Set,90.02,Gram
+BS-ET-UV-16192,Paint Mixing,Paint Mixing,146.73,Gram
+BS-ET-UV-16192,Paint Matt agent(Matt),Paint Matt Agent,73.37,Gram
+BS-ET-UV-16192,Paint Harnder,Paint Harnder,73.37,Gram
+BS-ET-UV-16192,Paint Thinner,Paint Thinner,59.39,Gram
+BS-ET-UV-16192,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16180-A,Paint Epoxy Primer,Epoxy Set,113.55,Gram
+BS-SM-16180-A,Epoxy Thinner,Epoxy Set,23.99,Gram
+BS-SM-16180-A,Epoxy Hardner,Epoxy Set,22.39,Gram
+BS-SM-16180-A,Paint Mixing,Paint Mixing,36.5,Gram
+BS-SM-16180-A,Paint Matt agent(Matt),Paint Matt Agent,18.25,Gram
+BS-SM-16180-A,Paint Harnder,Paint Harnder,18.25,Gram
+BS-SM-16180-A,Paint Thinner,Paint Thinner,14.77,Gram
+BS-SM-16180-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16180-B,Paint Epoxy Primer,Epoxy Set,94.39,Gram
+BS-SM-16180-B,Epoxy Thinner,Epoxy Set,19.94,Gram
+BS-SM-16180-B,Epoxy Hardner,Epoxy Set,18.61,Gram
+BS-SM-16180-B,Paint Mixing,Paint Mixing,30.34,Gram
+BS-SM-16180-B,Paint Matt agent(Matt),Paint Matt Agent,15.17,Gram
+BS-SM-16180-B,Paint Harnder,Paint Harnder,15.17,Gram
+BS-SM-16180-B,Paint Thinner,Paint Thinner,12.28,Gram
+BS-SM-16180-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16218,Paint Epoxy Primer,Epoxy Set,125.07,Gram
+BS-ET-16218,Epoxy Thinner,Epoxy Set,24.63,Gram
+BS-ET-16218,Epoxy Hardner,Epoxy Set,37.9,Gram
+BS-ET-16218,Paint Mixing,Paint Mixing,43.86,Gram
+BS-ET-16218,Paint Matt agent(Matt),Paint Matt Agent,24.09,Gram
+BS-ET-16218,Paint Harnder,Paint Harnder,21.62,Gram
+BS-ET-16218,Paint Thinner,Paint Thinner,12.36,Gram
+BS-ET-16218,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2491,Paint Epoxy Primer,Epoxy Set,153.9,Gram
+BS-US-2491,Epoxy Thinner,Epoxy Set,32.51,Gram
+BS-US-2491,Epoxy Hardner,Epoxy Set,30.35,Gram
+BS-US-2491,Paint Mixing,Paint Mixing,49.46,Gram
+BS-US-2491,Paint Matt agent(Matt),Paint Matt Agent,24.73,Gram
+BS-US-2491,Paint Harnder,Paint Harnder,24.73,Gram
+BS-US-2491,Paint Thinner,Paint Thinner,20.02,Gram
+BS-US-2491,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16161,Paint Epoxy Primer,Epoxy Set,74.74,Gram
+BS-ET-16161,Epoxy Thinner,Epoxy Set,15.79,Gram
+BS-ET-16161,Epoxy Hardner,Epoxy Set,14.74,Gram
+BS-ET-16161,Paint Mixing,Paint Mixing,24.02,Gram
+BS-ET-16161,Paint Matt agent(Matt),Paint Matt Agent,12.01,Gram
+BS-ET-16161,Paint Harnder,Paint Harnder,12.01,Gram
+BS-ET-16161,Paint Thinner,Paint Thinner,9.72,Gram
+BS-ET-16161,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16206,Paint Epoxy Primer,Epoxy Set,69.48,Gram
+BS-ET-16206,Epoxy Thinner,Epoxy Set,13.69,Gram
+BS-ET-16206,Epoxy Hardner,Epoxy Set,21.05,Gram
+BS-ET-16206,Paint Mixing,Paint Mixing,24.37,Gram
+BS-ET-16206,Paint Matt agent(Matt),Paint Matt Agent,13.38,Gram
+BS-ET-16206,Paint Harnder,Paint Harnder,12.01,Gram
+BS-ET-16206,Paint Thinner,Paint Thinner,6.86,Gram
+BS-ET-16206,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16203,Paint Epoxy Primer,Epoxy Set,94.87,Gram
+BS-ET-16203,Epoxy Thinner,Epoxy Set,20.04,Gram
+BS-ET-16203,Epoxy Hardner,Epoxy Set,18.71,Gram
+BS-ET-16203,Paint Mixing,Paint Mixing,30.49,Gram
+BS-ET-16203,Paint Matt agent(Matt),Paint Matt Agent,15.25,Gram
+BS-ET-16203,Paint Harnder,Paint Harnder,15.25,Gram
+BS-ET-16203,Paint Thinner,Paint Thinner,12.34,Gram
+BS-ET-16203,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SN-16162,Paint Epoxy Primer,Epoxy Set,177.09,Gram
+BS-SN-16162,Epoxy Thinner,Epoxy Set,37.41,Gram
+BS-SN-16162,Epoxy Hardner,Epoxy Set,34.92,Gram
+BS-SN-16162,Paint Mixing,Paint Mixing,56.92,Gram
+BS-SN-16162,Paint Matt agent(Matt),Paint Matt Agent,28.46,Gram
+BS-SN-16162,Paint Harnder,Paint Harnder,28.46,Gram
+BS-SN-16162,Paint Thinner,Paint Thinner,23.04,Gram
+BS-SN-16162,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-289,Paint Epoxy Primer,Epoxy Set,114.91,Gram
+BS-LHET-289,Epoxy Thinner,Epoxy Set,22.63,Gram
+BS-LHET-289,Epoxy Hardner,Epoxy Set,34.82,Gram
+BS-LHET-289,Paint Mixing,Paint Mixing,40.3,Gram
+BS-LHET-289,Paint Matt agent(Matt),Paint Matt Agent,22.14,Gram
+BS-LHET-289,Paint Harnder,Paint Harnder,19.87,Gram
+BS-LHET-289,Paint Thinner,Paint Thinner,11.35,Gram
+BS-LHET-289,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16237,Paint Epoxy Primer,Epoxy Set,483.64,Gram
+BS-SI-16237,Epoxy Thinner,Epoxy Set,102.18,Gram
+BS-SI-16237,Epoxy Hardner,Epoxy Set,95.36,Gram
+BS-SI-16237,Paint Mixing,Paint Mixing,155.45,Gram
+BS-SI-16237,Paint Matt agent(Matt),Paint Matt Agent,77.72,Gram
+BS-SI-16237,Paint Harnder,Paint Harnder,77.72,Gram
+BS-SI-16237,Paint Thinner,Paint Thinner,62.92,Gram
+BS-SI-16237,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16248,Paint Epoxy Primer,Epoxy Set,590.65,Gram
+BS-QS-16248,Epoxy Thinner,Epoxy Set,124.79,Gram
+BS-QS-16248,Epoxy Hardner,Epoxy Set,116.47,Gram
+BS-QS-16248,Paint Mixing,Paint Mixing,189.84,Gram
+BS-QS-16248,Paint Matt agent(Matt),Paint Matt Agent,94.92,Gram
+BS-QS-16248,Paint Harnder,Paint Harnder,94.92,Gram
+BS-QS-16248,Paint Thinner,Paint Thinner,76.84,Gram
+BS-QS-16248,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16118-A,Paint Epoxy Primer,Epoxy Set,559.87,Gram
+BS-ET-16118-A,Epoxy Thinner,Epoxy Set,118.28,Gram
+BS-ET-16118-A,Epoxy Hardner,Epoxy Set,110.4,Gram
+BS-ET-16118-A,Paint Mixing,Paint Mixing,179.95,Gram
+BS-ET-16118-A,Paint Matt agent(Matt),Paint Matt Agent,89.97,Gram
+BS-ET-16118-A,Paint Harnder,Paint Harnder,89.97,Gram
+BS-ET-16118-A,Paint Thinner,Paint Thinner,72.84,Gram
+BS-ET-16118-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16118-C,Paint Epoxy Primer,Epoxy Set,677.01,Gram
+BS-ET-16118-C,Epoxy Thinner,Epoxy Set,143.03,Gram
+BS-ET-16118-C,Epoxy Hardner,Epoxy Set,133.5,Gram
+BS-ET-16118-C,Paint Mixing,Paint Mixing,217.6,Gram
+BS-ET-16118-C,Paint Matt agent(Matt),Paint Matt Agent,108.8,Gram
+BS-ET-16118-C,Paint Harnder,Paint Harnder,108.8,Gram
+BS-ET-16118-C,Paint Thinner,Paint Thinner,88.08,Gram
+BS-ET-16118-C,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16118-B,Paint Epoxy Primer,Epoxy Set,1552.39,Gram
+BS-ET-16118-B,Epoxy Thinner,Epoxy Set,327.97,Gram
+BS-ET-16118-B,Epoxy Hardner,Epoxy Set,306.1,Gram
+BS-ET-16118-B,Paint Mixing,Paint Mixing,498.96,Gram
+BS-ET-16118-B,Paint Matt agent(Matt),Paint Matt Agent,249.48,Gram
+BS-ET-16118-B,Paint Harnder,Paint Harnder,249.48,Gram
+BS-ET-16118-B,Paint Thinner,Paint Thinner,201.96,Gram
+BS-ET-16118-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16233,Paint Epoxy Primer,Epoxy Set,335.78,Gram
+BS-ET-16233,Epoxy Thinner,Epoxy Set,70.94,Gram
+BS-ET-16233,Epoxy Hardner,Epoxy Set,66.21,Gram
+BS-ET-16233,Paint Mixing,Paint Mixing,107.92,Gram
+BS-ET-16233,Paint Matt agent(Matt),Paint Matt Agent,53.96,Gram
+BS-ET-16233,Paint Harnder,Paint Harnder,53.96,Gram
+BS-ET-16233,Paint Thinner,Paint Thinner,43.68,Gram
+BS-ET-16233,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16250 A,Paint Epoxy Primer,Epoxy Set,94.63,Gram
+BS-ET-16250 A,Epoxy Thinner,Epoxy Set,19.99,Gram
+BS-ET-16250 A,Epoxy Hardner,Epoxy Set,18.66,Gram
+BS-ET-16250 A,Paint Mixing,Paint Mixing,30.42,Gram
+BS-ET-16250 A,Paint Matt agent(Matt),Paint Matt Agent,15.21,Gram
+BS-ET-16250 A,Paint Harnder,Paint Harnder,15.21,Gram
+BS-ET-16250 A,Paint Thinner,Paint Thinner,12.31,Gram
+BS-ET-16250 A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16250 C,Paint Epoxy Primer,Epoxy Set,157.87,Gram
+BS-ET-16250 C,Epoxy Thinner,Epoxy Set,33.35,Gram
+BS-ET-16250 C,Epoxy Hardner,Epoxy Set,31.13,Gram
+BS-ET-16250 C,Paint Mixing,Paint Mixing,50.74,Gram
+BS-ET-16250 C,Paint Matt agent(Matt),Paint Matt Agent,25.37,Gram
+BS-ET-16250 C,Paint Harnder,Paint Harnder,25.37,Gram
+BS-ET-16250 C,Paint Thinner,Paint Thinner,20.54,Gram
+BS-ET-16250 C,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16250 B,Paint Epoxy Primer,Epoxy Set,155.96,Gram
+BS-ET-16250 B,Epoxy Thinner,Epoxy Set,32.95,Gram
+BS-ET-16250 B,Epoxy Hardner,Epoxy Set,30.75,Gram
+BS-ET-16250 B,Paint Mixing,Paint Mixing,50.13,Gram
+BS-ET-16250 B,Paint Matt agent(Matt),Paint Matt Agent,25.06,Gram
+BS-ET-16250 B,Paint Harnder,Paint Harnder,25.06,Gram
+BS-ET-16250 B,Paint Thinner,Paint Thinner,20.29,Gram
+BS-ET-16250 B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-304,Paint Epoxy Primer,Epoxy Set,126.49,Gram
+BS-LHET-304,Epoxy Thinner,Epoxy Set,26.72,Gram
+BS-LHET-304,Epoxy Hardner,Epoxy Set,24.94,Gram
+BS-LHET-304,Paint Mixing,Paint Mixing,40.66,Gram
+BS-LHET-304,Paint Matt agent(Matt),Paint Matt Agent,20.33,Gram
+BS-LHET-304,Paint Harnder,Paint Harnder,20.33,Gram
+BS-LHET-304,Paint Thinner,Paint Thinner,16.46,Gram
+BS-LHET-304,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16254,Paint Epoxy Primer,Epoxy Set,459.3,Gram
+BS-SM-16254,Epoxy Thinner,Epoxy Set,97.03,Gram
+BS-SM-16254,Epoxy Hardner,Epoxy Set,90.57,Gram
+BS-SM-16254,Paint Mixing,Paint Mixing,147.62,Gram
+BS-SM-16254,Paint Matt agent(Matt),Paint Matt Agent,73.81,Gram
+BS-SM-16254,Paint Harnder,Paint Harnder,73.81,Gram
+BS-SM-16254,Paint Thinner,Paint Thinner,59.75,Gram
+BS-SM-16254,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16255,Paint Epoxy Primer,Epoxy Set,155.81,Gram
+BS-SM-16255,Epoxy Thinner,Epoxy Set,32.92,Gram
+BS-SM-16255,Epoxy Hardner,Epoxy Set,30.72,Gram
+BS-SM-16255,Paint Mixing,Paint Mixing,50.08,Gram
+BS-SM-16255,Paint Matt agent(Matt),Paint Matt Agent,25.04,Gram
+BS-SM-16255,Paint Harnder,Paint Harnder,25.04,Gram
+BS-SM-16255,Paint Thinner,Paint Thinner,20.27,Gram
+BS-SM-16255,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16205,Paint Epoxy Primer,Epoxy Set,85.78,Gram
+BS-ET-16205,Epoxy Thinner,Epoxy Set,16.9,Gram
+BS-ET-16205,Epoxy Hardner,Epoxy Set,25.99,Gram
+BS-ET-16205,Paint Mixing,Paint Mixing,30.08,Gram
+BS-ET-16205,Paint Matt agent(Matt),Paint Matt Agent,16.53,Gram
+BS-ET-16205,Paint Harnder,Paint Harnder,14.83,Gram
+BS-ET-16205,Paint Thinner,Paint Thinner,8.47,Gram
+BS-ET-16205,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-15873,Paint Epoxy Primer,Epoxy Set,2452.96,Gram
+BS-QS-15873,Epoxy Thinner,Epoxy Set,518.23,Gram
+BS-QS-15873,Epoxy Hardner,Epoxy Set,483.68,Gram
+BS-QS-15873,Paint Mixing,Paint Mixing,788.42,Gram
+BS-QS-15873,Paint Matt agent(Matt),Paint Matt Agent,394.21,Gram
+BS-QS-15873,Paint Harnder,Paint Harnder,394.21,Gram
+BS-QS-15873,Paint Thinner,Paint Thinner,319.12,Gram
+BS-QS-15873,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16251,Paint Epoxy Primer,Epoxy Set,63.25,Gram
+BS-SI-16251,Epoxy Thinner,Epoxy Set,13.36,Gram
+BS-SI-16251,Epoxy Hardner,Epoxy Set,12.47,Gram
+BS-SI-16251,Paint Mixing,Paint Mixing,20.33,Gram
+BS-SI-16251,Paint Matt agent(Matt),Paint Matt Agent,10.16,Gram
+BS-SI-16251,Paint Harnder,Paint Harnder,10.16,Gram
+BS-SI-16251,Paint Thinner,Paint Thinner,8.23,Gram
+BS-SI-16251,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2504 A,Paint Epoxy Primer,Epoxy Set,167.89,Gram
+BS-US-2504 A,Epoxy Thinner,Epoxy Set,35.47,Gram
+BS-US-2504 A,Epoxy Hardner,Epoxy Set,33.1,Gram
+BS-US-2504 A,Paint Mixing,Paint Mixing,57.82,Gram
+BS-US-2504 A,Paint Matt agent(Matt),Paint Matt Agent,17.99,Gram
+BS-US-2504 A,Paint Harnder,Paint Harnder,29.55,Gram
+BS-US-2504 A,Paint Thinner,Paint Thinner,11.56,Gram
+BS-US-2504 A,Paint Binder(Gloss),Paint Binder,11.56,Gram
+BS-US-2504 B,Paint Epoxy Primer,Epoxy Set,167.89,Gram
+BS-US-2504 B,Epoxy Thinner,Epoxy Set,35.47,Gram
+BS-US-2504 B,Epoxy Hardner,Epoxy Set,33.1,Gram
+BS-US-2504 B,Paint Mixing,Paint Mixing,57.82,Gram
+BS-US-2504 B,Paint Matt agent(Matt),Paint Matt Agent,17.99,Gram
+BS-US-2504 B,Paint Harnder,Paint Harnder,29.55,Gram
+BS-US-2504 B,Paint Thinner,Paint Thinner,11.56,Gram
+BS-US-2504 B,Paint Binder(Gloss),Paint Binder,11.56,Gram
+BS-SI-16236,Paint Epoxy Primer,Epoxy Set,344.97,Gram
+BS-SI-16236,Epoxy Thinner,Epoxy Set,72.88,Gram
+BS-SI-16236,Epoxy Hardner,Epoxy Set,68.02,Gram
+BS-SI-16236,Paint Mixing,Paint Mixing,110.88,Gram
+BS-SI-16236,Paint Matt agent(Matt),Paint Matt Agent,55.44,Gram
+BS-SI-16236,Paint Harnder,Paint Harnder,55.44,Gram
+BS-SI-16236,Paint Thinner,Paint Thinner,44.88,Gram
+BS-SI-16236,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2503 A,Paint Epoxy Primer,Epoxy Set,4620.99,Gram
+BS-US-2503 A,Epoxy Thinner,Epoxy Set,976.26,Gram
+BS-US-2503 A,Epoxy Hardner,Epoxy Set,911.18,Gram
+BS-US-2503 A,Paint Mixing,Paint Mixing,1591.34,Gram
+BS-US-2503 A,Paint Matt agent(Matt),Paint Matt Agent,495.08,Gram
+BS-US-2503 A,Paint Harnder,Paint Harnder,813.35,Gram
+BS-US-2503 A,Paint Thinner,Paint Thinner,318.27,Gram
+BS-US-2503 A,Paint Binder(Gloss),Paint Binder,318.27,Gram
+BS-US-2503 B,Paint Epoxy Primer,Epoxy Set,4620.99,Gram
+BS-US-2503 B,Epoxy Thinner,Epoxy Set,976.26,Gram
+BS-US-2503 B,Epoxy Hardner,Epoxy Set,911.18,Gram
+BS-US-2503 B,Paint Mixing,Paint Mixing,1591.34,Gram
+BS-US-2503 B,Paint Matt agent(Matt),Paint Matt Agent,495.08,Gram
+BS-US-2503 B,Paint Harnder,Paint Harnder,813.35,Gram
+BS-US-2503 B,Paint Thinner,Paint Thinner,318.27,Gram
+BS-US-2503 B,Paint Binder(Gloss),Paint Binder,318.27,Gram
+BS-SM-16150,Paint Epoxy Primer,Epoxy Set,905.56,Gram
+BS-SM-16150,Epoxy Thinner,Epoxy Set,191.32,Gram
+BS-SM-16150,Epoxy Hardner,Epoxy Set,178.56,Gram
+BS-SM-16150,Paint Mixing,Paint Mixing,601.06,Gram
+BS-SM-16150,Paint Matt agent(Matt),Paint Matt Agent,145.53,Gram
+BS-SM-16150,Paint Harnder,Paint Harnder,145.53,Gram
+BS-SM-16150,Paint Thinner,Paint Thinner,117.81,Gram
+BS-SM-16150,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16246,Paint Epoxy Primer,Epoxy Set,2283.54,Gram
+BS-SM-16246,Epoxy Thinner,Epoxy Set,482.44,Gram
+BS-SM-16246,Epoxy Hardner,Epoxy Set,450.28,Gram
+BS-SM-16246,Paint Mixing,Paint Mixing,733.96,Gram
+BS-SM-16246,Paint Matt agent(Matt),Paint Matt Agent,366.98,Gram
+BS-SM-16246,Paint Harnder,Paint Harnder,366.98,Gram
+BS-SM-16246,Paint Thinner,Paint Thinner,297.08,Gram
+BS-SM-16246,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16258,Paint Epoxy Primer,Epoxy Set,454.22,Gram
+BS-ET-16258,Epoxy Thinner,Epoxy Set,95.96,Gram
+BS-ET-16258,Epoxy Hardner,Epoxy Set,89.56,Gram
+BS-ET-16258,Paint Mixing,Paint Mixing,145.99,Gram
+BS-ET-16258,Paint Matt agent(Matt),Paint Matt Agent,73,Gram
+BS-ET-16258,Paint Harnder,Paint Harnder,73,Gram
+BS-ET-16258,Paint Thinner,Paint Thinner,59.09,Gram
+BS-ET-16258,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16269,Paint Epoxy Primer,Epoxy Set,172.49,Gram
+BS-ET-16269,Epoxy Thinner,Epoxy Set,36.44,Gram
+BS-ET-16269,Epoxy Hardner,Epoxy Set,34.01,Gram
+BS-ET-16269,Paint Mixing,Paint Mixing,100,Gram
+BS-ET-16269,Paint Matt agent(Matt),Paint Matt Agent,27.72,Gram
+BS-ET-16269,Paint Harnder,Paint Harnder,27.72,Gram
+BS-ET-16269,Paint Thinner,Paint Thinner,22.44,Gram
+BS-ET-16269,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-298,Paint Epoxy Primer,Epoxy Set,335.78,Gram
+BS-LHET-298,Epoxy Thinner,Epoxy Set,70.94,Gram
+BS-LHET-298,Epoxy Hardner,Epoxy Set,66.21,Gram
+BS-LHET-298,Paint Mixing,Paint Mixing,107.92,Gram
+BS-LHET-298,Paint Matt agent(Matt),Paint Matt Agent,53.96,Gram
+BS-LHET-298,Paint Harnder,Paint Harnder,53.96,Gram
+BS-LHET-298,Paint Thinner,Paint Thinner,43.68,Gram
+BS-LHET-298,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-303,Paint Epoxy Primer,Epoxy Set,316.23,Gram
+BS-LHET-303,Epoxy Thinner,Epoxy Set,66.81,Gram
+BS-LHET-303,Epoxy Hardner,Epoxy Set,62.35,Gram
+BS-LHET-303,Paint Mixing,Paint Mixing,101.64,Gram
+BS-LHET-303,Paint Matt agent(Matt),Paint Matt Agent,50.82,Gram
+BS-LHET-303,Paint Harnder,Paint Harnder,50.82,Gram
+BS-LHET-303,Paint Thinner,Paint Thinner,41.14,Gram
+BS-LHET-303,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-15936,Paint Epoxy Primer,Epoxy Set,467.92,Gram
+BS-SI-15936,Epoxy Thinner,Epoxy Set,98.86,Gram
+BS-SI-15936,Epoxy Hardner,Epoxy Set,92.27,Gram
+BS-SI-15936,Paint Mixing,Paint Mixing,150.4,Gram
+BS-SI-15936,Paint Matt agent(Matt),Paint Matt Agent,75.2,Gram
+BS-SI-15936,Paint Harnder,Paint Harnder,75.2,Gram
+BS-SI-15936,Paint Thinner,Paint Thinner,60.87,Gram
+BS-SI-15936,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-15869,Paint Epoxy Primer,Epoxy Set,172.49,Gram
+BS-SI-15869,Epoxy Thinner,Epoxy Set,36.44,Gram
+BS-SI-15869,Epoxy Hardner,Epoxy Set,34.01,Gram
+BS-SI-15869,Paint Mixing,Paint Mixing,100,Gram
+BS-SI-15869,Paint Matt agent(Matt),Paint Matt Agent,27.72,Gram
+BS-SI-15869,Paint Harnder,Paint Harnder,27.72,Gram
+BS-SI-15869,Paint Thinner,Paint Thinner,22.44,Gram
+BS-SI-15869,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16264,Paint Epoxy Primer,Epoxy Set,196.44,Gram
+BS-QS-16264,Epoxy Thinner,Epoxy Set,41.5,Gram
+BS-QS-16264,Epoxy Hardner,Epoxy Set,38.74,Gram
+BS-QS-16264,Paint Mixing,Paint Mixing,63.14,Gram
+BS-QS-16264,Paint Matt agent(Matt),Paint Matt Agent,31.57,Gram
+BS-QS-16264,Paint Harnder,Paint Harnder,31.57,Gram
+BS-QS-16264,Paint Thinner,Paint Thinner,25.56,Gram
+BS-QS-16264,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16281,Paint Epoxy Primer,Epoxy Set,155.81,Gram
+BS-QS-16281,Epoxy Thinner,Epoxy Set,32.92,Gram
+BS-QS-16281,Epoxy Hardner,Epoxy Set,30.72,Gram
+BS-QS-16281,Paint Mixing,Paint Mixing,50.08,Gram
+BS-QS-16281,Paint Matt agent(Matt),Paint Matt Agent,25.04,Gram
+BS-QS-16281,Paint Harnder,Paint Harnder,25.04,Gram
+BS-QS-16281,Paint Thinner,Paint Thinner,20.27,Gram
+BS-QS-16281,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16261,Paint Epoxy Primer,Epoxy Set,275,Gram
+BS-QS-16261,Epoxy Thinner,Epoxy Set,58.1,Gram
+BS-QS-16261,Epoxy Hardner,Epoxy Set,54.22,Gram
+BS-QS-16261,Paint Mixing,Paint Mixing,88.39,Gram
+BS-QS-16261,Paint Matt agent(Matt),Paint Matt Agent,44.19,Gram
+BS-QS-16261,Paint Harnder,Paint Harnder,44.19,Gram
+BS-QS-16261,Paint Thinner,Paint Thinner,35.78,Gram
+BS-QS-16261,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16285,Paint Epoxy Primer,Epoxy Set,516.22,Gram
+BS-ET-16285,Epoxy Thinner,Epoxy Set,109.06,Gram
+BS-ET-16285,Epoxy Hardner,Epoxy Set,101.79,Gram
+BS-ET-16285,Paint Mixing,Paint Mixing,165.92,Gram
+BS-ET-16285,Paint Matt agent(Matt),Paint Matt Agent,82.96,Gram
+BS-ET-16285,Paint Harnder,Paint Harnder,82.96,Gram
+BS-ET-16285,Paint Thinner,Paint Thinner,67.16,Gram
+BS-ET-16285,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-500069 A,Paint Epoxy Primer,Epoxy Set,2712.87,Gram
+BS-US-500069 A,Epoxy Thinner,Epoxy Set,573.14,Gram
+BS-US-500069 A,Epoxy Hardner,Epoxy Set,534.93,Gram
+BS-US-500069 A,Paint Mixing,Paint Mixing,934.24,Gram
+BS-US-500069 A,Paint Matt agent(Matt),Paint Matt Agent,290.65,Gram
+BS-US-500069 A,Paint Harnder,Paint Harnder,477.5,Gram
+BS-US-500069 A,Paint Thinner,Paint Thinner,186.85,Gram
+BS-US-500069 A,Paint Binder(Gloss),Paint Binder,186.85,Gram
+BS-US-500069 B,Paint Epoxy Primer,Epoxy Set,3931.68,Gram
+BS-US-500069 B,Epoxy Thinner,Epoxy Set,830.64,Gram
+BS-US-500069 B,Epoxy Hardner,Epoxy Set,775.26,Gram
+BS-US-500069 B,Paint Mixing,Paint Mixing,1353.97,Gram
+BS-US-500069 B,Paint Matt agent(Matt),Paint Matt Agent,421.23,Gram
+BS-US-500069 B,Paint Harnder,Paint Harnder,692.03,Gram
+BS-US-500069 B,Paint Thinner,Paint Thinner,270.79,Gram
+BS-US-500069 B,Paint Binder(Gloss),Paint Binder,270.79,Gram
+BS-ET-16152,Paint Epoxy Primer,Epoxy Set,563.36,Gram
+BS-ET-16152,Epoxy Thinner,Epoxy Set,119.02,Gram
+BS-ET-16152,Epoxy Hardner,Epoxy Set,111.09,Gram
+BS-ET-16152,Paint Mixing,Paint Mixing,181.07,Gram
+BS-ET-16152,Paint Matt agent(Matt),Paint Matt Agent,90.54,Gram
+BS-ET-16152,Paint Harnder,Paint Harnder,90.54,Gram
+BS-ET-16152,Paint Thinner,Paint Thinner,73.29,Gram
+BS-ET-16152,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-306,Paint Epoxy Primer,Epoxy Set,373.15,Gram
+BS-LHET-306,Epoxy Thinner,Epoxy Set,78.83,Gram
+BS-LHET-306,Epoxy Hardner,Epoxy Set,73.58,Gram
+BS-LHET-306,Paint Mixing,Paint Mixing,119.94,Gram
+BS-LHET-306,Paint Matt agent(Matt),Paint Matt Agent,59.97,Gram
+BS-LHET-306,Paint Harnder,Paint Harnder,59.97,Gram
+BS-LHET-306,Paint Thinner,Paint Thinner,48.55,Gram
+BS-LHET-306,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16228,Paint Epoxy Primer,Epoxy Set,144.31,Gram
+BS-SM-16228,Epoxy Thinner,Epoxy Set,28.42,Gram
+BS-SM-16228,Epoxy Hardner,Epoxy Set,43.73,Gram
+BS-SM-16228,Paint Mixing,Paint Mixing,50.61,Gram
+BS-SM-16228,Paint Matt agent(Matt),Paint Matt Agent,27.8,Gram
+BS-SM-16228,Paint Harnder,Paint Harnder,24.95,Gram
+BS-SM-16228,Paint Thinner,Paint Thinner,14.26,Gram
+BS-SM-16228,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16273-A,Paint Epoxy Primer,Epoxy Set,259.31,Gram
+BS-SM-16273-A,Epoxy Thinner,Epoxy Set,54.78,Gram
+BS-SM-16273-A,Epoxy Hardner,Epoxy Set,51.13,Gram
+BS-SM-16273-A,Paint Mixing,Paint Mixing,83.34,Gram
+BS-SM-16273-A,Paint Matt agent(Matt),Paint Matt Agent,41.67,Gram
+BS-SM-16273-A,Paint Harnder,Paint Harnder,41.67,Gram
+BS-SM-16273-A,Paint Thinner,Paint Thinner,33.73,Gram
+BS-SM-16273-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16273-B,Paint Epoxy Primer,Epoxy Set,1352.88,Gram
+BS-SM-16273-B,Epoxy Thinner,Epoxy Set,285.82,Gram
+BS-SM-16273-B,Epoxy Hardner,Epoxy Set,266.76,Gram
+BS-SM-16273-B,Paint Mixing,Paint Mixing,434.83,Gram
+BS-SM-16273-B,Paint Matt agent(Matt),Paint Matt Agent,217.42,Gram
+BS-SM-16273-B,Paint Harnder,Paint Harnder,217.42,Gram
+BS-SM-16273-B,Paint Thinner,Paint Thinner,176,Gram
+BS-SM-16273-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16253,Paint Epoxy Primer,Epoxy Set,94.87,Gram
+BS-ET-16253,Epoxy Thinner,Epoxy Set,20.04,Gram
+BS-ET-16253,Epoxy Hardner,Epoxy Set,18.71,Gram
+BS-ET-16253,Paint Mixing,Paint Mixing,30.49,Gram
+BS-ET-16253,Paint Matt agent(Matt),Paint Matt Agent,15.25,Gram
+BS-ET-16253,Paint Harnder,Paint Harnder,15.25,Gram
+BS-ET-16253,Paint Thinner,Paint Thinner,12.34,Gram
+BS-ET-16253,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16271-A,Paint Epoxy Primer,Epoxy Set,552.53,Gram
+BS-ET-16271-A,Epoxy Thinner,Epoxy Set,116.73,Gram
+BS-ET-16271-A,Epoxy Hardner,Epoxy Set,108.95,Gram
+BS-ET-16271-A,Paint Mixing,Paint Mixing,177.59,Gram
+BS-ET-16271-A,Paint Matt agent(Matt),Paint Matt Agent,88.8,Gram
+BS-ET-16271-A,Paint Harnder,Paint Harnder,88.8,Gram
+BS-ET-16271-A,Paint Thinner,Paint Thinner,71.88,Gram
+BS-ET-16271-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16278,Paint Epoxy Primer,Epoxy Set,94.44,Gram
+BS-ET-16278,Epoxy Thinner,Epoxy Set,19.95,Gram
+BS-ET-16278,Epoxy Hardner,Epoxy Set,18.62,Gram
+BS-ET-16278,Paint Mixing,Paint Mixing,30.35,Gram
+BS-ET-16278,Paint Matt agent(Matt),Paint Matt Agent,15.18,Gram
+BS-ET-16278,Paint Harnder,Paint Harnder,15.18,Gram
+BS-ET-16278,Paint Thinner,Paint Thinner,12.29,Gram
+BS-ET-16278,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16284,Paint Epoxy Primer,Epoxy Set,155.81,Gram
+BS-ET-16284,Epoxy Thinner,Epoxy Set,32.92,Gram
+BS-ET-16284,Epoxy Hardner,Epoxy Set,30.72,Gram
+BS-ET-16284,Paint Mixing,Paint Mixing,50.08,Gram
+BS-ET-16284,Paint Matt agent(Matt),Paint Matt Agent,25.04,Gram
+BS-ET-16284,Paint Harnder,Paint Harnder,25.04,Gram
+BS-ET-16284,Paint Thinner,Paint Thinner,20.27,Gram
+BS-ET-16284,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16290,Paint Epoxy Primer,Epoxy Set,407.8,Gram
+BS-ET-16290,Epoxy Thinner,Epoxy Set,80.32,Gram
+BS-ET-16290,Epoxy Hardner,Epoxy Set,123.58,Gram
+BS-ET-16290,Paint Mixing,Paint Mixing,143.02,Gram
+BS-ET-16290,Paint Matt agent(Matt),Paint Matt Agent,78.56,Gram
+BS-ET-16290,Paint Harnder,Paint Harnder,70.5,Gram
+BS-ET-16290,Paint Thinner,Paint Thinner,40.29,Gram
+BS-ET-16290,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16294,Paint Epoxy Primer,Epoxy Set,155.81,Gram
+BS-ET-16294,Epoxy Thinner,Epoxy Set,32.92,Gram
+BS-ET-16294,Epoxy Hardner,Epoxy Set,30.72,Gram
+BS-ET-16294,Paint Mixing,Paint Mixing,50.08,Gram
+BS-ET-16294,Paint Matt agent(Matt),Paint Matt Agent,25.04,Gram
+BS-ET-16294,Paint Harnder,Paint Harnder,25.04,Gram
+BS-ET-16294,Paint Thinner,Paint Thinner,20.27,Gram
+BS-ET-16294,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16271-B,Paint Epoxy Primer,Epoxy Set,552.53,Gram
+BS-ET-16271-B,Epoxy Thinner,Epoxy Set,116.73,Gram
+BS-ET-16271-B,Epoxy Hardner,Epoxy Set,108.95,Gram
+BS-ET-16271-B,Paint Mixing,Paint Mixing,177.59,Gram
+BS-ET-16271-B,Paint Matt agent(Matt),Paint Matt Agent,88.8,Gram
+BS-ET-16271-B,Paint Harnder,Paint Harnder,88.8,Gram
+BS-ET-16271-B,Paint Thinner,Paint Thinner,71.88,Gram
+BS-ET-16271-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-500071,Paint Epoxy Primer,Epoxy Set,341.72,Gram
+BS-US-500071,Epoxy Thinner,Epoxy Set,72.19,Gram
+BS-US-500071,Epoxy Hardner,Epoxy Set,67.38,Gram
+BS-US-500071,Paint Mixing,Paint Mixing,117.68,Gram
+BS-US-500071,Paint Matt agent(Matt),Paint Matt Agent,36.61,Gram
+BS-US-500071,Paint Harnder,Paint Harnder,60.15,Gram
+BS-US-500071,Paint Thinner,Paint Thinner,23.54,Gram
+BS-US-500071,Paint Binder(Gloss),Paint Binder,23.54,Gram
+BS-ET-16194,Paint Epoxy Primer,Epoxy Set,126.49,Gram
+BS-ET-16194,Epoxy Thinner,Epoxy Set,26.72,Gram
+BS-ET-16194,Epoxy Hardner,Epoxy Set,24.94,Gram
+BS-ET-16194,Paint Mixing,Paint Mixing,40.66,Gram
+BS-ET-16194,Paint Matt agent(Matt),Paint Matt Agent,20.33,Gram
+BS-ET-16194,Paint Harnder,Paint Harnder,20.33,Gram
+BS-ET-16194,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16194,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16256,Paint Epoxy Primer,Epoxy Set,98.41,Gram
+BS-ET-16256,Epoxy Thinner,Epoxy Set,20.79,Gram
+BS-ET-16256,Epoxy Hardner,Epoxy Set,19.41,Gram
+BS-ET-16256,Paint Mixing,Paint Mixing,31.63,Gram
+BS-ET-16256,Paint Matt agent(Matt),Paint Matt Agent,15.82,Gram
+BS-ET-16256,Paint Harnder,Paint Harnder,15.82,Gram
+BS-ET-16256,Paint Thinner,Paint Thinner,12.8,Gram
+BS-ET-16256,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-500072,Paint Epoxy Primer,Epoxy Set,359.54,Gram
+BS-US-500072,Epoxy Thinner,Epoxy Set,75.96,Gram
+BS-US-500072,Epoxy Hardner,Epoxy Set,70.9,Gram
+BS-US-500072,Paint Mixing,Paint Mixing,115.56,Gram
+BS-US-500072,Paint Matt agent(Matt),Paint Matt Agent,57.78,Gram
+BS-US-500072,Paint Harnder,Paint Harnder,57.78,Gram
+BS-US-500072,Paint Thinner,Paint Thinner,46.77,Gram
+BS-US-500072,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16106 A RE,Paint Epoxy Primer,Epoxy Set,0,Gram
+BS-SM-16106 A RE,Epoxy Thinner,Epoxy Set,0,Gram
+BS-SM-16106 A RE,Epoxy Hardner,Epoxy Set,0,Gram
+BS-SM-16106 A RE,Paint Mixing,Paint Mixing,0,Gram
+BS-SM-16106 A RE,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-SM-16106 A RE,Paint Harnder,Paint Harnder,0,Gram
+BS-SM-16106 A RE,Paint Thinner,Paint Thinner,0,Gram
+BS-SM-16106 A RE,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16275,Paint Epoxy Primer,Epoxy Set,271.28,Gram
+BS-SM-16275,Epoxy Thinner,Epoxy Set,57.31,Gram
+BS-SM-16275,Epoxy Hardner,Epoxy Set,53.49,Gram
+BS-SM-16275,Paint Mixing,Paint Mixing,87.19,Gram
+BS-SM-16275,Paint Matt agent(Matt),Paint Matt Agent,43.6,Gram
+BS-SM-16275,Paint Harnder,Paint Harnder,43.6,Gram
+BS-SM-16275,Paint Thinner,Paint Thinner,35.29,Gram
+BS-SM-16275,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16277-A,Paint Epoxy Primer,Epoxy Set,955.48,Gram
+BS-SM-16277-A,Epoxy Thinner,Epoxy Set,201.86,Gram
+BS-SM-16277-A,Epoxy Hardner,Epoxy Set,188.41,Gram
+BS-SM-16277-A,Paint Mixing,Paint Mixing,307.11,Gram
+BS-SM-16277-A,Paint Matt agent(Matt),Paint Matt Agent,153.55,Gram
+BS-SM-16277-A,Paint Harnder,Paint Harnder,153.55,Gram
+BS-SM-16277-A,Paint Thinner,Paint Thinner,124.31,Gram
+BS-SM-16277-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16277-B,Paint Epoxy Primer,Epoxy Set,353.91,Gram
+BS-SM-16277-B,Epoxy Thinner,Epoxy Set,74.77,Gram
+BS-SM-16277-B,Epoxy Hardner,Epoxy Set,69.79,Gram
+BS-SM-16277-B,Paint Mixing,Paint Mixing,113.75,Gram
+BS-SM-16277-B,Paint Matt agent(Matt),Paint Matt Agent,56.88,Gram
+BS-SM-16277-B,Paint Harnder,Paint Harnder,56.88,Gram
+BS-SM-16277-B,Paint Thinner,Paint Thinner,46.04,Gram
+BS-SM-16277-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16272-A,Paint Epoxy Primer,Epoxy Set,761.24,Gram
+BS-ET-16272-A,Epoxy Thinner,Epoxy Set,160.83,Gram
+BS-ET-16272-A,Epoxy Hardner,Epoxy Set,150.1,Gram
+BS-ET-16272-A,Paint Mixing,Paint Mixing,244.68,Gram
+BS-ET-16272-A,Paint Matt agent(Matt),Paint Matt Agent,122.34,Gram
+BS-ET-16272-A,Paint Harnder,Paint Harnder,122.34,Gram
+BS-ET-16272-A,Paint Thinner,Paint Thinner,99.04,Gram
+BS-ET-16272-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16286-A,Paint Epoxy Primer,Epoxy Set,257.61,Gram
+BS-ET-16286-A,Epoxy Thinner,Epoxy Set,50.74,Gram
+BS-ET-16286-A,Epoxy Hardner,Epoxy Set,78.06,Gram
+BS-ET-16286-A,Paint Mixing,Paint Mixing,90.35,Gram
+BS-ET-16286-A,Paint Matt agent(Matt),Paint Matt Agent,49.63,Gram
+BS-ET-16286-A,Paint Harnder,Paint Harnder,44.54,Gram
+BS-ET-16286-A,Paint Thinner,Paint Thinner,25.45,Gram
+BS-ET-16286-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16288,Paint Epoxy Primer,Epoxy Set,126.49,Gram
+BS-ET-16288,Epoxy Thinner,Epoxy Set,26.72,Gram
+BS-ET-16288,Epoxy Hardner,Epoxy Set,24.94,Gram
+BS-ET-16288,Paint Mixing,Paint Mixing,40.66,Gram
+BS-ET-16288,Paint Matt agent(Matt),Paint Matt Agent,20.33,Gram
+BS-ET-16288,Paint Harnder,Paint Harnder,20.33,Gram
+BS-ET-16288,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16288,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16289,Paint Epoxy Primer,Epoxy Set,155.96,Gram
+BS-ET-16289,Epoxy Thinner,Epoxy Set,32.95,Gram
+BS-ET-16289,Epoxy Hardner,Epoxy Set,30.75,Gram
+BS-ET-16289,Paint Mixing,Paint Mixing,50.13,Gram
+BS-ET-16289,Paint Matt agent(Matt),Paint Matt Agent,25.06,Gram
+BS-ET-16289,Paint Harnder,Paint Harnder,25.06,Gram
+BS-ET-16289,Paint Thinner,Paint Thinner,20.29,Gram
+BS-ET-16289,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16291,Paint Epoxy Primer,Epoxy Set,126.49,Gram
+BS-ET-16291,Epoxy Thinner,Epoxy Set,26.72,Gram
+BS-ET-16291,Epoxy Hardner,Epoxy Set,24.94,Gram
+BS-ET-16291,Paint Mixing,Paint Mixing,40.66,Gram
+BS-ET-16291,Paint Matt agent(Matt),Paint Matt Agent,20.33,Gram
+BS-ET-16291,Paint Harnder,Paint Harnder,20.33,Gram
+BS-ET-16291,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16291,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16272-B,Paint Epoxy Primer,Epoxy Set,761.24,Gram
+BS-ET-16272-B,Epoxy Thinner,Epoxy Set,160.83,Gram
+BS-ET-16272-B,Epoxy Hardner,Epoxy Set,150.1,Gram
+BS-ET-16272-B,Paint Mixing,Paint Mixing,244.68,Gram
+BS-ET-16272-B,Paint Matt agent(Matt),Paint Matt Agent,122.34,Gram
+BS-ET-16272-B,Paint Harnder,Paint Harnder,122.34,Gram
+BS-ET-16272-B,Paint Thinner,Paint Thinner,99.04,Gram
+BS-ET-16272-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16286-B,Paint Epoxy Primer,Epoxy Set,257.61,Gram
+BS-ET-16286-B,Epoxy Thinner,Epoxy Set,50.74,Gram
+BS-ET-16286-B,Epoxy Hardner,Epoxy Set,78.06,Gram
+BS-ET-16286-B,Paint Mixing,Paint Mixing,90.35,Gram
+BS-ET-16286-B,Paint Matt agent(Matt),Paint Matt Agent,49.63,Gram
+BS-ET-16286-B,Paint Harnder,Paint Harnder,44.54,Gram
+BS-ET-16286-B,Paint Thinner,Paint Thinner,25.45,Gram
+BS-ET-16286-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16304,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16304,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16304,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16304,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16304,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16304,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16304,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16304,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16263,Paint Epoxy Primer,Epoxy Set,366.54,Gram
+BS-QS-16263,Epoxy Thinner,Epoxy Set,77.44,Gram
+BS-QS-16263,Epoxy Hardner,Epoxy Set,72.27,Gram
+BS-QS-16263,Paint Mixing,Paint Mixing,117.81,Gram
+BS-QS-16263,Paint Matt agent(Matt),Paint Matt Agent,58.91,Gram
+BS-QS-16263,Paint Harnder,Paint Harnder,58.91,Gram
+BS-QS-16263,Paint Thinner,Paint Thinner,47.69,Gram
+BS-QS-16263,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-500070 A,Paint Epoxy Primer,Epoxy Set,562.5,Gram
+BS-US-500070 A,Epoxy Thinner,Epoxy Set,118.84,Gram
+BS-US-500070 A,Epoxy Hardner,Epoxy Set,110.92,Gram
+BS-US-500070 A,Paint Mixing,Paint Mixing,193.71,Gram
+BS-US-500070 A,Paint Matt agent(Matt),Paint Matt Agent,60.27,Gram
+BS-US-500070 A,Paint Harnder,Paint Harnder,99.01,Gram
+BS-US-500070 A,Paint Thinner,Paint Thinner,38.74,Gram
+BS-US-500070 A,Paint Binder(Gloss),Paint Binder,38.74,Gram
+BS-QS-16314,Paint Epoxy Primer,Epoxy Set,144.31,Gram
+BS-QS-16314,Epoxy Thinner,Epoxy Set,28.42,Gram
+BS-QS-16314,Epoxy Hardner,Epoxy Set,43.73,Gram
+BS-QS-16314,Paint Mixing,Paint Mixing,50.61,Gram
+BS-QS-16314,Paint Matt agent(Matt),Paint Matt Agent,27.8,Gram
+BS-QS-16314,Paint Harnder,Paint Harnder,24.95,Gram
+BS-QS-16314,Paint Thinner,Paint Thinner,14.26,Gram
+BS-QS-16314,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16257,Paint Epoxy Primer,Epoxy Set,0,Gram
+BS-ET-16257,Epoxy Thinner,Epoxy Set,0,Gram
+BS-ET-16257,Epoxy Hardner,Epoxy Set,0,Gram
+BS-ET-16257,Paint Mixing,Paint Mixing,0,Gram
+BS-ET-16257,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-ET-16257,Paint Harnder,Paint Harnder,0,Gram
+BS-ET-16257,Paint Thinner,Paint Thinner,0,Gram
+BS-ET-16257,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16297,Paint Epoxy Primer,Epoxy Set,155.72,Gram
+BS-ET-16297,Epoxy Thinner,Epoxy Set,32.9,Gram
+BS-ET-16297,Epoxy Hardner,Epoxy Set,30.7,Gram
+BS-ET-16297,Paint Mixing,Paint Mixing,50.05,Gram
+BS-ET-16297,Paint Matt agent(Matt),Paint Matt Agent,25.03,Gram
+BS-ET-16297,Paint Harnder,Paint Harnder,25.03,Gram
+BS-ET-16297,Paint Thinner,Paint Thinner,20.26,Gram
+BS-ET-16297,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16301,Paint Epoxy Primer,Epoxy Set,144.31,Gram
+BS-ET-16301,Epoxy Thinner,Epoxy Set,28.42,Gram
+BS-ET-16301,Epoxy Hardner,Epoxy Set,43.73,Gram
+BS-ET-16301,Paint Mixing,Paint Mixing,50.61,Gram
+BS-ET-16301,Paint Matt agent(Matt),Paint Matt Agent,27.8,Gram
+BS-ET-16301,Paint Harnder,Paint Harnder,24.95,Gram
+BS-ET-16301,Paint Thinner,Paint Thinner,14.26,Gram
+BS-ET-16301,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16318,Paint Epoxy Primer,Epoxy Set,409.95,Gram
+BS-ET-16318,Epoxy Thinner,Epoxy Set,86.61,Gram
+BS-ET-16318,Epoxy Hardner,Epoxy Set,80.83,Gram
+BS-ET-16318,Paint Mixing,Paint Mixing,131.76,Gram
+BS-ET-16318,Paint Matt agent(Matt),Paint Matt Agent,65.88,Gram
+BS-ET-16318,Paint Harnder,Paint Harnder,65.88,Gram
+BS-ET-16318,Paint Thinner,Paint Thinner,53.33,Gram
+BS-ET-16318,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16061-RE,Paint Epoxy Primer,Epoxy Set,116.51,Gram
+BS-ET-16061-RE,Epoxy Thinner,Epoxy Set,22.95,Gram
+BS-ET-16061-RE,Epoxy Hardner,Epoxy Set,35.31,Gram
+BS-ET-16061-RE,Paint Mixing,Paint Mixing,40.86,Gram
+BS-ET-16061-RE,Paint Matt agent(Matt),Paint Matt Agent,22.45,Gram
+BS-ET-16061-RE,Paint Harnder,Paint Harnder,20.14,Gram
+BS-ET-16061-RE,Paint Thinner,Paint Thinner,11.51,Gram
+BS-ET-16061-RE,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16329,Paint Epoxy Primer,Epoxy Set,116.51,Gram
+BS-ET-16329,Epoxy Thinner,Epoxy Set,22.95,Gram
+BS-ET-16329,Epoxy Hardner,Epoxy Set,35.31,Gram
+BS-ET-16329,Paint Mixing,Paint Mixing,40.86,Gram
+BS-ET-16329,Paint Matt agent(Matt),Paint Matt Agent,22.45,Gram
+BS-ET-16329,Paint Harnder,Paint Harnder,20.14,Gram
+BS-ET-16329,Paint Thinner,Paint Thinner,11.51,Gram
+BS-ET-16329,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-307,Paint Epoxy Primer,Epoxy Set,212.73,Gram
+BS-LHET-307,Epoxy Thinner,Epoxy Set,44.94,Gram
+BS-LHET-307,Epoxy Hardner,Epoxy Set,41.95,Gram
+BS-LHET-307,Paint Mixing,Paint Mixing,68.38,Gram
+BS-LHET-307,Paint Matt agent(Matt),Paint Matt Agent,34.19,Gram
+BS-LHET-307,Paint Harnder,Paint Harnder,34.19,Gram
+BS-LHET-307,Paint Thinner,Paint Thinner,27.68,Gram
+BS-LHET-307,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-15954-RE,Paint Epoxy Primer,Epoxy Set,126.49,Gram
+BS-ET-15954-RE,Epoxy Thinner,Epoxy Set,26.72,Gram
+BS-ET-15954-RE,Epoxy Hardner,Epoxy Set,24.94,Gram
+BS-ET-15954-RE,Paint Mixing,Paint Mixing,40.66,Gram
+BS-ET-15954-RE,Paint Matt agent(Matt),Paint Matt Agent,20.33,Gram
+BS-ET-15954-RE,Paint Harnder,Paint Harnder,20.33,Gram
+BS-ET-15954-RE,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-15954-RE,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16309,Paint Epoxy Primer,Epoxy Set,788.41,Gram
+BS-SI-16309,Epoxy Thinner,Epoxy Set,166.57,Gram
+BS-SI-16309,Epoxy Hardner,Epoxy Set,155.46,Gram
+BS-SI-16309,Paint Mixing,Paint Mixing,253.41,Gram
+BS-SI-16309,Paint Matt agent(Matt),Paint Matt Agent,126.7,Gram
+BS-SI-16309,Paint Harnder,Paint Harnder,126.7,Gram
+BS-SI-16309,Paint Thinner,Paint Thinner,102.57,Gram
+BS-SI-16309,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16302 A,Paint Epoxy Primer,Epoxy Set,732.21,Gram
+BS-QS-16302 A,Epoxy Thinner,Epoxy Set,154.69,Gram
+BS-QS-16302 A,Epoxy Hardner,Epoxy Set,144.38,Gram
+BS-QS-16302 A,Paint Mixing,Paint Mixing,235.34,Gram
+BS-QS-16302 A,Paint Matt agent(Matt),Paint Matt Agent,117.67,Gram
+BS-QS-16302 A,Paint Harnder,Paint Harnder,117.67,Gram
+BS-QS-16302 A,Paint Thinner,Paint Thinner,95.26,Gram
+BS-QS-16302 A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16302 B,Paint Epoxy Primer,Epoxy Set,1077.33,Gram
+BS-QS-16302 B,Epoxy Thinner,Epoxy Set,227.6,Gram
+BS-QS-16302 B,Epoxy Hardner,Epoxy Set,212.43,Gram
+BS-QS-16302 B,Paint Mixing,Paint Mixing,346.27,Gram
+BS-QS-16302 B,Paint Matt agent(Matt),Paint Matt Agent,173.13,Gram
+BS-QS-16302 B,Paint Harnder,Paint Harnder,173.13,Gram
+BS-QS-16302 B,Paint Thinner,Paint Thinner,140.16,Gram
+BS-QS-16302 B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-15903 C RE,Paint Epoxy Primer,Epoxy Set,0,Gram
+BS-SM-15903 C RE,Epoxy Thinner,Epoxy Set,0,Gram
+BS-SM-15903 C RE,Epoxy Hardner,Epoxy Set,0,Gram
+BS-SM-15903 C RE,Paint Mixing,Paint Mixing,0,Gram
+BS-SM-15903 C RE,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-SM-15903 C RE,Paint Harnder,Paint Harnder,0,Gram
+BS-SM-15903 C RE,Paint Thinner,Paint Thinner,0,Gram
+BS-SM-15903 C RE,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16332,Paint Epoxy Primer,Epoxy Set,155.81,Gram
+BS-SM-16332,Epoxy Thinner,Epoxy Set,32.92,Gram
+BS-SM-16332,Epoxy Hardner,Epoxy Set,30.72,Gram
+BS-SM-16332,Paint Mixing,Paint Mixing,50.08,Gram
+BS-SM-16332,Paint Matt agent(Matt),Paint Matt Agent,25.04,Gram
+BS-SM-16332,Paint Harnder,Paint Harnder,25.04,Gram
+BS-SM-16332,Paint Thinner,Paint Thinner,20.27,Gram
+BS-SM-16332,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16333,Paint Epoxy Primer,Epoxy Set,155.81,Gram
+BS-SM-16333,Epoxy Thinner,Epoxy Set,32.92,Gram
+BS-SM-16333,Epoxy Hardner,Epoxy Set,30.72,Gram
+BS-SM-16333,Paint Mixing,Paint Mixing,50.08,Gram
+BS-SM-16333,Paint Matt agent(Matt),Paint Matt Agent,25.04,Gram
+BS-SM-16333,Paint Harnder,Paint Harnder,25.04,Gram
+BS-SM-16333,Paint Thinner,Paint Thinner,20.27,Gram
+BS-SM-16333,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-UV-16296,Paint Epoxy Primer,Epoxy Set,793.44,Gram
+BS-ET-UV-16296,Epoxy Thinner,Epoxy Set,167.63,Gram
+BS-ET-UV-16296,Epoxy Hardner,Epoxy Set,156.45,Gram
+BS-ET-UV-16296,Paint Mixing,Paint Mixing,255.02,Gram
+BS-ET-UV-16296,Paint Matt agent(Matt),Paint Matt Agent,127.51,Gram
+BS-ET-UV-16296,Paint Harnder,Paint Harnder,127.51,Gram
+BS-ET-UV-16296,Paint Thinner,Paint Thinner,103.22,Gram
+BS-ET-UV-16296,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16306-A,Paint Epoxy Primer,Epoxy Set,166.57,Gram
+BS-ET-16306-A,Epoxy Thinner,Epoxy Set,32.81,Gram
+BS-ET-16306-A,Epoxy Hardner,Epoxy Set,50.47,Gram
+BS-ET-16306-A,Paint Mixing,Paint Mixing,58.42,Gram
+BS-ET-16306-A,Paint Matt agent(Matt),Paint Matt Agent,32.09,Gram
+BS-ET-16306-A,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16306-A,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16306-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16319,Paint Epoxy Primer,Epoxy Set,252,Gram
+BS-ET-16319,Epoxy Thinner,Epoxy Set,49.64,Gram
+BS-ET-16319,Epoxy Hardner,Epoxy Set,76.36,Gram
+BS-ET-16319,Paint Mixing,Paint Mixing,88.38,Gram
+BS-ET-16319,Paint Matt agent(Matt),Paint Matt Agent,48.55,Gram
+BS-ET-16319,Paint Harnder,Paint Harnder,43.57,Gram
+BS-ET-16319,Paint Thinner,Paint Thinner,24.9,Gram
+BS-ET-16319,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16320-(Bulk),Paint Epoxy Primer,Epoxy Set,1413.65,Gram
+BS-ET-16320-(Bulk),Epoxy Thinner,Epoxy Set,298.66,Gram
+BS-ET-16320-(Bulk),Epoxy Hardner,Epoxy Set,278.75,Gram
+BS-ET-16320-(Bulk),Paint Mixing,Paint Mixing,454.37,Gram
+BS-ET-16320-(Bulk),Paint Matt agent(Matt),Paint Matt Agent,227.18,Gram
+BS-ET-16320-(Bulk),Paint Harnder,Paint Harnder,227.18,Gram
+BS-ET-16320-(Bulk),Paint Thinner,Paint Thinner,183.91,Gram
+BS-ET-16320-(Bulk),Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16323,Paint Epoxy Primer,Epoxy Set,181.83,Gram
+BS-ET-16323,Epoxy Thinner,Epoxy Set,38.41,Gram
+BS-ET-16323,Epoxy Hardner,Epoxy Set,35.85,Gram
+BS-ET-16323,Paint Mixing,Paint Mixing,58.44,Gram
+BS-ET-16323,Paint Matt agent(Matt),Paint Matt Agent,29.22,Gram
+BS-ET-16323,Paint Harnder,Paint Harnder,29.22,Gram
+BS-ET-16323,Paint Thinner,Paint Thinner,23.66,Gram
+BS-ET-16323,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16306-B,Paint Epoxy Primer,Epoxy Set,166.57,Gram
+BS-ET-16306-B,Epoxy Thinner,Epoxy Set,32.81,Gram
+BS-ET-16306-B,Epoxy Hardner,Epoxy Set,50.47,Gram
+BS-ET-16306-B,Paint Mixing,Paint Mixing,58.42,Gram
+BS-ET-16306-B,Paint Matt agent(Matt),Paint Matt Agent,32.09,Gram
+BS-ET-16306-B,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16306-B,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16306-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16330,Paint Epoxy Primer,Epoxy Set,165.95,Gram
+BS-ET-16330,Epoxy Thinner,Epoxy Set,32.69,Gram
+BS-ET-16330,Epoxy Hardner,Epoxy Set,50.29,Gram
+BS-ET-16330,Paint Mixing,Paint Mixing,58.2,Gram
+BS-ET-16330,Paint Matt agent(Matt),Paint Matt Agent,31.97,Gram
+BS-ET-16330,Paint Harnder,Paint Harnder,28.69,Gram
+BS-ET-16330,Paint Thinner,Paint Thinner,16.39,Gram
+BS-ET-16330,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16337,Paint Epoxy Primer,Epoxy Set,188.44,Gram
+BS-ET-16337,Epoxy Thinner,Epoxy Set,39.81,Gram
+BS-ET-16337,Epoxy Hardner,Epoxy Set,37.16,Gram
+BS-ET-16337,Paint Mixing,Paint Mixing,60.57,Gram
+BS-ET-16337,Paint Matt agent(Matt),Paint Matt Agent,30.28,Gram
+BS-ET-16337,Paint Harnder,Paint Harnder,30.28,Gram
+BS-ET-16337,Paint Thinner,Paint Thinner,24.52,Gram
+BS-ET-16337,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16338,Paint Epoxy Primer,Epoxy Set,180.51,Gram
+BS-ET-16338,Epoxy Thinner,Epoxy Set,38.14,Gram
+BS-ET-16338,Epoxy Hardner,Epoxy Set,35.59,Gram
+BS-ET-16338,Paint Mixing,Paint Mixing,58.02,Gram
+BS-ET-16338,Paint Matt agent(Matt),Paint Matt Agent,29.01,Gram
+BS-ET-16338,Paint Harnder,Paint Harnder,29.01,Gram
+BS-ET-16338,Paint Thinner,Paint Thinner,23.48,Gram
+BS-ET-16338,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16313-A,Paint Epoxy Primer,Epoxy Set,181.83,Gram
+BS-SM-16313-A,Epoxy Thinner,Epoxy Set,38.41,Gram
+BS-SM-16313-A,Epoxy Hardner,Epoxy Set,35.85,Gram
+BS-SM-16313-A,Paint Mixing,Paint Mixing,57.05,Gram
+BS-SM-16313-A,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-SM-16313-A,Paint Harnder,Paint Harnder,41.74,Gram
+BS-SM-16313-A,Paint Thinner,Paint Thinner,11.13,Gram
+BS-SM-16313-A,Paint Binder(Gloss),Paint Binder,29.22,Gram
+BS-SM-16334,Paint Epoxy Primer,Epoxy Set,159.81,Gram
+BS-SM-16334,Epoxy Thinner,Epoxy Set,31.48,Gram
+BS-SM-16334,Epoxy Hardner,Epoxy Set,48.43,Gram
+BS-SM-16334,Paint Mixing,Paint Mixing,506.04,Gram
+BS-SM-16334,Paint Matt agent(Matt),Paint Matt Agent,30.79,Gram
+BS-SM-16334,Paint Harnder,Paint Harnder,27.63,Gram
+BS-SM-16334,Paint Thinner,Paint Thinner,15.79,Gram
+BS-SM-16334,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16335,Paint Epoxy Primer,Epoxy Set,284.32,Gram
+BS-SM-16335,Epoxy Thinner,Epoxy Set,60.07,Gram
+BS-SM-16335,Epoxy Hardner,Epoxy Set,56.06,Gram
+BS-SM-16335,Paint Mixing,Paint Mixing,91.38,Gram
+BS-SM-16335,Paint Matt agent(Matt),Paint Matt Agent,45.69,Gram
+BS-SM-16335,Paint Harnder,Paint Harnder,45.69,Gram
+BS-SM-16335,Paint Thinner,Paint Thinner,36.99,Gram
+BS-SM-16335,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16336,Paint Epoxy Primer,Epoxy Set,575.47,Gram
+BS-SM-16336,Epoxy Thinner,Epoxy Set,121.58,Gram
+BS-SM-16336,Epoxy Hardner,Epoxy Set,113.47,Gram
+BS-SM-16336,Paint Mixing,Paint Mixing,224.96,Gram
+BS-SM-16336,Paint Matt agent(Matt),Paint Matt Agent,92.48,Gram
+BS-SM-16336,Paint Harnder,Paint Harnder,92.48,Gram
+BS-SM-16336,Paint Thinner,Paint Thinner,74.87,Gram
+BS-SM-16336,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16313-B,Paint Epoxy Primer,Epoxy Set,185.8,Gram
+BS-SM-16313-B,Epoxy Thinner,Epoxy Set,39.25,Gram
+BS-SM-16313-B,Epoxy Hardner,Epoxy Set,36.64,Gram
+BS-SM-16313-B,Paint Mixing,Paint Mixing,58.3,Gram
+BS-SM-16313-B,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-SM-16313-B,Paint Harnder,Paint Harnder,42.66,Gram
+BS-SM-16313-B,Paint Thinner,Paint Thinner,11.37,Gram
+BS-SM-16313-B,Paint Binder(Gloss),Paint Binder,29.86,Gram
+BS-QS-16223,Paint Epoxy Primer,Epoxy Set,1542.91,Gram
+BS-QS-16223,Epoxy Thinner,Epoxy Set,325.97,Gram
+BS-QS-16223,Epoxy Hardner,Epoxy Set,304.24,Gram
+BS-QS-16223,Paint Mixing,Paint Mixing,495.92,Gram
+BS-QS-16223,Paint Matt agent(Matt),Paint Matt Agent,247.96,Gram
+BS-QS-16223,Paint Harnder,Paint Harnder,247.96,Gram
+BS-QS-16223,Paint Thinner,Paint Thinner,200.73,Gram
+BS-QS-16223,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16292,Paint Epoxy Primer,Epoxy Set,292.91,Gram
+BS-SI-16292,Epoxy Thinner,Epoxy Set,61.88,Gram
+BS-SI-16292,Epoxy Hardner,Epoxy Set,57.76,Gram
+BS-SI-16292,Paint Mixing,Paint Mixing,94.15,Gram
+BS-SI-16292,Paint Matt agent(Matt),Paint Matt Agent,47.07,Gram
+BS-SI-16292,Paint Harnder,Paint Harnder,47.07,Gram
+BS-SI-16292,Paint Thinner,Paint Thinner,38.11,Gram
+BS-SI-16292,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16325,Paint Epoxy Primer,Epoxy Set,967.39,Gram
+BS-SI-16325,Epoxy Thinner,Epoxy Set,204.38,Gram
+BS-SI-16325,Epoxy Hardner,Epoxy Set,190.75,Gram
+BS-SI-16325,Paint Mixing,Paint Mixing,310.93,Gram
+BS-SI-16325,Paint Matt agent(Matt),Paint Matt Agent,155.47,Gram
+BS-SI-16325,Paint Harnder,Paint Harnder,155.47,Gram
+BS-SI-16325,Paint Thinner,Paint Thinner,125.85,Gram
+BS-SI-16325,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16327,Paint Epoxy Primer,Epoxy Set,408.95,Gram
+BS-SI-16327,Epoxy Thinner,Epoxy Set,86.4,Gram
+BS-SI-16327,Epoxy Hardner,Epoxy Set,80.64,Gram
+BS-SI-16327,Paint Mixing,Paint Mixing,131.44,Gram
+BS-SI-16327,Paint Matt agent(Matt),Paint Matt Agent,65.72,Gram
+BS-SI-16327,Paint Harnder,Paint Harnder,65.72,Gram
+BS-SI-16327,Paint Thinner,Paint Thinner,53.2,Gram
+BS-SI-16327,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16347,Paint Epoxy Primer,Epoxy Set,423.83,Gram
+BS-SI-16347,Epoxy Thinner,Epoxy Set,89.54,Gram
+BS-SI-16347,Epoxy Hardner,Epoxy Set,83.57,Gram
+BS-SI-16347,Paint Mixing,Paint Mixing,136.23,Gram
+BS-SI-16347,Paint Matt agent(Matt),Paint Matt Agent,68.11,Gram
+BS-SI-16347,Paint Harnder,Paint Harnder,68.11,Gram
+BS-SI-16347,Paint Thinner,Paint Thinner,55.14,Gram
+BS-SI-16347,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2513,Paint Epoxy Primer,Epoxy Set,1089.88,Gram
+BS-US-2513,Epoxy Thinner,Epoxy Set,230.26,Gram
+BS-US-2513,Epoxy Hardner,Epoxy Set,214.91,Gram
+BS-US-2513,Paint Mixing,Paint Mixing,375.33,Gram
+BS-US-2513,Paint Matt agent(Matt),Paint Matt Agent,116.77,Gram
+BS-US-2513,Paint Harnder,Paint Harnder,191.83,Gram
+BS-US-2513,Paint Thinner,Paint Thinner,75.07,Gram
+BS-US-2513,Paint Binder(Gloss),Paint Binder,75.07,Gram
+BS-US-2517,Paint Epoxy Primer,Epoxy Set,342.72,Gram
+BS-US-2517,Epoxy Thinner,Epoxy Set,72.41,Gram
+BS-US-2517,Epoxy Hardner,Epoxy Set,67.58,Gram
+BS-US-2517,Paint Mixing,Paint Mixing,118.02,Gram
+BS-US-2517,Paint Matt agent(Matt),Paint Matt Agent,36.72,Gram
+BS-US-2517,Paint Harnder,Paint Harnder,60.32,Gram
+BS-US-2517,Paint Thinner,Paint Thinner,23.6,Gram
+BS-US-2517,Paint Binder(Gloss),Paint Binder,23.6,Gram
+BS-SN-15485,Paint Epoxy Primer,Epoxy Set,4552.92,Gram
+BS-SN-15485,Epoxy Thinner,Epoxy Set,961.89,Gram
+BS-SN-15485,Epoxy Hardner,Epoxy Set,897.76,Gram
+BS-SN-15485,Paint Mixing,Paint Mixing,1567.9,Gram
+BS-SN-15485,Paint Matt agent(Matt),Paint Matt Agent,487.79,Gram
+BS-SN-15485,Paint Harnder,Paint Harnder,801.37,Gram
+BS-SN-15485,Paint Thinner,Paint Thinner,313.58,Gram
+BS-SN-15485,Paint Binder(Gloss),Paint Binder,313.58,Gram
+BS-QS-16315,Paint Epoxy Primer,Epoxy Set,165.95,Gram
+BS-QS-16315,Epoxy Thinner,Epoxy Set,32.69,Gram
+BS-QS-16315,Epoxy Hardner,Epoxy Set,50.29,Gram
+BS-QS-16315,Paint Mixing,Paint Mixing,58.2,Gram
+BS-QS-16315,Paint Matt agent(Matt),Paint Matt Agent,31.97,Gram
+BS-QS-16315,Paint Harnder,Paint Harnder,28.69,Gram
+BS-QS-16315,Paint Thinner,Paint Thinner,16.39,Gram
+BS-QS-16315,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16360,Paint Epoxy Primer,Epoxy Set,536.68,Gram
+BS-QS-16360,Epoxy Thinner,Epoxy Set,113.38,Gram
+BS-QS-16360,Epoxy Hardner,Epoxy Set,105.82,Gram
+BS-QS-16360,Paint Mixing,Paint Mixing,172.5,Gram
+BS-QS-16360,Paint Matt agent(Matt),Paint Matt Agent,86.25,Gram
+BS-QS-16360,Paint Harnder,Paint Harnder,86.25,Gram
+BS-QS-16360,Paint Thinner,Paint Thinner,69.82,Gram
+BS-QS-16360,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-GL-0018,Paint Epoxy Primer,Epoxy Set,165.95,Gram
+BS-GL-0018,Epoxy Thinner,Epoxy Set,32.69,Gram
+BS-GL-0018,Epoxy Hardner,Epoxy Set,50.29,Gram
+BS-GL-0018,Paint Mixing,Paint Mixing,58.2,Gram
+BS-GL-0018,Paint Matt agent(Matt),Paint Matt Agent,31.97,Gram
+BS-GL-0018,Paint Harnder,Paint Harnder,28.69,Gram
+BS-GL-0018,Paint Thinner,Paint Thinner,16.39,Gram
+BS-GL-0018,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16357,Paint Epoxy Primer,Epoxy Set,349.22,Gram
+BS-SI-16357,Epoxy Thinner,Epoxy Set,73.78,Gram
+BS-SI-16357,Epoxy Hardner,Epoxy Set,68.86,Gram
+BS-SI-16357,Paint Mixing,Paint Mixing,112.25,Gram
+BS-SI-16357,Paint Matt agent(Matt),Paint Matt Agent,56.12,Gram
+BS-SI-16357,Paint Harnder,Paint Harnder,56.12,Gram
+BS-SI-16357,Paint Thinner,Paint Thinner,45.43,Gram
+BS-SI-16357,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16344,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-QS-16344,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-QS-16344,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-QS-16344,Paint Mixing,Paint Mixing,57.59,Gram
+BS-QS-16344,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-QS-16344,Paint Harnder,Paint Harnder,28.8,Gram
+BS-QS-16344,Paint Thinner,Paint Thinner,23.31,Gram
+BS-QS-16344,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-S.C-15317,Paint Epoxy Primer,Epoxy Set,2827.55,Gram
+BS-S.C-15317,Epoxy Thinner,Epoxy Set,597.37,Gram
+BS-S.C-15317,Epoxy Hardner,Epoxy Set,557.54,Gram
+BS-S.C-15317,Paint Mixing,Paint Mixing,908.82,Gram
+BS-S.C-15317,Paint Matt agent(Matt),Paint Matt Agent,454.41,Gram
+BS-S.C-15317,Paint Harnder,Paint Harnder,454.41,Gram
+BS-S.C-15317,Paint Thinner,Paint Thinner,367.85,Gram
+BS-S.C-15317,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16358-B,Paint Epoxy Primer,Epoxy Set,640.46,Gram
+BS-QS-16358-B,Epoxy Thinner,Epoxy Set,135.31,Gram
+BS-QS-16358-B,Epoxy Hardner,Epoxy Set,126.29,Gram
+BS-QS-16358-B,Paint Mixing,Paint Mixing,205.85,Gram
+BS-QS-16358-B,Paint Matt agent(Matt),Paint Matt Agent,102.93,Gram
+BS-QS-16358-B,Paint Harnder,Paint Harnder,102.93,Gram
+BS-QS-16358-B,Paint Thinner,Paint Thinner,83.32,Gram
+BS-QS-16358-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16353-A,Paint Epoxy Primer,Epoxy Set,313.24,Gram
+BS-SM-16353-A,Epoxy Thinner,Epoxy Set,66.18,Gram
+BS-SM-16353-A,Epoxy Hardner,Epoxy Set,61.77,Gram
+BS-SM-16353-A,Paint Mixing,Paint Mixing,100.68,Gram
+BS-SM-16353-A,Paint Matt agent(Matt),Paint Matt Agent,50.34,Gram
+BS-SM-16353-A,Paint Harnder,Paint Harnder,50.34,Gram
+BS-SM-16353-A,Paint Thinner,Paint Thinner,40.75,Gram
+BS-SM-16353-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16354-A,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-SM-16354-A,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-SM-16354-A,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-SM-16354-A,Paint Mixing,Paint Mixing,57.59,Gram
+BS-SM-16354-A,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-SM-16354-A,Paint Harnder,Paint Harnder,28.8,Gram
+BS-SM-16354-A,Paint Thinner,Paint Thinner,23.31,Gram
+BS-SM-16354-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16353-B,Paint Epoxy Primer,Epoxy Set,179.35,Gram
+BS-SM-16353-B,Epoxy Thinner,Epoxy Set,37.89,Gram
+BS-SM-16353-B,Epoxy Hardner,Epoxy Set,35.36,Gram
+BS-SM-16353-B,Paint Mixing,Paint Mixing,57.65,Gram
+BS-SM-16353-B,Paint Matt agent(Matt),Paint Matt Agent,28.82,Gram
+BS-SM-16353-B,Paint Harnder,Paint Harnder,28.82,Gram
+BS-SM-16353-B,Paint Thinner,Paint Thinner,23.33,Gram
+BS-SM-16353-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16354-B,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-SM-16354-B,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-SM-16354-B,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-SM-16354-B,Paint Mixing,Paint Mixing,57.59,Gram
+BS-SM-16354-B,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-SM-16354-B,Paint Harnder,Paint Harnder,28.8,Gram
+BS-SM-16354-B,Paint Thinner,Paint Thinner,23.31,Gram
+BS-SM-16354-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16172-A,Paint Epoxy Primer,Epoxy Set,623.4,Gram
+BS-ET-16172-A,Epoxy Thinner,Epoxy Set,122.79,Gram
+BS-ET-16172-A,Epoxy Hardner,Epoxy Set,188.91,Gram
+BS-ET-16172-A,Paint Mixing,Paint Mixing,218.63,Gram
+BS-ET-16172-A,Paint Matt agent(Matt),Paint Matt Agent,120.09,Gram
+BS-ET-16172-A,Paint Harnder,Paint Harnder,107.77,Gram
+BS-ET-16172-A,Paint Thinner,Paint Thinner,61.59,Gram
+BS-ET-16172-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16305,Paint Epoxy Primer,Epoxy Set,0,Gram
+BS-ET-16305,Epoxy Thinner,Epoxy Set,0,Gram
+BS-ET-16305,Epoxy Hardner,Epoxy Set,0,Gram
+BS-ET-16305,Paint Mixing,Paint Mixing,0,Gram
+BS-ET-16305,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-ET-16305,Paint Harnder,Paint Harnder,0,Gram
+BS-ET-16305,Paint Thinner,Paint Thinner,0,Gram
+BS-ET-16305,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16321,Paint Epoxy Primer,Epoxy Set,253.13,Gram
+BS-ET-16321,Epoxy Thinner,Epoxy Set,53.48,Gram
+BS-ET-16321,Epoxy Hardner,Epoxy Set,49.91,Gram
+BS-ET-16321,Paint Mixing,Paint Mixing,81.36,Gram
+BS-ET-16321,Paint Matt agent(Matt),Paint Matt Agent,40.68,Gram
+BS-ET-16321,Paint Harnder,Paint Harnder,40.68,Gram
+BS-ET-16321,Paint Thinner,Paint Thinner,32.93,Gram
+BS-ET-16321,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16324,Paint Epoxy Primer,Epoxy Set,848.98,Gram
+BS-ET-16324,Epoxy Thinner,Epoxy Set,179.36,Gram
+BS-ET-16324,Epoxy Hardner,Epoxy Set,167.41,Gram
+BS-ET-16324,Paint Mixing,Paint Mixing,266.38,Gram
+BS-ET-16324,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-ET-16324,Paint Harnder,Paint Harnder,194.91,Gram
+BS-ET-16324,Paint Thinner,Paint Thinner,51.98,Gram
+BS-ET-16324,Paint Binder(Gloss),Paint Binder,136.44,Gram
+BS-ET-16365-A,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16365-A,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16365-A,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16365-A,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16365-A,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16365-A,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16365-A,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16365-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16367,Paint Epoxy Primer,Epoxy Set,179.3,Gram
+BS-ET-16367,Epoxy Thinner,Epoxy Set,37.88,Gram
+BS-ET-16367,Epoxy Hardner,Epoxy Set,35.35,Gram
+BS-ET-16367,Paint Mixing,Paint Mixing,57.63,Gram
+BS-ET-16367,Paint Matt agent(Matt),Paint Matt Agent,28.81,Gram
+BS-ET-16367,Paint Harnder,Paint Harnder,28.81,Gram
+BS-ET-16367,Paint Thinner,Paint Thinner,23.33,Gram
+BS-ET-16367,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16365-B,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16365-B,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16365-B,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16365-B,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16365-B,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16365-B,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16365-B,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16365-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16365-C,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16365-C,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16365-C,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16365-C,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16365-C,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16365-C,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16365-C,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16365-C,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16365-D,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16365-D,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16365-D,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16365-D,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16365-D,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16365-D,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16365-D,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16365-D,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-316,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-LHET-316,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-LHET-316,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-LHET-316,Paint Mixing,Paint Mixing,57.59,Gram
+BS-LHET-316,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-LHET-316,Paint Harnder,Paint Harnder,28.8,Gram
+BS-LHET-316,Paint Thinner,Paint Thinner,23.31,Gram
+BS-LHET-316,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-323,Paint Epoxy Primer,Epoxy Set,457.66,Gram
+BS-LHET-323,Epoxy Thinner,Epoxy Set,96.69,Gram
+BS-LHET-323,Epoxy Hardner,Epoxy Set,90.24,Gram
+BS-LHET-323,Paint Mixing,Paint Mixing,147.1,Gram
+BS-LHET-323,Paint Matt agent(Matt),Paint Matt Agent,73.55,Gram
+BS-LHET-323,Paint Harnder,Paint Harnder,73.55,Gram
+BS-LHET-323,Paint Thinner,Paint Thinner,59.54,Gram
+BS-LHET-323,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-325-A,Paint Epoxy Primer,Epoxy Set,386.14,Gram
+BS-LHET-325-A,Epoxy Thinner,Epoxy Set,81.58,Gram
+BS-LHET-325-A,Epoxy Hardner,Epoxy Set,76.14,Gram
+BS-LHET-325-A,Paint Mixing,Paint Mixing,124.11,Gram
+BS-LHET-325-A,Paint Matt agent(Matt),Paint Matt Agent,62.06,Gram
+BS-LHET-325-A,Paint Harnder,Paint Harnder,62.06,Gram
+BS-LHET-325-A,Paint Thinner,Paint Thinner,50.24,Gram
+BS-LHET-325-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-325-B,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-LHET-325-B,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-LHET-325-B,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-LHET-325-B,Paint Mixing,Paint Mixing,57.59,Gram
+BS-LHET-325-B,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-LHET-325-B,Paint Harnder,Paint Harnder,28.8,Gram
+BS-LHET-325-B,Paint Thinner,Paint Thinner,23.31,Gram
+BS-LHET-325-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16293,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-SI-16293,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-SI-16293,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-SI-16293,Paint Mixing,Paint Mixing,57.59,Gram
+BS-SI-16293,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-SI-16293,Paint Harnder,Paint Harnder,28.8,Gram
+BS-SI-16293,Paint Thinner,Paint Thinner,23.31,Gram
+BS-SI-16293,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16368-A,Paint Epoxy Primer,Epoxy Set,416.45,Gram
+BS-SI-16368-A,Epoxy Thinner,Epoxy Set,87.98,Gram
+BS-SI-16368-A,Epoxy Hardner,Epoxy Set,82.12,Gram
+BS-SI-16368-A,Paint Mixing,Paint Mixing,133.85,Gram
+BS-SI-16368-A,Paint Matt agent(Matt),Paint Matt Agent,66.93,Gram
+BS-SI-16368-A,Paint Harnder,Paint Harnder,66.93,Gram
+BS-SI-16368-A,Paint Thinner,Paint Thinner,54.18,Gram
+BS-SI-16368-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16368-B,Paint Epoxy Primer,Epoxy Set,312.42,Gram
+BS-SI-16368-B,Epoxy Thinner,Epoxy Set,66,Gram
+BS-SI-16368-B,Epoxy Hardner,Epoxy Set,61.6,Gram
+BS-SI-16368-B,Paint Mixing,Paint Mixing,100.42,Gram
+BS-SI-16368-B,Paint Matt agent(Matt),Paint Matt Agent,50.21,Gram
+BS-SI-16368-B,Paint Harnder,Paint Harnder,50.21,Gram
+BS-SI-16368-B,Paint Thinner,Paint Thinner,40.64,Gram
+BS-SI-16368-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16155,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16155,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16155,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16155,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16155,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16155,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16155,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16155,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16172-B-Bulk,Paint Epoxy Primer,Epoxy Set,1107.29,Gram
+BS-ET-16172-B-Bulk,Epoxy Thinner,Epoxy Set,233.94,Gram
+BS-ET-16172-B-Bulk,Epoxy Hardner,Epoxy Set,218.34,Gram
+BS-ET-16172-B-Bulk,Paint Mixing,Paint Mixing,355.9,Gram
+BS-ET-16172-B-Bulk,Paint Matt agent(Matt),Paint Matt Agent,177.95,Gram
+BS-ET-16172-B-Bulk,Paint Harnder,Paint Harnder,177.95,Gram
+BS-ET-16172-B-Bulk,Paint Thinner,Paint Thinner,144.05,Gram
+BS-ET-16172-B-Bulk,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-321,Paint Epoxy Primer,Epoxy Set,311.43,Gram
+BS-LHET-321,Epoxy Thinner,Epoxy Set,65.79,Gram
+BS-LHET-321,Epoxy Hardner,Epoxy Set,61.41,Gram
+BS-LHET-321,Paint Mixing,Paint Mixing,200.1,Gram
+BS-LHET-321,Paint Matt agent(Matt),Paint Matt Agent,50.05,Gram
+BS-LHET-321,Paint Harnder,Paint Harnder,50.05,Gram
+BS-LHET-321,Paint Thinner,Paint Thinner,40.52,Gram
+BS-LHET-321,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-315-A,Paint Epoxy Primer,Epoxy Set,386.14,Gram
+BS-LHET-315-A,Epoxy Thinner,Epoxy Set,81.58,Gram
+BS-LHET-315-A,Epoxy Hardner,Epoxy Set,76.14,Gram
+BS-LHET-315-A,Paint Mixing,Paint Mixing,124.11,Gram
+BS-LHET-315-A,Paint Matt agent(Matt),Paint Matt Agent,62.06,Gram
+BS-LHET-315-A,Paint Harnder,Paint Harnder,62.06,Gram
+BS-LHET-315-A,Paint Thinner,Paint Thinner,50.24,Gram
+BS-LHET-315-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-315-B,Paint Epoxy Primer,Epoxy Set,386.14,Gram
+BS-LHET-315-B,Epoxy Thinner,Epoxy Set,81.58,Gram
+BS-LHET-315-B,Epoxy Hardner,Epoxy Set,76.14,Gram
+BS-LHET-315-B,Paint Mixing,Paint Mixing,124.11,Gram
+BS-LHET-315-B,Paint Matt agent(Matt),Paint Matt Agent,62.06,Gram
+BS-LHET-315-B,Paint Harnder,Paint Harnder,62.06,Gram
+BS-LHET-315-B,Paint Thinner,Paint Thinner,50.24,Gram
+BS-LHET-315-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-315-C,Paint Epoxy Primer,Epoxy Set,386.14,Gram
+BS-LHET-315-C,Epoxy Thinner,Epoxy Set,81.58,Gram
+BS-LHET-315-C,Epoxy Hardner,Epoxy Set,76.14,Gram
+BS-LHET-315-C,Paint Mixing,Paint Mixing,124.11,Gram
+BS-LHET-315-C,Paint Matt agent(Matt),Paint Matt Agent,62.06,Gram
+BS-LHET-315-C,Paint Harnder,Paint Harnder,62.06,Gram
+BS-LHET-315-C,Paint Thinner,Paint Thinner,50.24,Gram
+BS-LHET-315-C,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2499 A,Paint Epoxy Primer,Epoxy Set,290.93,Gram
+BS-US-2499 A,Epoxy Thinner,Epoxy Set,61.46,Gram
+BS-US-2499 A,Epoxy Hardner,Epoxy Set,57.37,Gram
+BS-US-2499 A,Paint Mixing,Paint Mixing,150.19,Gram
+BS-US-2499 A,Paint Matt agent(Matt),Paint Matt Agent,31.17,Gram
+BS-US-2499 A,Paint Harnder,Paint Harnder,51.21,Gram
+BS-US-2499 A,Paint Thinner,Paint Thinner,20.04,Gram
+BS-US-2499 A,Paint Binder(Gloss),Paint Binder,20.04,Gram
+BS-US-2499 B,Paint Epoxy Primer,Epoxy Set,168.61,Gram
+BS-US-2499 B,Epoxy Thinner,Epoxy Set,35.62,Gram
+BS-US-2499 B,Epoxy Hardner,Epoxy Set,33.25,Gram
+BS-US-2499 B,Paint Mixing,Paint Mixing,58.06,Gram
+BS-US-2499 B,Paint Matt agent(Matt),Paint Matt Agent,18.06,Gram
+BS-US-2499 B,Paint Harnder,Paint Harnder,29.68,Gram
+BS-US-2499 B,Paint Thinner,Paint Thinner,11.61,Gram
+BS-US-2499 B,Paint Binder(Gloss),Paint Binder,11.61,Gram
+BS-US-2511 A,Paint Epoxy Primer,Epoxy Set,3798.93,Gram
+BS-US-2511 A,Epoxy Thinner,Epoxy Set,802.59,Gram
+BS-US-2511 A,Epoxy Hardner,Epoxy Set,749.09,Gram
+BS-US-2511 A,Paint Mixing,Paint Mixing,1308.25,Gram
+BS-US-2511 A,Paint Matt agent(Matt),Paint Matt Agent,407.01,Gram
+BS-US-2511 A,Paint Harnder,Paint Harnder,668.66,Gram
+BS-US-2511 A,Paint Thinner,Paint Thinner,261.65,Gram
+BS-US-2511 A,Paint Binder(Gloss),Paint Binder,261.65,Gram
+BS-US-2511 B,Paint Epoxy Primer,Epoxy Set,4346.74,Gram
+BS-US-2511 B,Epoxy Thinner,Epoxy Set,918.33,Gram
+BS-US-2511 B,Epoxy Hardner,Epoxy Set,857.1,Gram
+BS-US-2511 B,Paint Mixing,Paint Mixing,1496.9,Gram
+BS-US-2511 B,Paint Matt agent(Matt),Paint Matt Agent,465.7,Gram
+BS-US-2511 B,Paint Harnder,Paint Harnder,765.08,Gram
+BS-US-2511 B,Paint Thinner,Paint Thinner,299.38,Gram
+BS-US-2511 B,Paint Binder(Gloss),Paint Binder,299.38,Gram
+BS-US-2511 C,Paint Epoxy Primer,Epoxy Set,4346.74,Gram
+BS-US-2511 C,Epoxy Thinner,Epoxy Set,918.33,Gram
+BS-US-2511 C,Epoxy Hardner,Epoxy Set,857.1,Gram
+BS-US-2511 C,Paint Mixing,Paint Mixing,1496.9,Gram
+BS-US-2511 C,Paint Matt agent(Matt),Paint Matt Agent,465.7,Gram
+BS-US-2511 C,Paint Harnder,Paint Harnder,765.08,Gram
+BS-US-2511 C,Paint Thinner,Paint Thinner,299.38,Gram
+BS-US-2511 C,Paint Binder(Gloss),Paint Binder,299.38,Gram
+BS-ET-16317-(Bulk),Paint Epoxy Primer,Epoxy Set,311.65,Gram
+BS-ET-16317-(Bulk),Epoxy Thinner,Epoxy Set,65.84,Gram
+BS-ET-16317-(Bulk),Epoxy Hardner,Epoxy Set,61.45,Gram
+BS-ET-16317-(Bulk),Paint Mixing,Paint Mixing,100.17,Gram
+BS-ET-16317-(Bulk),Paint Matt agent(Matt),Paint Matt Agent,50.08,Gram
+BS-ET-16317-(Bulk),Paint Harnder,Paint Harnder,50.08,Gram
+BS-ET-16317-(Bulk),Paint Thinner,Paint Thinner,40.54,Gram
+BS-ET-16317-(Bulk),Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16377,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16377,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16377,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16377,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16377,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16377,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16377,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16377,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-S.C-16340,Paint Epoxy Primer,Epoxy Set,184.48,Gram
+BS-S.C-16340,Epoxy Thinner,Epoxy Set,38.97,Gram
+BS-S.C-16340,Epoxy Hardner,Epoxy Set,36.38,Gram
+BS-S.C-16340,Paint Mixing,Paint Mixing,59.29,Gram
+BS-S.C-16340,Paint Matt agent(Matt),Paint Matt Agent,29.65,Gram
+BS-S.C-16340,Paint Harnder,Paint Harnder,29.65,Gram
+BS-S.C-16340,Paint Thinner,Paint Thinner,24,Gram
+BS-S.C-16340,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-500061 A,Paint Epoxy Primer,Epoxy Set,4974.47,Gram
+BS-US-500061 A,Epoxy Thinner,Epoxy Set,1050.94,Gram
+BS-US-500061 A,Epoxy Hardner,Epoxy Set,980.88,Gram
+BS-US-500061 A,Paint Mixing,Paint Mixing,1713.07,Gram
+BS-US-500061 A,Paint Matt agent(Matt),Paint Matt Agent,532.96,Gram
+BS-US-500061 A,Paint Harnder,Paint Harnder,875.57,Gram
+BS-US-500061 A,Paint Thinner,Paint Thinner,342.61,Gram
+BS-US-500061 A,Paint Binder(Gloss),Paint Binder,342.61,Gram
+BS-US-500061 B,Paint Epoxy Primer,Epoxy Set,4974.47,Gram
+BS-US-500061 B,Epoxy Thinner,Epoxy Set,1050.94,Gram
+BS-US-500061 B,Epoxy Hardner,Epoxy Set,980.88,Gram
+BS-US-500061 B,Paint Mixing,Paint Mixing,1713.07,Gram
+BS-US-500061 B,Paint Matt agent(Matt),Paint Matt Agent,532.96,Gram
+BS-US-500061 B,Paint Harnder,Paint Harnder,875.57,Gram
+BS-US-500061 B,Paint Thinner,Paint Thinner,342.61,Gram
+BS-US-500061 B,Paint Binder(Gloss),Paint Binder,342.61,Gram
+BS-SM-16274,Paint Epoxy Primer,Epoxy Set,998.86,Gram
+BS-SM-16274,Epoxy Thinner,Epoxy Set,211.03,Gram
+BS-SM-16274,Epoxy Hardner,Epoxy Set,196.96,Gram
+BS-SM-16274,Paint Mixing,Paint Mixing,321.05,Gram
+BS-SM-16274,Paint Matt agent(Matt),Paint Matt Agent,160.52,Gram
+BS-SM-16274,Paint Harnder,Paint Harnder,160.52,Gram
+BS-SM-16274,Paint Thinner,Paint Thinner,129.95,Gram
+BS-SM-16274,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16349,Paint Epoxy Primer,Epoxy Set,960.51,Gram
+BS-SM-16349,Epoxy Thinner,Epoxy Set,202.92,Gram
+BS-SM-16349,Epoxy Hardner,Epoxy Set,189.4,Gram
+BS-SM-16349,Paint Mixing,Paint Mixing,308.72,Gram
+BS-SM-16349,Paint Matt agent(Matt),Paint Matt Agent,154.36,Gram
+BS-SM-16349,Paint Harnder,Paint Harnder,154.36,Gram
+BS-SM-16349,Paint Thinner,Paint Thinner,124.96,Gram
+BS-SM-16349,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16364,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-SM-16364,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-SM-16364,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-SM-16364,Paint Mixing,Paint Mixing,57.59,Gram
+BS-SM-16364,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-SM-16364,Paint Harnder,Paint Harnder,28.8,Gram
+BS-SM-16364,Paint Thinner,Paint Thinner,23.31,Gram
+BS-SM-16364,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2479,Paint Epoxy Primer,Epoxy Set,6283.57,Gram
+BS-US-2479,Epoxy Thinner,Epoxy Set,1327.51,Gram
+BS-US-2479,Epoxy Hardner,Epoxy Set,1239.01,Gram
+BS-US-2479,Paint Mixing,Paint Mixing,2163.89,Gram
+BS-US-2479,Paint Matt agent(Matt),Paint Matt Agent,673.21,Gram
+BS-US-2479,Paint Harnder,Paint Harnder,1105.99,Gram
+BS-US-2479,Paint Thinner,Paint Thinner,432.78,Gram
+BS-US-2479,Paint Binder(Gloss),Paint Binder,432.78,Gram
+BS-QS-16280,Paint Epoxy Primer,Epoxy Set,323.11,Gram
+BS-QS-16280,Epoxy Thinner,Epoxy Set,68.26,Gram
+BS-QS-16280,Epoxy Hardner,Epoxy Set,63.71,Gram
+BS-QS-16280,Paint Mixing,Paint Mixing,103.85,Gram
+BS-QS-16280,Paint Matt agent(Matt),Paint Matt Agent,51.93,Gram
+BS-QS-16280,Paint Harnder,Paint Harnder,51.93,Gram
+BS-QS-16280,Paint Thinner,Paint Thinner,42.04,Gram
+BS-QS-16280,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16358-A,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-QS-16358-A,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-QS-16358-A,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-QS-16358-A,Paint Mixing,Paint Mixing,57.59,Gram
+BS-QS-16358-A,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-QS-16358-A,Paint Harnder,Paint Harnder,28.8,Gram
+BS-QS-16358-A,Paint Thinner,Paint Thinner,23.31,Gram
+BS-QS-16358-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-S.inc-16395-A-(Bulk),Paint Epoxy Primer,Epoxy Set,568.08,Gram
+BS-S.inc-16395-A-(Bulk),Epoxy Thinner,Epoxy Set,120.02,Gram
+BS-S.inc-16395-A-(Bulk),Epoxy Hardner,Epoxy Set,112.02,Gram
+BS-S.inc-16395-A-(Bulk),Paint Mixing,Paint Mixing,182.59,Gram
+BS-S.inc-16395-A-(Bulk),Paint Matt agent(Matt),Paint Matt Agent,91.3,Gram
+BS-S.inc-16395-A-(Bulk),Paint Harnder,Paint Harnder,91.3,Gram
+BS-S.inc-16395-A-(Bulk),Paint Thinner,Paint Thinner,73.91,Gram
+BS-S.inc-16395-A-(Bulk),Paint Binder(Gloss),Paint Binder,0,Gram
+BS-S.inc-16395-B-(Bulk),Paint Epoxy Primer,Epoxy Set,311.7,Gram
+BS-S.inc-16395-B-(Bulk),Epoxy Thinner,Epoxy Set,65.85,Gram
+BS-S.inc-16395-B-(Bulk),Epoxy Hardner,Epoxy Set,61.46,Gram
+BS-S.inc-16395-B-(Bulk),Paint Mixing,Paint Mixing,100.19,Gram
+BS-S.inc-16395-B-(Bulk),Paint Matt agent(Matt),Paint Matt Agent,50.09,Gram
+BS-S.inc-16395-B-(Bulk),Paint Harnder,Paint Harnder,50.09,Gram
+BS-S.inc-16395-B-(Bulk),Paint Thinner,Paint Thinner,40.55,Gram
+BS-S.inc-16395-B-(Bulk),Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16372,Paint Epoxy Primer,Epoxy Set,180.73,Gram
+BS-SI-16372,Epoxy Thinner,Epoxy Set,38.18,Gram
+BS-SI-16372,Epoxy Hardner,Epoxy Set,35.64,Gram
+BS-SI-16372,Paint Mixing,Paint Mixing,58.09,Gram
+BS-SI-16372,Paint Matt agent(Matt),Paint Matt Agent,29.04,Gram
+BS-SI-16372,Paint Harnder,Paint Harnder,29.04,Gram
+BS-SI-16372,Paint Thinner,Paint Thinner,23.51,Gram
+BS-SI-16372,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16279-A,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16279-A,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16279-A,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16279-A,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16279-A,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16279-A,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16279-A,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16279-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16279-B,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16279-B,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16279-B,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16279-B,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16279-B,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16279-B,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16279-B,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16279-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16279-C,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16279-C,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16279-C,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16279-C,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16279-C,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16279-C,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16279-C,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16279-C,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16279-D,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16279-D,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16279-D,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16279-D,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16279-D,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16279-D,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16279-D,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16279-D,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16279-E,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16279-E,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16279-E,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16279-E,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16279-E,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16279-E,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16279-E,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16279-E,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16279-F,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16279-F,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16279-F,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16279-F,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16279-F,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16279-F,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16279-F,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16279-F,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16279-G,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16279-G,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16279-G,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16279-G,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16279-G,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16279-G,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16279-G,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16279-G,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16390,Paint Epoxy Primer,Epoxy Set,181.83,Gram
+BS-ET-16390,Epoxy Thinner,Epoxy Set,38.41,Gram
+BS-ET-16390,Epoxy Hardner,Epoxy Set,35.85,Gram
+BS-ET-16390,Paint Mixing,Paint Mixing,58.44,Gram
+BS-ET-16390,Paint Matt agent(Matt),Paint Matt Agent,29.22,Gram
+BS-ET-16390,Paint Harnder,Paint Harnder,29.22,Gram
+BS-ET-16390,Paint Thinner,Paint Thinner,23.66,Gram
+BS-ET-16390,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-313,Paint Epoxy Primer,Epoxy Set,361.79,Gram
+BS-LHET-313,Epoxy Thinner,Epoxy Set,76.43,Gram
+BS-LHET-313,Epoxy Hardner,Epoxy Set,71.34,Gram
+BS-LHET-313,Paint Mixing,Paint Mixing,116.28,Gram
+BS-LHET-313,Paint Matt agent(Matt),Paint Matt Agent,58.14,Gram
+BS-LHET-313,Paint Harnder,Paint Harnder,58.14,Gram
+BS-LHET-313,Paint Thinner,Paint Thinner,47.07,Gram
+BS-LHET-313,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16388,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16388,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16388,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16388,Paint Mixing,Paint Mixing,100,Gram
+BS-ET-16388,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16388,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16388,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16388,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16376,Paint Epoxy Primer,Epoxy Set,647.43,Gram
+BS-ET-16376,Epoxy Thinner,Epoxy Set,136.78,Gram
+BS-ET-16376,Epoxy Hardner,Epoxy Set,127.66,Gram
+BS-ET-16376,Paint Mixing,Paint Mixing,203.14,Gram
+BS-ET-16376,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-ET-16376,Paint Harnder,Paint Harnder,148.64,Gram
+BS-ET-16376,Paint Thinner,Paint Thinner,39.64,Gram
+BS-ET-16376,Paint Binder(Gloss),Paint Binder,104.05,Gram
+BS-US-2518,Paint Stain,Paint Stain,0.5,Sqft
+BS-US-2518,Paint Epoxy Primer,Epoxy Set,168.61,Gram
+BS-US-2518,Epoxy Thinner,Epoxy Set,35.62,Gram
+BS-US-2518,Epoxy Hardner,Epoxy Set,33.25,Gram
+BS-US-2518,Paint Mixing,Paint Mixing,58.06,Gram
+BS-US-2518,Paint Matt agent(Matt),Paint Matt Agent,18.06,Gram
+BS-US-2518,Paint Harnder,Paint Harnder,29.68,Gram
+BS-US-2518,Paint Thinner,Paint Thinner,11.61,Gram
+BS-US-2518,Paint Binder(Gloss),Paint Binder,11.61,Gram
+BS-SM-16283-(Bulk),Paint Epoxy Primer,Epoxy Set,2162.96,Gram
+BS-SM-16283-(Bulk),Epoxy Thinner,Epoxy Set,456.96,Gram
+BS-SM-16283-(Bulk),Epoxy Hardner,Epoxy Set,426.5,Gram
+BS-SM-16283-(Bulk),Paint Mixing,Paint Mixing,695.21,Gram
+BS-SM-16283-(Bulk),Paint Matt agent(Matt),Paint Matt Agent,347.6,Gram
+BS-SM-16283-(Bulk),Paint Harnder,Paint Harnder,347.6,Gram
+BS-SM-16283-(Bulk),Paint Thinner,Paint Thinner,281.39,Gram
+BS-SM-16283-(Bulk),Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-500073 A,Paint Epoxy Primer,Epoxy Set,2781.46,Gram
+BS-US-500073 A,Epoxy Thinner,Epoxy Set,587.63,Gram
+BS-US-500073 A,Epoxy Hardner,Epoxy Set,548.46,Gram
+BS-US-500073 A,Paint Mixing,Paint Mixing,957.86,Gram
+BS-US-500073 A,Paint Matt agent(Matt),Paint Matt Agent,298,Gram
+BS-US-500073 A,Paint Harnder,Paint Harnder,489.57,Gram
+BS-US-500073 A,Paint Thinner,Paint Thinner,191.57,Gram
+BS-US-500073 A,Paint Binder(Gloss),Paint Binder,191.57,Gram
+BS-US-500073 B,Paint Epoxy Primer,Epoxy Set,5693.39,Gram
+BS-US-500073 B,Epoxy Thinner,Epoxy Set,1202.83,Gram
+BS-US-500073 B,Epoxy Hardner,Epoxy Set,1122.64,Gram
+BS-US-500073 B,Paint Mixing,Paint Mixing,1960.65,Gram
+BS-US-500073 B,Paint Matt agent(Matt),Paint Matt Agent,609.98,Gram
+BS-US-500073 B,Paint Harnder,Paint Harnder,1002.11,Gram
+BS-US-500073 B,Paint Thinner,Paint Thinner,392.13,Gram
+BS-US-500073 B,Paint Binder(Gloss),Paint Binder,392.13,Gram
+BS-US-500073 C,Paint Epoxy Primer,Epoxy Set,3869.68,Gram
+BS-US-500073 C,Epoxy Thinner,Epoxy Set,817.54,Gram
+BS-US-500073 C,Epoxy Hardner,Epoxy Set,763.04,Gram
+BS-US-500073 C,Paint Mixing,Paint Mixing,1332.61,Gram
+BS-US-500073 C,Paint Matt agent(Matt),Paint Matt Agent,414.59,Gram
+BS-US-500073 C,Paint Harnder,Paint Harnder,681.11,Gram
+BS-US-500073 C,Paint Thinner,Paint Thinner,266.52,Gram
+BS-US-500073 C,Paint Binder(Gloss),Paint Binder,266.52,Gram
+BS-US-500073 D,Paint Epoxy Primer,Epoxy Set,3316.81,Gram
+BS-US-500073 D,Epoxy Thinner,Epoxy Set,700.73,Gram
+BS-US-500073 D,Epoxy Hardner,Epoxy Set,654.02,Gram
+BS-US-500073 D,Paint Mixing,Paint Mixing,1142.22,Gram
+BS-US-500073 D,Paint Matt agent(Matt),Paint Matt Agent,355.36,Gram
+BS-US-500073 D,Paint Harnder,Paint Harnder,583.8,Gram
+BS-US-500073 D,Paint Thinner,Paint Thinner,228.44,Gram
+BS-US-500073 D,Paint Binder(Gloss),Paint Binder,228.44,Gram
+BS-US-500073 E,Paint Epoxy Primer,Epoxy Set,657.45,Gram
+BS-US-500073 E,Epoxy Thinner,Epoxy Set,138.9,Gram
+BS-US-500073 E,Epoxy Hardner,Epoxy Set,129.64,Gram
+BS-US-500073 E,Paint Mixing,Paint Mixing,226.41,Gram
+BS-US-500073 E,Paint Matt agent(Matt),Paint Matt Agent,70.44,Gram
+BS-US-500073 E,Paint Harnder,Paint Harnder,115.72,Gram
+BS-US-500073 E,Paint Thinner,Paint Thinner,45.28,Gram
+BS-US-500073 E,Paint Binder(Gloss),Paint Binder,45.28,Gram
+BS-US-500073 F,Paint Epoxy Primer,Epoxy Set,302.5,Gram
+BS-US-500073 F,Epoxy Thinner,Epoxy Set,63.91,Gram
+BS-US-500073 F,Epoxy Hardner,Epoxy Set,59.65,Gram
+BS-US-500073 F,Paint Mixing,Paint Mixing,104.17,Gram
+BS-US-500073 F,Paint Matt agent(Matt),Paint Matt Agent,32.41,Gram
+BS-US-500073 F,Paint Harnder,Paint Harnder,53.24,Gram
+BS-US-500073 F,Paint Thinner,Paint Thinner,20.83,Gram
+BS-US-500073 F,Paint Binder(Gloss),Paint Binder,20.83,Gram
+BS-US-500073 G,Paint Epoxy Primer,Epoxy Set,368.29,Gram
+BS-US-500073 G,Epoxy Thinner,Epoxy Set,77.81,Gram
+BS-US-500073 G,Epoxy Hardner,Epoxy Set,72.62,Gram
+BS-US-500073 G,Paint Mixing,Paint Mixing,126.83,Gram
+BS-US-500073 G,Paint Matt agent(Matt),Paint Matt Agent,39.46,Gram
+BS-US-500073 G,Paint Harnder,Paint Harnder,64.82,Gram
+BS-US-500073 G,Paint Thinner,Paint Thinner,25.37,Gram
+BS-US-500073 G,Paint Binder(Gloss),Paint Binder,25.37,Gram
+BS-US-500073 H,Paint Epoxy Primer,Epoxy Set,187.78,Gram
+BS-US-500073 H,Epoxy Thinner,Epoxy Set,39.67,Gram
+BS-US-500073 H,Epoxy Hardner,Epoxy Set,37.03,Gram
+BS-US-500073 H,Paint Mixing,Paint Mixing,64.67,Gram
+BS-US-500073 H,Paint Matt agent(Matt),Paint Matt Agent,20.12,Gram
+BS-US-500073 H,Paint Harnder,Paint Harnder,33.05,Gram
+BS-US-500073 H,Paint Thinner,Paint Thinner,12.93,Gram
+BS-US-500073 H,Paint Binder(Gloss),Paint Binder,12.93,Gram
+BS-SM-16230,Paint Epoxy Primer,Epoxy Set,2265.94,Gram
+BS-SM-16230,Epoxy Thinner,Epoxy Set,478.72,Gram
+BS-SM-16230,Epoxy Hardner,Epoxy Set,446.8,Gram
+BS-SM-16230,Paint Mixing,Paint Mixing,728.31,Gram
+BS-SM-16230,Paint Matt agent(Matt),Paint Matt Agent,364.15,Gram
+BS-SM-16230,Paint Harnder,Paint Harnder,364.15,Gram
+BS-SM-16230,Paint Thinner,Paint Thinner,294.79,Gram
+BS-SM-16230,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SM-16311,Paint Epoxy Primer,Epoxy Set,365.42,Gram
+BS-SM-16311,Epoxy Thinner,Epoxy Set,77.2,Gram
+BS-SM-16311,Epoxy Hardner,Epoxy Set,72.06,Gram
+BS-SM-16311,Paint Mixing,Paint Mixing,197.45,Gram
+BS-SM-16311,Paint Matt agent(Matt),Paint Matt Agent,58.73,Gram
+BS-SM-16311,Paint Harnder,Paint Harnder,58.73,Gram
+BS-SM-16311,Paint Thinner,Paint Thinner,47.54,Gram
+BS-SM-16311,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16128,Paint Epoxy Primer,Epoxy Set,2406.66,Gram
+BS-ET-16128,Epoxy Thinner,Epoxy Set,508.45,Gram
+BS-ET-16128,Epoxy Hardner,Epoxy Set,474.55,Gram
+BS-ET-16128,Paint Mixing,Paint Mixing,773.54,Gram
+BS-ET-16128,Paint Matt agent(Matt),Paint Matt Agent,386.77,Gram
+BS-ET-16128,Paint Harnder,Paint Harnder,386.77,Gram
+BS-ET-16128,Paint Thinner,Paint Thinner,313.1,Gram
+BS-ET-16128,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16372,Paint Epoxy Primer,Epoxy Set,180.45,Gram
+BS-ET-16372,Epoxy Thinner,Epoxy Set,38.12,Gram
+BS-ET-16372,Epoxy Hardner,Epoxy Set,35.58,Gram
+BS-ET-16372,Paint Mixing,Paint Mixing,58,Gram
+BS-ET-16372,Paint Matt agent(Matt),Paint Matt Agent,29,Gram
+BS-ET-16372,Paint Harnder,Paint Harnder,29,Gram
+BS-ET-16372,Paint Thinner,Paint Thinner,23.48,Gram
+BS-ET-16372,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16375,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16375,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16375,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16375,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16375,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16375,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16375,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16375,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16385,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16385,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16385,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16385,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16385,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16385,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16385,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16385,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16389,Paint Epoxy Primer,Epoxy Set,570.67,Gram
+BS-ET-16389,Epoxy Thinner,Epoxy Set,120.56,Gram
+BS-ET-16389,Epoxy Hardner,Epoxy Set,112.53,Gram
+BS-ET-16389,Paint Mixing,Paint Mixing,183.42,Gram
+BS-ET-16389,Paint Matt agent(Matt),Paint Matt Agent,91.71,Gram
+BS-ET-16389,Paint Harnder,Paint Harnder,91.71,Gram
+BS-ET-16389,Paint Thinner,Paint Thinner,74.24,Gram
+BS-ET-16389,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-327-A,Paint Epoxy Primer,Epoxy Set,383.5,Gram
+BS-LHET-327-A,Epoxy Thinner,Epoxy Set,81.02,Gram
+BS-LHET-327-A,Epoxy Hardner,Epoxy Set,75.62,Gram
+BS-LHET-327-A,Paint Mixing,Paint Mixing,123.26,Gram
+BS-LHET-327-A,Paint Matt agent(Matt),Paint Matt Agent,61.63,Gram
+BS-LHET-327-A,Paint Harnder,Paint Harnder,61.63,Gram
+BS-LHET-327-A,Paint Thinner,Paint Thinner,49.89,Gram
+BS-LHET-327-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-327-B,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-LHET-327-B,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-LHET-327-B,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-LHET-327-B,Paint Mixing,Paint Mixing,100,Gram
+BS-LHET-327-B,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-LHET-327-B,Paint Harnder,Paint Harnder,28.8,Gram
+BS-LHET-327-B,Paint Thinner,Paint Thinner,23.31,Gram
+BS-LHET-327-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-US-2520,Paint Epoxy Primer,Epoxy Set,168.61,Gram
+BS-US-2520,Epoxy Thinner,Epoxy Set,35.62,Gram
+BS-US-2520,Epoxy Hardner,Epoxy Set,33.25,Gram
+BS-US-2520,Paint Mixing,Paint Mixing,100,Gram
+BS-US-2520,Paint Matt agent(Matt),Paint Matt Agent,18.06,Gram
+BS-US-2520,Paint Harnder,Paint Harnder,29.68,Gram
+BS-US-2520,Paint Thinner,Paint Thinner,11.61,Gram
+BS-US-2520,Paint Binder(Gloss),Paint Binder,11.61,Gram
+BS-SI-16238,Paint Epoxy Primer,Epoxy Set,1325.52,Gram
+BS-SI-16238,Epoxy Thinner,Epoxy Set,280.04,Gram
+BS-SI-16238,Epoxy Hardner,Epoxy Set,261.37,Gram
+BS-SI-16238,Paint Mixing,Paint Mixing,426.04,Gram
+BS-SI-16238,Paint Matt agent(Matt),Paint Matt Agent,213.02,Gram
+BS-SI-16238,Paint Harnder,Paint Harnder,213.02,Gram
+BS-SI-16238,Paint Thinner,Paint Thinner,172.45,Gram
+BS-SI-16238,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16345,Paint Epoxy Primer,Epoxy Set,413.47,Gram
+BS-SI-16345,Epoxy Thinner,Epoxy Set,87.35,Gram
+BS-SI-16345,Epoxy Hardner,Epoxy Set,81.53,Gram
+BS-SI-16345,Paint Mixing,Paint Mixing,129.73,Gram
+BS-SI-16345,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-SI-16345,Paint Harnder,Paint Harnder,94.93,Gram
+BS-SI-16345,Paint Thinner,Paint Thinner,25.31,Gram
+BS-SI-16345,Paint Binder(Gloss),Paint Binder,66.45,Gram
+BS-US-2271 RE,Paint Epoxy Primer,Epoxy Set,166.95,Gram
+BS-US-2271 RE,Epoxy Thinner,Epoxy Set,35.27,Gram
+BS-US-2271 RE,Epoxy Hardner,Epoxy Set,32.92,Gram
+BS-US-2271 RE,Paint Mixing,Paint Mixing,57.49,Gram
+BS-US-2271 RE,Paint Matt agent(Matt),Paint Matt Agent,17.89,Gram
+BS-US-2271 RE,Paint Harnder,Paint Harnder,29.39,Gram
+BS-US-2271 RE,Paint Thinner,Paint Thinner,11.5,Gram
+BS-US-2271 RE,Paint Binder(Gloss),Paint Binder,11.5,Gram
+BS-QS-16422-A,Paint Epoxy Primer,Epoxy Set,1013.62,Gram
+BS-QS-16422-A,Epoxy Thinner,Epoxy Set,214.15,Gram
+BS-QS-16422-A,Epoxy Hardner,Epoxy Set,199.87,Gram
+BS-QS-16422-A,Paint Mixing,Paint Mixing,325.79,Gram
+BS-QS-16422-A,Paint Matt agent(Matt),Paint Matt Agent,162.9,Gram
+BS-QS-16422-A,Paint Harnder,Paint Harnder,162.9,Gram
+BS-QS-16422-A,Paint Thinner,Paint Thinner,131.87,Gram
+BS-QS-16422-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16356,Paint Epoxy Primer,Epoxy Set,457.11,Gram
+BS-ET-16356,Epoxy Thinner,Epoxy Set,96.57,Gram
+BS-ET-16356,Epoxy Hardner,Epoxy Set,90.13,Gram
+BS-ET-16356,Paint Mixing,Paint Mixing,146.92,Gram
+BS-ET-16356,Paint Matt agent(Matt),Paint Matt Agent,73.46,Gram
+BS-ET-16356,Paint Harnder,Paint Harnder,73.46,Gram
+BS-ET-16356,Paint Thinner,Paint Thinner,59.47,Gram
+BS-ET-16356,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16384,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-ET-16384,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-ET-16384,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-ET-16384,Paint Mixing,Paint Mixing,57.59,Gram
+BS-ET-16384,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-ET-16384,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16384,Paint Thinner,Paint Thinner,23.31,Gram
+BS-ET-16384,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16401,Paint Epoxy Primer,Epoxy Set,166.57,Gram
+BS-ET-16401,Epoxy Thinner,Epoxy Set,32.81,Gram
+BS-ET-16401,Epoxy Hardner,Epoxy Set,50.47,Gram
+BS-ET-16401,Paint Mixing,Paint Mixing,58.42,Gram
+BS-ET-16401,Paint Matt agent(Matt),Paint Matt Agent,32.09,Gram
+BS-ET-16401,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16401,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16401,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16412-A,Paint Epoxy Primer,Epoxy Set,166.57,Gram
+BS-ET-16412-A,Epoxy Thinner,Epoxy Set,32.81,Gram
+BS-ET-16412-A,Epoxy Hardner,Epoxy Set,50.47,Gram
+BS-ET-16412-A,Paint Mixing,Paint Mixing,58.42,Gram
+BS-ET-16412-A,Paint Matt agent(Matt),Paint Matt Agent,32.09,Gram
+BS-ET-16412-A,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16412-A,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16412-A,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16414,Paint Epoxy Primer,Epoxy Set,185.14,Gram
+BS-ET-16414,Epoxy Thinner,Epoxy Set,39.11,Gram
+BS-ET-16414,Epoxy Hardner,Epoxy Set,36.51,Gram
+BS-ET-16414,Paint Mixing,Paint Mixing,58.09,Gram
+BS-ET-16414,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-ET-16414,Paint Harnder,Paint Harnder,42.5,Gram
+BS-ET-16414,Paint Thinner,Paint Thinner,11.33,Gram
+BS-ET-16414,Paint Binder(Gloss),Paint Binder,29.75,Gram
+BS-ET-16415,Paint Epoxy Primer,Epoxy Set,469.43,Gram
+BS-ET-16415,Epoxy Thinner,Epoxy Set,92.46,Gram
+BS-ET-16415,Epoxy Hardner,Epoxy Set,142.25,Gram
+BS-ET-16415,Paint Mixing,Paint Mixing,164.63,Gram
+BS-ET-16415,Paint Matt agent(Matt),Paint Matt Agent,90.43,Gram
+BS-ET-16415,Paint Harnder,Paint Harnder,81.16,Gram
+BS-ET-16415,Paint Thinner,Paint Thinner,46.37,Gram
+BS-ET-16415,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16412-C,Paint Epoxy Primer,Epoxy Set,166.57,Gram
+BS-ET-16412-C,Epoxy Thinner,Epoxy Set,32.81,Gram
+BS-ET-16412-C,Epoxy Hardner,Epoxy Set,50.47,Gram
+BS-ET-16412-C,Paint Mixing,Paint Mixing,58.42,Gram
+BS-ET-16412-C,Paint Matt agent(Matt),Paint Matt Agent,32.09,Gram
+BS-ET-16412-C,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16412-C,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16412-C,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-ET-16412-B,Paint Epoxy Primer,Epoxy Set,166.57,Gram
+BS-ET-16412-B,Epoxy Thinner,Epoxy Set,32.81,Gram
+BS-ET-16412-B,Epoxy Hardner,Epoxy Set,50.47,Gram
+BS-ET-16412-B,Paint Mixing,Paint Mixing,58.42,Gram
+BS-ET-16412-B,Paint Matt agent(Matt),Paint Matt Agent,32.09,Gram
+BS-ET-16412-B,Paint Harnder,Paint Harnder,28.8,Gram
+BS-ET-16412-B,Paint Thinner,Paint Thinner,16.46,Gram
+BS-ET-16412-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-LHET-329,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-LHET-329,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-LHET-329,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-LHET-329,Paint Mixing,Paint Mixing,57.59,Gram
+BS-LHET-329,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-LHET-329,Paint Harnder,Paint Harnder,28.8,Gram
+BS-LHET-329,Paint Thinner,Paint Thinner,23.31,Gram
+BS-LHET-329,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16426,Paint Epoxy Primer,Epoxy Set,311.43,Gram
+BS-SI-16426,Epoxy Thinner,Epoxy Set,65.79,Gram
+BS-SI-16426,Epoxy Hardner,Epoxy Set,61.41,Gram
+BS-SI-16426,Paint Mixing,Paint Mixing,100.1,Gram
+BS-SI-16426,Paint Matt agent(Matt),Paint Matt Agent,50.05,Gram
+BS-SI-16426,Paint Harnder,Paint Harnder,50.05,Gram
+BS-SI-16426,Paint Thinner,Paint Thinner,40.52,Gram
+BS-SI-16426,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16392,Paint Epoxy Primer,Epoxy Set,210.92,Gram
+BS-SI-16392,Epoxy Thinner,Epoxy Set,44.56,Gram
+BS-SI-16392,Epoxy Hardner,Epoxy Set,41.59,Gram
+BS-SI-16392,Paint Mixing,Paint Mixing,100,Gram
+BS-SI-16392,Paint Matt agent(Matt),Paint Matt Agent,33.9,Gram
+BS-SI-16392,Paint Harnder,Paint Harnder,33.9,Gram
+BS-SI-16392,Paint Thinner,Paint Thinner,27.44,Gram
+BS-SI-16392,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16393,Paint Epoxy Primer,Epoxy Set,916.43,Gram
+BS-SI-16393,Epoxy Thinner,Epoxy Set,193.61,Gram
+BS-SI-16393,Epoxy Hardner,Epoxy Set,180.7,Gram
+BS-SI-16393,Paint Mixing,Paint Mixing,287.54,Gram
+BS-SI-16393,Paint Matt agent(Matt),Paint Matt Agent,0,Gram
+BS-SI-16393,Paint Harnder,Paint Harnder,210.39,Gram
+BS-SI-16393,Paint Thinner,Paint Thinner,56.11,Gram
+BS-SI-16393,Paint Binder(Gloss),Paint Binder,147.28,Gram
+BS-SI-16405,Paint Epoxy Primer,Epoxy Set,853.58,Gram
+BS-SI-16405,Epoxy Thinner,Epoxy Set,180.33,Gram
+BS-SI-16405,Epoxy Hardner,Epoxy Set,168.31,Gram
+BS-SI-16405,Paint Mixing,Paint Mixing,274.35,Gram
+BS-SI-16405,Paint Matt agent(Matt),Paint Matt Agent,137.18,Gram
+BS-SI-16405,Paint Harnder,Paint Harnder,137.18,Gram
+BS-SI-16405,Paint Thinner,Paint Thinner,111.05,Gram
+BS-SI-16405,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16407,Paint Epoxy Primer,Epoxy Set,179.19,Gram
+BS-SI-16407,Epoxy Thinner,Epoxy Set,37.86,Gram
+BS-SI-16407,Epoxy Hardner,Epoxy Set,35.33,Gram
+BS-SI-16407,Paint Mixing,Paint Mixing,100,Gram
+BS-SI-16407,Paint Matt agent(Matt),Paint Matt Agent,28.8,Gram
+BS-SI-16407,Paint Harnder,Paint Harnder,28.8,Gram
+BS-SI-16407,Paint Thinner,Paint Thinner,23.31,Gram
+BS-SI-16407,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16326,Paint Epoxy Primer,Epoxy Set,1714.08,Gram
+BS-SI-16326,Epoxy Thinner,Epoxy Set,362.13,Gram
+BS-SI-16326,Epoxy Hardner,Epoxy Set,337.99,Gram
+BS-SI-16326,Paint Mixing,Paint Mixing,550.93,Gram
+BS-SI-16326,Paint Matt agent(Matt),Paint Matt Agent,275.47,Gram
+BS-SI-16326,Paint Harnder,Paint Harnder,275.47,Gram
+BS-SI-16326,Paint Thinner,Paint Thinner,223,Gram
+BS-SI-16326,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-QS-16421-B,Paint Epoxy Primer,Epoxy Set,782.97,Gram
+BS-QS-16421-B,Epoxy Thinner,Epoxy Set,165.42,Gram
+BS-QS-16421-B,Epoxy Hardner,Epoxy Set,154.39,Gram
+BS-QS-16421-B,Paint Mixing,Paint Mixing,251.66,Gram
+BS-QS-16421-B,Paint Matt agent(Matt),Paint Matt Agent,125.83,Gram
+BS-QS-16421-B,Paint Harnder,Paint Harnder,125.83,Gram
+BS-QS-16421-B,Paint Thinner,Paint Thinner,101.86,Gram
+BS-QS-16421-B,Paint Binder(Gloss),Paint Binder,0,Gram
+BS-SI-16436-(Bulk),Paint Epoxy Primer,Epoxy Set,4017.68,Gram
+BS-SI-16436-(Bulk),Epoxy Thinner,Epoxy Set,848.81,Gram
+BS-SI-16436-(Bulk),Epoxy Hardner,Epoxy Set,792.22,Gram
+BS-SI-16436-(Bulk),Paint Mixing,Paint Mixing,1291.34,Gram
+BS-SI-16436-(Bulk),Paint Matt agent(Matt),Paint Matt Agent,645.67,Gram
+BS-SI-16436-(Bulk),Paint Harnder,Paint Harnder,645.67,Gram
+BS-SI-16436-(Bulk),Paint Thinner,Paint Thinner,522.69,Gram
+BS-SI-16436-(Bulk),Paint Binder(Gloss),Paint Binder,0,Gram

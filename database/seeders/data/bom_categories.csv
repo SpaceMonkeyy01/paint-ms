@@ -1,0 +1,12 @@
+name,issue_pool,clubbed,uom,notes
+Paint Epoxy Primer,Epoxy Set,1,Gram,Clubbed: primer+thinner+hardner issue as one set (code 2158)
+Epoxy Thinner,Epoxy Set,1,Gram,Clubbed into Epoxy Set
+Epoxy Hardner,Epoxy Set,1,Gram,Clubbed into Epoxy Set
+Paint Mixing,Paint Mixing,0,Gram,Split across any number of tinting colours
+Paint Matt agent(Matt),Paint Matt Agent,0,Gram,
+Paint Binder(Gloss),Paint Binder,0,Gram,
+Paint Harnder,Paint Harnder,0,Gram,Choose fast / slow / PU / lacquer hardner
+Paint Thinner,Paint Thinner,0,Gram,Choose fast / slow / local thinner
+Paint Stain,Paint Stain,0,Sqft,
+Miscellaneous,Miscellaneous,0,Nos,Free issue - not validated against BOM
+Paint Miscellaneous cost,IGNORE,0,Nos,"Cost flag in BOM, not a material - never issued"
