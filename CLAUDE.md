@@ -13,8 +13,11 @@ costing) and **Paint Consumption Tool** (station: scale-weight consumption, g→
 
 ## Domain rules — do not violate
 
-1. **Stock is derived, never stored.** `stock_on_hand = SUM(transactions.qty)` per item. No `stock`
-   column on `items`, no cached totals. Use `App\Services\StockService`.
+1. **Stock is derived, never stored.** `stock_on_hand = SUM(transactions.qty)` per item over
+   **stock-moving types** (`opening`/`receipt`/`issue`/`adjust` — `TransactionType::affectsStock()`).
+   `consumption`/`wastage` are scale readings of material *already issued* to an order; counting them
+   would deduct the same paint twice. No `stock` column on `items`, no cached totals. Use
+   `App\Services\StockService`.
 2. **`transactions.qty` is signed.** `opening`/`receipt`/`adjust(+)` add; `issue`/`consumption`/
    `wastage`/`adjust(−)` remove. `TransactionType::sign()` is the source of truth. Never store abs values
    for issues.

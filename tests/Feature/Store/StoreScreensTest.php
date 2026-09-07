@@ -2,13 +2,7 @@
 
 use App\Enums\Role;
 use App\Enums\TransactionType;
-use App\Models\User;
 use App\Services\LedgerService;
-
-function makeUser(Role $role): User
-{
-    return User::factory()->create(['role' => $role]);
-}
 
 test('guests are redirected to login', function () {
     $this->get('/store/stock')->assertRedirect('/login');

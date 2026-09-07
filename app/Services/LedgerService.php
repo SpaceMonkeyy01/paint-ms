@@ -120,6 +120,68 @@ class LedgerService
         });
     }
 
+    /**
+     * Record a station session: one consumption row per slot reading
+     * (qty = start_wt − end_wt) plus a wastage row where a container gap
+     * was entered. Atomic across all slots.
+     *
+     * @param array<int, array{slot: string, item_id: int, start_wt: float, end_wt: float,
+     *                         wastage?: float|null, colour_batch_id?: int|null}> $readings
+     * @return array<int, Transaction>
+     */
+    public function consumeSlots(Order $order, array $readings, ?User $enteredBy = null): array
+    {
+        $items = Item::whereIn('id', array_column($readings, 'item_id'))->get()->keyBy('id');
+
+        return DB::transaction(function () use ($order, $readings, $enteredBy, $items) {
+            $txns = [];
+            foreach ($readings as $r) {
+                $item = $items[$r['item_id']];
+                $consumed = round((float) $r['start_wt'] - (float) $r['end_wt'], 3);
+                $wastage = round((float) ($r['wastage'] ?? 0), 3);
+
+                if ($consumed < 0) {
+                    throw ValidationException::withMessages([
+                        'readings' => "{$r['slot']}: end weight is above start weight.",
+                    ]);
+                }
+                if ($consumed == 0.0 && $wastage == 0.0) {
+                    throw ValidationException::withMessages([
+                        'readings' => "{$r['slot']}: nothing consumed and no wastage — remove the slot.",
+                    ]);
+                }
+
+                if ($consumed > 0) {
+                    $txns[] = $this->record(
+                        type: TransactionType::Consumption,
+                        item: $item,
+                        qty: $consumed,
+                        order: $order,
+                        enteredBy: $enteredBy,
+                        slot: $r['slot'],
+                        startWt: (float) $r['start_wt'],
+                        endWt: (float) $r['end_wt'],
+                        colourBatchId: $r['colour_batch_id'] ?? null,
+                    );
+                }
+                if ($wastage > 0) {
+                    $txns[] = $this->record(
+                        type: TransactionType::Wastage,
+                        item: $item,
+                        qty: $wastage,
+                        order: $order,
+                        enteredBy: $enteredBy,
+                        slot: $r['slot'],
+                        colourBatchId: $r['colour_batch_id'] ?? null,
+                        remarks: 'container gap',
+                    );
+                }
+            }
+
+            return $txns;
+        });
+    }
+
     /** Remaining BOM allowance for a pool on an order: allocated − already issued (grams). */
     public function remainingAllowance(Order $order, string $pool): float
     {

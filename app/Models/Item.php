@@ -15,10 +15,12 @@ class Item extends Model
         return $this->hasMany(Transaction::class);
     }
 
-    /** Stock on hand = SUM(qty). Use StockService for bulk queries. */
+    /** Stock on hand = SUM(qty) over stock-moving types. Use StockService for bulk queries. */
     public function stockOnHand(): float
     {
-        return (float) $this->transactions()->sum('qty');
+        return (float) $this->transactions()
+            ->whereIn('type', \App\Enums\TransactionType::stockMoving())
+            ->sum('qty');
     }
 
     public function gramsToLitres(float $grams): ?float

@@ -20,4 +20,23 @@ enum TransactionType: string
             self::Adjust => 0,
         };
     }
+
+    /**
+     * Whether this type moves sub-warehouse stock. Consumption and wastage are
+     * scale readings of material *already issued* to an order — counting them
+     * against item stock would deduct the same paint twice.
+     */
+    public function affectsStock(): bool
+    {
+        return ! in_array($this, [self::Consumption, self::Wastage], true);
+    }
+
+    /** @return string[] type values that move stock, for whereIn() filters */
+    public static function stockMoving(): array
+    {
+        return array_values(array_map(
+            fn (self $c) => $c->value,
+            array_filter(self::cases(), fn (self $c) => $c->affectsStock()),
+        ));
+    }
 }

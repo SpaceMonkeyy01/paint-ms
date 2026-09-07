@@ -2,46 +2,7 @@
 
 use App\Enums\IssueType;
 use App\Enums\TransactionType;
-use App\Models\BomLine;
-use App\Models\Item;
-use App\Models\Order;
-use App\Services\LedgerService;
 use Illuminate\Validation\ValidationException;
-
-function makeItem(array $attrs = []): Item
-{
-    return Item::create(array_merge([
-        'code' => 'T-'.fake()->unique()->numerify('####'),
-        'name' => 'Test Paint '.fake()->unique()->word(),
-        'bom_category' => 'Paint Mixing',
-        'issue_pool' => 'Paint Mixing',
-        'uom' => 'Gram',
-        'rate_per_uom' => 2.5,
-        'min_level' => 100,
-        'is_active' => true,
-    ], $attrs));
-}
-
-function makeOrder(array $pools = ['Paint Mixing' => 500.0]): Order
-{
-    $order = Order::create(['code' => 'BS-TEST-'.fake()->unique()->numerify('####')]);
-    foreach ($pools as $pool => $qty) {
-        BomLine::create([
-            'order_id' => $order->id,
-            'bom_category' => $pool,
-            'issue_pool' => $pool,
-            'allocated_qty' => $qty,
-            'uom' => 'Gram',
-        ]);
-    }
-
-    return $order;
-}
-
-function ledger(): LedgerService
-{
-    return app(LedgerService::class);
-}
 
 test('issue writes signed negative qty and moves stock on hand', function () {
     $item = makeItem();

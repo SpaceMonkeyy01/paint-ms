@@ -52,6 +52,14 @@ export default function AuthenticatedLayout({ header, children }) {
                                         </NavLink>
                                     </>
                                 )}
+                                {['admin', 'painter'].includes(user.role) && (
+                                    <NavLink
+                                        href={route('station.consume.index')}
+                                        active={route().current('station.*')}
+                                    >
+                                        Station
+                                    </NavLink>
+                                )}
                             </div>
                         </div>
 
@@ -177,6 +185,14 @@ export default function AuthenticatedLayout({ header, children }) {
                                     Receipts
                                 </ResponsiveNavLink>
                             </>
+                        )}
+                        {['admin', 'painter'].includes(user.role) && (
+                            <ResponsiveNavLink
+                                href={route('station.consume.index')}
+                                active={route().current('station.*')}
+                            >
+                                Station
+                            </ResponsiveNavLink>
                         )}
                     </div>
 

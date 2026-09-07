@@ -11,10 +11,12 @@ use Illuminate\Support\Facades\DB;
 
 class StockService
 {
-    /** item_id => stock on hand (grams), one query. */
+    /** item_id => stock on hand (grams), one query. Stock-moving types only —
+     *  consumption/wastage are order-side usage of already-issued material. */
     public function stockByItem(): Collection
     {
         return Transaction::query()
+            ->whereIn('type', TransactionType::stockMoving())
             ->select('item_id', DB::raw('SUM(qty) as qty'))
             ->groupBy('item_id')
             ->pluck('qty', 'item_id');

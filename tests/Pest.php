@@ -44,7 +44,43 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
+function makeUser(\App\Enums\Role $role): \App\Models\User
 {
-    // ..
+    return \App\Models\User::factory()->create(['role' => $role]);
+}
+
+function makeItem(array $attrs = []): \App\Models\Item
+{
+    return \App\Models\Item::create(array_merge([
+        'code' => 'T-'.fake()->unique()->numerify('####'),
+        'name' => 'Test Paint '.fake()->unique()->word(),
+        'bom_category' => 'Paint Mixing',
+        'issue_pool' => 'Paint Mixing',
+        'uom' => 'Gram',
+        'rate_per_uom' => 2.5,
+        'min_level' => 100,
+        'is_active' => true,
+    ], $attrs));
+}
+
+/** @param array<string, float> $pools issue_pool => allocated grams */
+function makeOrder(array $pools = ['Paint Mixing' => 500.0]): \App\Models\Order
+{
+    $order = \App\Models\Order::create(['code' => 'BS-TEST-'.fake()->unique()->numerify('####')]);
+    foreach ($pools as $pool => $qty) {
+        \App\Models\BomLine::create([
+            'order_id' => $order->id,
+            'bom_category' => $pool,
+            'issue_pool' => $pool,
+            'allocated_qty' => $qty,
+            'uom' => 'Gram',
+        ]);
+    }
+
+    return $order;
+}
+
+function ledger(): \App\Services\LedgerService
+{
+    return app(\App\Services\LedgerService::class);
 }
