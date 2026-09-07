@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\CostingController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Station\ColourBatchController;
 use App\Http\Controllers\Station\ConsumptionController;
@@ -35,6 +37,12 @@ Route::middleware(['auth', 'role:painter'])->prefix('station')->name('station.')
     Route::get('/{order}', [ConsumptionController::class, 'show'])->name('consume.show');
     Route::post('/{order}', [ConsumptionController::class, 'store'])->name('consume.store');
     Route::post('/{order}/colour-batch', [ColourBatchController::class, 'store'])->name('colour-batch.store');
+});
+
+Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/costing', [CostingController::class, 'index'])->name('costing.index');
+    Route::get('/costing/{order}', [CostingController::class, 'show'])->name('costing.show');
 });
 
 require __DIR__.'/auth.php';

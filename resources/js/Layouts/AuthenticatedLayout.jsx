@@ -60,6 +60,22 @@ export default function AuthenticatedLayout({ header, children }) {
                                         Station
                                     </NavLink>
                                 )}
+                                {user.role === 'admin' && (
+                                    <>
+                                        <NavLink
+                                            href={route('admin.dashboard')}
+                                            active={route().current('admin.dashboard')}
+                                        >
+                                            Overview
+                                        </NavLink>
+                                        <NavLink
+                                            href={route('admin.costing.index')}
+                                            active={route().current('admin.costing.*')}
+                                        >
+                                            Costing
+                                        </NavLink>
+                                    </>
+                                )}
                             </div>
                         </div>
 
@@ -193,6 +209,22 @@ export default function AuthenticatedLayout({ header, children }) {
                             >
                                 Station
                             </ResponsiveNavLink>
+                        )}
+                        {user.role === 'admin' && (
+                            <>
+                                <ResponsiveNavLink
+                                    href={route('admin.dashboard')}
+                                    active={route().current('admin.dashboard')}
+                                >
+                                    Overview
+                                </ResponsiveNavLink>
+                                <ResponsiveNavLink
+                                    href={route('admin.costing.index')}
+                                    active={route().current('admin.costing.*')}
+                                >
+                                    Costing
+                                </ResponsiveNavLink>
+                            </>
                         )}
                     </div>
 
