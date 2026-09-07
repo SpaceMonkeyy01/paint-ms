@@ -1,4 +1,4 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
+import ApplicationLogo, { BrandWordmark } from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
@@ -14,19 +14,19 @@ export default function AuthenticatedLayout({ header, children }) {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* paint swatch strip */}
-            <div className="h-1 bg-gradient-to-r from-indigo-600 via-sky-500 via-emerald-500 via-amber-400 to-rose-500" />
+            <div className="h-1 bg-gradient-to-r from-amber-500 via-orange-500 via-emerald-500 via-sky-500 to-indigo-600" />
             <nav className="border-b border-gray-200/70 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 justify-between">
                         <div className="flex">
                             <div className="flex shrink-0 items-center">
-                                <Link href="/" className="flex items-center gap-2">
-                                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-700 shadow-sm">
-                                        <ApplicationLogo className="h-5 w-5 fill-white" />
-                                    </span>
+                                <Link href="/" className="flex items-center gap-2.5">
+                                    <ApplicationLogo className="h-9 w-9" />
                                     <span className="hidden leading-tight md:block">
-                                        <span className="block text-sm font-bold tracking-tight text-gray-900">Paint MS</span>
-                                        <span className="block text-[10px] font-medium uppercase tracking-widest text-gray-400">BlueCascade</span>
+                                        <BrandWordmark />
+                                        <span className="mt-0.5 block text-[10px] font-medium uppercase tracking-widest text-gray-400">
+                                            Paint Management
+                                        </span>
                                     </span>
                                 </Link>
                             </div>
