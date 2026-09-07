@@ -6,9 +6,9 @@ const fmt = (g, dp = 0) =>
     Number(g).toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp });
 
 const STATUS_STYLE = {
-    OK: 'bg-green-100 text-green-700',
-    LOW: 'bg-amber-100 text-amber-700',
-    OUT: 'bg-red-100 text-red-700',
+    OK: 'bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-600/20',
+    LOW: 'bg-amber-50 text-amber-700 ring-1 ring-inset ring-amber-600/20',
+    OUT: 'bg-red-50 text-red-700 ring-1 ring-inset ring-red-600/20',
 };
 
 export default function Stock({ items }) {
@@ -41,7 +41,7 @@ export default function Stock({ items }) {
                         value={q}
                         onChange={(e) => setQ(e.target.value)}
                         placeholder="Search item or code"
-                        className="min-w-52 flex-1 rounded-lg border-gray-300 px-4 py-3 text-lg"
+                        className="min-w-52 flex-1 rounded-xl border-gray-200 px-4 py-3 text-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                     />
                     {['', 'OUT', 'LOW', 'OK'].map((s) => (
                         <button
@@ -56,10 +56,10 @@ export default function Stock({ items }) {
                     ))}
                 </div>
 
-                <div className="overflow-x-auto rounded-lg bg-white shadow">
+                <div className="overflow-x-auto rounded-xl border border-gray-200/70 bg-white shadow-sm">
                     <table className="min-w-full text-sm">
                         <thead>
-                            <tr className="border-b text-left text-gray-500">
+                            <tr className="border-b bg-gray-50/60 text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
                                 <th className="px-4 py-3">Item</th>
                                 <th className="px-3 py-3">Pool</th>
                                 <th className="px-3 py-3 text-right">On hand (g)</th>

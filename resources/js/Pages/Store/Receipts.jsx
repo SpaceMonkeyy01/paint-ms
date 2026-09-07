@@ -33,10 +33,10 @@ export default function Receipts({ items }) {
 
             <div className="mx-auto max-w-xl space-y-4 px-4 py-6">
                 {flash?.success && (
-                    <div className="rounded-lg bg-green-50 px-4 py-3 font-medium text-green-800">{flash.success}</div>
+                    <div className="rounded-xl bg-emerald-50 px-4 py-3 font-medium text-emerald-800 ring-1 ring-inset ring-emerald-600/20">{flash.success}</div>
                 )}
 
-                <form onSubmit={submit} className="space-y-3 rounded-lg bg-white p-4 shadow">
+                <form onSubmit={submit} className="space-y-3 rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                     <div className="flex gap-2">
                         {[['receipt', 'Receipt (+)'], ['adjust', 'Adjustment (±)']].map(([v, label]) => (
                             <button
@@ -111,7 +111,7 @@ export default function Receipts({ items }) {
                     <button
                         type="submit"
                         disabled={processing || !data.item_id || !data.grams}
-                        className="w-full rounded-lg bg-green-600 py-4 text-xl font-bold text-white disabled:opacity-40"
+                        className="w-full rounded-lg bg-emerald-600 py-4 text-xl font-bold text-white shadow-sm transition hover:bg-emerald-500 disabled:opacity-40"
                     >
                         {data.type === 'receipt' ? 'Record receipt' : 'Record adjustment'}
                     </button>

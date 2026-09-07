@@ -5,13 +5,13 @@ const fmt = (n, dp = 0) =>
     Number(n).toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp });
 
 const STATUS_STYLE = {
-    OK: 'bg-green-100 text-green-700',
-    LOW: 'bg-amber-100 text-amber-700',
-    OUT: 'bg-red-100 text-red-700',
+    OK: 'bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-600/20',
+    LOW: 'bg-amber-50 text-amber-700 ring-1 ring-inset ring-amber-600/20',
+    OUT: 'bg-red-50 text-red-700 ring-1 ring-inset ring-red-600/20',
 };
 
 const TYPE_STYLE = {
-    variance: 'bg-red-100 text-red-700',
+    variance: 'bg-red-50 text-red-700 ring-1 ring-inset ring-red-600/20',
     rework: 'bg-orange-100 text-orange-700',
     reissue: 'bg-sky-100 text-sky-700',
 };
@@ -32,7 +32,7 @@ export default function Dashboard({ stock, pendingIssue, exceptions }) {
                         ['Orders pending issue', pendingIssue.count, 'text-indigo-600'],
                         ['Stock value (Rs)', fmt(stock.total_value), 'text-gray-800'],
                     ].map(([label, value, colour]) => (
-                        <div key={label} className="rounded-lg bg-white p-4 shadow">
+                        <div key={label} className="rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                             <div className="text-sm text-gray-500">{label}</div>
                             <div className={`mt-1 text-3xl font-bold tabular-nums ${colour}`}>{value}</div>
                         </div>
@@ -41,7 +41,7 @@ export default function Dashboard({ stock, pendingIssue, exceptions }) {
 
                 <div className="grid gap-6 lg:grid-cols-2">
                     {/* stock health */}
-                    <div className="rounded-lg bg-white p-4 shadow">
+                    <div className="rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                         <div className="mb-2 flex items-baseline justify-between">
                             <div className="font-semibold text-gray-700">Stock health</div>
                             <Link href={route('store.stock')} className="text-sm text-indigo-600">full list →</Link>
@@ -66,7 +66,7 @@ export default function Dashboard({ stock, pendingIssue, exceptions }) {
                     </div>
 
                     {/* pending issue */}
-                    <div className="rounded-lg bg-white p-4 shadow">
+                    <div className="rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                         <div className="mb-2 flex items-baseline justify-between">
                             <div className="font-semibold text-gray-700">Orders pending issue</div>
                             <span className="text-sm text-gray-400">{pendingIssue.count} total</span>
@@ -85,7 +85,7 @@ export default function Dashboard({ stock, pendingIssue, exceptions }) {
                 </div>
 
                 {/* variance exceptions */}
-                <div className="rounded-lg bg-white p-4 shadow">
+                <div className="rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                     <div className="mb-2 font-semibold text-gray-700">Variance & repaint exceptions</div>
                     {exceptions.length === 0 ? (
                         <p className="py-4 text-center text-sm text-gray-400">No over-BOM or rework issues recorded yet.</p>
@@ -93,7 +93,7 @@ export default function Dashboard({ stock, pendingIssue, exceptions }) {
                         <div className="overflow-x-auto">
                             <table className="min-w-full text-sm">
                                 <thead>
-                                    <tr className="border-b text-left text-gray-500">
+                                    <tr className="border-b bg-gray-50/60 text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
                                         <th className="px-3 py-2">Order</th>
                                         <th className="px-3 py-2">Item</th>
                                         <th className="px-3 py-2">Type</th>

@@ -1,5 +1,6 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import InputError from '@/Components/InputError';
+import ProgressBar from '@/Components/ProgressBar';
 import { Head, Link, useForm, usePage } from '@inertiajs/react';
 import { useMemo, useState } from 'react';
 
@@ -112,20 +113,20 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
 
             <div className="mx-auto max-w-3xl space-y-6 px-4 py-6">
                 {flash?.success && (
-                    <div className="rounded-lg bg-green-50 px-4 py-3 font-medium text-green-800">{flash.success}</div>
+                    <div className="rounded-xl bg-emerald-50 px-4 py-3 font-medium text-emerald-800 ring-1 ring-inset ring-emerald-600/20">{flash.success}</div>
                 )}
 
                 {order.colour_note && (
-                    <div className="rounded-lg bg-sky-50 px-4 py-3 text-sky-900">
+                    <div className="rounded-xl bg-sky-50 px-4 py-3 text-sky-900 ring-1 ring-inset ring-sky-600/20">
                         <span className="font-semibold">Colour:</span> {order.colour_note}
                     </div>
                 )}
 
                 {/* issued vs consumed per pool, variance vs BOM */}
-                <div className="overflow-x-auto rounded-lg bg-white shadow">
+                <div className="overflow-x-auto rounded-xl border border-gray-200/70 bg-white shadow-sm">
                     <table className="min-w-full text-sm">
                         <thead>
-                            <tr className="border-b text-left text-gray-500">
+                            <tr className="border-b bg-gray-50/60 text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
                                 <th className="px-4 py-3">Pool</th>
                                 <th className="px-3 py-3 text-right">BOM g</th>
                                 <th className="px-3 py-3 text-right">Issued g</th>
@@ -139,12 +140,15 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
                                 const variance = used - p.bom_qty;
                                 return (
                                     <tr key={p.issue_pool} className="border-b last:border-0">
-                                        <td className="px-4 py-3 font-medium">{p.issue_pool}</td>
+                                        <td className="px-4 py-3 font-medium">
+                                            {p.issue_pool}
+                                            <ProgressBar value={used} max={p.bom_qty} className="mt-1.5 w-24" />
+                                        </td>
                                         <td className="px-3 py-3 text-right tabular-nums">{fmt(p.bom_qty)}</td>
                                         <td className="px-3 py-3 text-right tabular-nums">{fmt(p.issued)}</td>
                                         <td className="px-3 py-3 text-right font-semibold tabular-nums">{fmt(used)}</td>
                                         <td className={`px-3 py-3 text-right font-semibold tabular-nums ${
-                                            variance > 0 ? 'text-red-600' : 'text-green-600'
+                                            variance > 0 ? 'text-red-600' : 'text-emerald-600'
                                         }`}>
                                             {variance > 0 ? '+' : ''}{fmt(variance)}
                                         </td>
@@ -161,7 +165,7 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
                         const consumed = consumedOf(s);
                         const litres = litresOf(s);
                         return (
-                            <div key={s.slot} className="space-y-2 rounded-lg bg-white p-4 shadow">
+                            <div key={s.slot} className="space-y-2 rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                                 <div className="flex items-center gap-2">
                                     <span className={`rounded px-2 py-0.5 text-sm font-bold ${CLASS_STYLE[s.class]}`}>{s.slot}</span>
                                     <span className="text-sm text-gray-400">{s.hint ?? CLASS_NAME[s.class]}</span>
@@ -250,14 +254,14 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
                     <button
                         type="submit"
                         disabled={consumeForm.processing || filled.length === 0}
-                        className="w-full rounded-lg bg-green-600 py-4 text-xl font-bold text-white disabled:opacity-40"
+                        className="w-full rounded-lg bg-emerald-600 py-4 text-xl font-bold text-white shadow-sm transition hover:bg-emerald-500 disabled:opacity-40"
                     >
                         Record {filled.length} slot{filled.length === 1 ? '' : 's'}
                     </button>
                 </form>
 
                 {/* colour batches */}
-                <div className="space-y-3 rounded-lg bg-white p-4 shadow">
+                <div className="space-y-3 rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                     <div className="flex items-center justify-between">
                         <div className="text-sm font-medium text-gray-500">Colour batches</div>
                         <button
@@ -329,7 +333,7 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
                             <button
                                 type="submit"
                                 disabled={batchForm.processing}
-                                className="w-full rounded-lg bg-indigo-600 py-3 font-semibold text-white disabled:opacity-40"
+                                className="w-full rounded-lg bg-indigo-600 py-3 font-semibold text-white shadow-sm transition hover:bg-indigo-500 disabled:opacity-40"
                             >
                                 Save batch
                             </button>
@@ -339,7 +343,7 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
 
                 {/* recent readings */}
                 {recent.length > 0 && (
-                    <div className="rounded-lg bg-white p-4 shadow">
+                    <div className="rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                         <div className="mb-2 text-sm font-medium text-gray-500">Recent readings</div>
                         <ul className="divide-y text-sm">
                             {recent.map((t) => (

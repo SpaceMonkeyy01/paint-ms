@@ -32,10 +32,10 @@ export default function Index({ orders, q }) {
                     />
                 </form>
 
-                <div className="overflow-x-auto rounded-lg bg-white shadow">
+                <div className="overflow-x-auto rounded-xl border border-gray-200/70 bg-white shadow-sm">
                     <table className="min-w-full text-sm">
                         <thead>
-                            <tr className="border-b text-left text-gray-500">
+                            <tr className="border-b bg-gray-50/60 text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
                                 <th className="px-4 py-3">Order</th>
                                 <th className="px-3 py-3 text-right">Sqft</th>
                                 <th className="px-3 py-3 text-right">BOM Rs</th>
@@ -62,7 +62,7 @@ export default function Index({ orders, q }) {
                                     <td className="px-3 py-2.5 text-right tabular-nums">{fmt(o.wasted_value)}</td>
                                     <td className="px-3 py-2.5 text-right tabular-nums">{fmt(o.repaint_value)}</td>
                                     <td className={`px-3 py-2.5 text-right font-semibold tabular-nums ${
-                                        o.variance_pct === null ? 'text-gray-400' : o.variance_pct > 0 ? 'text-red-600' : 'text-green-600'
+                                        o.variance_pct === null ? 'text-gray-400' : o.variance_pct > 0 ? 'text-red-600' : 'text-emerald-600'
                                     }`}>
                                         {o.variance_pct === null ? '—' : `${o.variance_pct > 0 ? '+' : ''}${fmt(o.variance_pct, 1)}%`}
                                     </td>

@@ -25,12 +25,12 @@ export default function Index({ orders, q }) {
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         placeholder="Search order code"
-                        className="w-full rounded-lg border-gray-300 px-4 py-3 text-lg shadow-sm"
+                        className="w-full rounded-xl border-gray-200 px-4 py-3 text-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 shadow-sm"
                         autoFocus
                     />
                 </form>
 
-                <ul className="divide-y divide-gray-100 overflow-hidden rounded-lg bg-white shadow">
+                <ul className="divide-y divide-gray-100 overflow-hidden rounded-xl border border-gray-200/70 bg-white shadow-sm">
                     {orders.map((o) => (
                         <li key={o.id}>
                             <Link

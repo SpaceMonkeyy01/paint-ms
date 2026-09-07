@@ -9,8 +9,8 @@ const fmt = (n, dp = 0) =>
 const TYPE_STYLE = {
     issue: 'bg-indigo-100 text-indigo-700',
     consumption: 'bg-sky-100 text-sky-700',
-    wastage: 'bg-amber-100 text-amber-700',
-    receipt: 'bg-green-100 text-green-700',
+    wastage: 'bg-amber-50 text-amber-700 ring-1 ring-inset ring-amber-600/20',
+    receipt: 'bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-600/20',
     opening: 'bg-gray-100 text-gray-600',
     adjust: 'bg-gray-100 text-gray-600',
 };
@@ -39,10 +39,10 @@ export default function Show({ order, costing, pools, transactions }) {
                         ['Repaint', costing.repaint_value, ''],
                         ['Over-BOM (variance)', costing.variance_value, ''],
                         ['Variance %', costing.variance_pct === null ? null : `${costing.variance_pct > 0 ? '+' : ''}${costing.variance_pct}%`,
-                            costing.variance_pct > 0 ? 'text-red-600' : 'text-green-600'],
+                            costing.variance_pct > 0 ? 'text-red-600' : 'text-emerald-600'],
                         ['Rs / sqft', costing.cost_per_sqft, ''],
                     ].map(([label, value, colour]) => (
-                        <div key={label} className="rounded-lg bg-white p-4 shadow">
+                        <div key={label} className="rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                             <div className="text-sm text-gray-500">{label}</div>
                             <div className={`mt-1 text-2xl font-bold tabular-nums ${colour || 'text-gray-800'}`}>
                                 {typeof value === 'string' ? value : fmt(value)}
@@ -52,10 +52,10 @@ export default function Show({ order, costing, pools, transactions }) {
                 </div>
 
                 {/* pool reconciliation */}
-                <div className="overflow-x-auto rounded-lg bg-white shadow">
+                <div className="overflow-x-auto rounded-xl border border-gray-200/70 bg-white shadow-sm">
                     <table className="min-w-full text-sm">
                         <thead>
-                            <tr className="border-b text-left text-gray-500">
+                            <tr className="border-b bg-gray-50/60 text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
                                 <th className="px-4 py-3">Pool</th>
                                 <th className="px-3 py-3 text-right">BOM g</th>
                                 <th className="px-3 py-3 text-right">Issued g</th>
@@ -73,7 +73,7 @@ export default function Show({ order, costing, pools, transactions }) {
                                     <td className="px-3 py-2.5 text-right tabular-nums">{fmt(p.consumed)}</td>
                                     <td className="px-3 py-2.5 text-right tabular-nums">{fmt(p.wasted)}</td>
                                     <td className={`px-3 py-2.5 text-right font-semibold tabular-nums ${
-                                        p.issue_variance > 0 ? 'text-red-600' : 'text-green-600'
+                                        p.issue_variance > 0 ? 'text-red-600' : 'text-emerald-600'
                                     }`}>
                                         {p.issue_variance > 0 ? '+' : ''}{fmt(p.issue_variance)}
                                     </td>
@@ -84,10 +84,10 @@ export default function Show({ order, costing, pools, transactions }) {
                 </div>
 
                 {/* ledger */}
-                <div className="overflow-x-auto rounded-lg bg-white shadow">
+                <div className="overflow-x-auto rounded-xl border border-gray-200/70 bg-white shadow-sm">
                     <table className="min-w-full text-sm">
                         <thead>
-                            <tr className="border-b text-left text-gray-500">
+                            <tr className="border-b bg-gray-50/60 text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
                                 <th className="px-4 py-3">When</th>
                                 <th className="px-3 py-3">Type</th>
                                 <th className="px-3 py-3">Item</th>

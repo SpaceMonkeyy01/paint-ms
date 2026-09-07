@@ -12,14 +12,22 @@ export default function AuthenticatedLayout({ header, children }) {
         useState(false);
 
     return (
-        <div className="min-h-screen bg-gray-100">
-            <nav className="border-b border-gray-100 bg-white">
+        <div className="min-h-screen bg-gray-50">
+            {/* paint swatch strip */}
+            <div className="h-1 bg-gradient-to-r from-indigo-600 via-sky-500 via-emerald-500 via-amber-400 to-rose-500" />
+            <nav className="border-b border-gray-200/70 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 justify-between">
                         <div className="flex">
                             <div className="flex shrink-0 items-center">
-                                <Link href="/">
-                                    <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
+                                <Link href="/" className="flex items-center gap-2">
+                                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-700 shadow-sm">
+                                        <ApplicationLogo className="h-5 w-5 fill-white" />
+                                    </span>
+                                    <span className="hidden leading-tight md:block">
+                                        <span className="block text-sm font-bold tracking-tight text-gray-900">Paint MS</span>
+                                        <span className="block text-[10px] font-medium uppercase tracking-widest text-gray-400">BlueCascade</span>
+                                    </span>
                                 </Link>
                             </div>
 
@@ -89,7 +97,9 @@ export default function AuthenticatedLayout({ header, children }) {
                                                 className="inline-flex items-center rounded-md border border-transparent bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
                                             >
                                                 {user.name}
-
+                                                <span className="ms-2 rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-indigo-600 ring-1 ring-inset ring-indigo-600/20">
+                                                    {user.role}
+                                                </span>
                                                 <svg
                                                     className="-me-0.5 ms-2 h-4 w-4"
                                                     xmlns="http://www.w3.org/2000/svg"

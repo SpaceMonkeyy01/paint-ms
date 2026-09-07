@@ -1,5 +1,6 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import InputError from '@/Components/InputError';
+import ProgressBar from '@/Components/ProgressBar';
 import { Head, Link, useForm, usePage } from '@inertiajs/react';
 import { useMemo, useState } from 'react';
 
@@ -60,14 +61,14 @@ export default function Show({ order, pools, itemsByPool, recentIssues }) {
 
             <div className="mx-auto max-w-3xl space-y-6 px-4 py-6">
                 {flash?.success && (
-                    <div className="rounded-lg bg-green-50 px-4 py-3 font-medium text-green-800">{flash.success}</div>
+                    <div className="rounded-xl bg-emerald-50 px-4 py-3 font-medium text-emerald-800 ring-1 ring-inset ring-emerald-600/20">{flash.success}</div>
                 )}
 
                 {/* BOM vs issued per pool */}
-                <div className="overflow-x-auto rounded-lg bg-white shadow">
+                <div className="overflow-x-auto rounded-xl border border-gray-200/70 bg-white shadow-sm">
                     <table className="min-w-full text-sm">
                         <thead>
-                            <tr className="border-b text-left text-gray-500">
+                            <tr className="border-b bg-gray-50/60 text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
                                 <th className="px-4 py-3">Pool</th>
                                 <th className="px-3 py-3 text-right">BOM g</th>
                                 <th className="px-3 py-3 text-right">Issued g</th>
@@ -84,10 +85,13 @@ export default function Show({ order, pools, itemsByPool, recentIssues }) {
                                         onClick={() => setPool(p.issue_pool)}
                                         className={`cursor-pointer border-b last:border-0 ${pool === p.issue_pool ? 'bg-indigo-50' : ''}`}
                                     >
-                                        <td className="px-4 py-3 font-medium">{p.issue_pool}</td>
+                                        <td className="px-4 py-3 font-medium">
+                                            {p.issue_pool}
+                                            <ProgressBar value={p.issued + pending} max={p.bom_qty} className="mt-1.5 w-24" />
+                                        </td>
                                         <td className="px-3 py-3 text-right">{fmt(p.bom_qty)}</td>
                                         <td className="px-3 py-3 text-right">{fmt(p.issued + pending)}</td>
-                                        <td className={`px-3 py-3 text-right font-semibold ${left === 0 ? 'text-green-600' : 'text-amber-600'}`}>
+                                        <td className={`px-3 py-3 text-right font-semibold ${left === 0 ? 'text-emerald-600' : 'text-amber-600'}`}>
                                             {fmt(left)}
                                         </td>
                                     </tr>
@@ -101,7 +105,7 @@ export default function Show({ order, pools, itemsByPool, recentIssues }) {
                 </div>
 
                 {/* line composer */}
-                <form onSubmit={addLine} className="space-y-3 rounded-lg bg-white p-4 shadow">
+                <form onSubmit={addLine} className="space-y-3 rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                     <div className="text-sm font-medium text-gray-500">Add line {pool && `— ${pool}`}</div>
                     <select
                         value={pool}
@@ -147,7 +151,7 @@ export default function Show({ order, pools, itemsByPool, recentIssues }) {
 
                 {/* pending lines + submit */}
                 {data.lines.length > 0 && (
-                    <form onSubmit={submit} className="space-y-3 rounded-lg bg-white p-4 shadow">
+                    <form onSubmit={submit} className="space-y-3 rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                         <ul className="divide-y">
                             {data.lines.map((l, idx) => {
                                 const item = itemById(l.item_id);
@@ -205,7 +209,7 @@ export default function Show({ order, pools, itemsByPool, recentIssues }) {
                         <button
                             type="submit"
                             disabled={processing}
-                            className="w-full rounded-lg bg-green-600 py-4 text-xl font-bold text-white disabled:opacity-40"
+                            className="w-full rounded-lg bg-emerald-600 py-4 text-xl font-bold text-white shadow-sm transition hover:bg-emerald-500 disabled:opacity-40"
                         >
                             Issue {data.lines.length} line{data.lines.length > 1 ? 's' : ''}
                         </button>
@@ -214,7 +218,7 @@ export default function Show({ order, pools, itemsByPool, recentIssues }) {
 
                 {/* recent issues on this order */}
                 {recentIssues.length > 0 && (
-                    <div className="rounded-lg bg-white p-4 shadow">
+                    <div className="rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                         <div className="mb-2 text-sm font-medium text-gray-500">Recent issues</div>
                         <ul className="divide-y text-sm">
                             {recentIssues.map((t) => (
