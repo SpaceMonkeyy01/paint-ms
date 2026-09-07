@@ -35,16 +35,18 @@ costing) and **Paint Consumption Tool** (station: scale-weight consumption, g→
    name. `odoo_id` is the Odoo product id and may be null.
 9. **Orders are identified by `orders.code`** (`BS-ET-16188`, `BS-US-2501 A`). Codes contain spaces
    and suffixes — treat as opaque strings, trim, case-sensitive.
-10. **Keep raw Odoo input.** `orders.bom_source` holds the original BOM string for audit. When Odoo sync
-    lands, parse into `bom_lines` and keep the raw payload.
+10. **Keep raw BOM input.** `orders.bom_source` holds the original BOM string for audit. All parsing
+    goes through `App\Services\BomStringParser` (repeated categories are **summed** — the string is a
+    matt block + a gloss block; last-wins is a bug). Keep the raw Airtable payload per sync.
 
 ## Layout
 
 ```
 app/Enums/          Role, TransactionType, IssueType
 app/Models/         Item, Order, BomLine, BomCategory, Transaction, ColourBatch, ColourBatchComponent
-app/Services/       StockService (stock list, LOW/OUT, per-order pool reconciliation) — add services here,
-                    keep controllers thin
+app/Services/       StockService (stock list, LOW/OUT, per-order pool reconciliation),
+                    BomStringParser (the only BOM string parser) — add services here, keep controllers thin
+docs/               airtable-sync.md — source of truth for the order/BOM feed
 database/seeders/   LegacyImportSeeder + data/ (real legacy data; idempotent on natural keys)
 tools/              extract_seed_data.py — xlsx → CSV, prints stock reconciliation vs legacy
 resources/js/Pages/ Inertia pages, grouped by role: Store/, Station/, Admin/
@@ -61,7 +63,9 @@ resources/js/Pages/ Inertia pages, grouped by role: Store/, Station/, Admin/
    `consumption` (+ `wastage`) transactions. Colour batch entry (Pantone target + component grams).
 4. **Admin — costing + dashboard.** Per-order BOM cost vs issued vs consumed vs repaint, variance %,
    cost per sqft. Stock health, orders pending issue, variance exceptions.
-5. **Odoo sync.** Orders + BOM lines in; consumption back as MO consumption.
+5. **Airtable sync.** Orders + BOM lines in from the production base — see `docs/airtable-sync.md`
+   for base/table/field IDs and the BOM string parsing rules. Odoo feeds Airtable; we do not talk
+   to Odoo directly. Status-tag write-back comes later.
 
 ## Conventions
 
