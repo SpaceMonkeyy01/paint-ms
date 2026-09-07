@@ -83,7 +83,7 @@ class ConsumptionController extends Controller
             ]);
 
         return Inertia::render('Station/Consume/Show', [
-            'order' => $order->only(['id', 'code', 'finish']),
+            'order' => $order->only(['id', 'code', 'finish', 'colour_note']),
             'pools' => $stock->orderReconciliation($order)->values(),
             'slotTemplate' => SlotTemplate::for($order->finish),
             'classPools' => SlotTemplate::CLASS_POOLS,

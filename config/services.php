@@ -28,6 +28,13 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'airtable' => [
+        'token' => env('AIRTABLE_TOKEN'),
+        'base' => env('AIRTABLE_BASE_ID', 'appPajKbbSBracppe'),
+        'table' => env('AIRTABLE_ORDERS_TABLE', 'tblcL1JAl6iJP8Jrb'),
+        'view' => env('AIRTABLE_ORDERS_VIEW', 'viwhqbXW8UuDx8ElE'),
+    ],
+
     'slack' => [
         'notifications' => [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),

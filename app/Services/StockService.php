@@ -43,7 +43,13 @@ class StockService
      */
     public function orderReconciliation(Order $order): Collection
     {
+        // Ignored categories (Paint Miscellaneous cost → pool IGNORE) are audit-only
+        // lines; unknown categories have a null pool until an admin maps them.
+        $ignored = \App\Models\BomCategory::where('ignored', true)->pluck('issue_pool')->all();
+
         $allocated = $order->bomLines()
+            ->whereNotNull('issue_pool')
+            ->whereNotIn('issue_pool', $ignored ?: [''])
             ->select('issue_pool', DB::raw('SUM(allocated_qty) as qty'))
             ->groupBy('issue_pool')->pluck('qty', 'issue_pool');
 

@@ -115,6 +115,12 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
                     <div className="rounded-lg bg-green-50 px-4 py-3 font-medium text-green-800">{flash.success}</div>
                 )}
 
+                {order.colour_note && (
+                    <div className="rounded-lg bg-sky-50 px-4 py-3 text-sky-900">
+                        <span className="font-semibold">Colour:</span> {order.colour_note}
+                    </div>
+                )}
+
                 {/* issued vs consumed per pool, variance vs BOM */}
                 <div className="overflow-x-auto rounded-lg bg-white shadow">
                     <table className="min-w-full text-sm">

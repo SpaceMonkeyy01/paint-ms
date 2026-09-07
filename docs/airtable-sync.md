@@ -85,7 +85,9 @@ Rules (encoded in `App\Services\BomStringParser`):
 - Re-parse `bom_lines` only when `bom_source` changed (compare hash); BOM edits after issue has
   started are allowed but logged (`orders.bom_changed_after_issue_at`) and surfaced on the order.
 - Never delete orders that disappear from the view — "This Month" is a rolling window.
-- Keep the raw payload for each sync in `airtable_sync_log` (record id, fields json, synced_at).
+- Keep the raw payload in `airtable_sync_log` (record id, fields json, action, synced_at).
+  Implemented: logged on created/updated/bom_reparsed only — an unchanged record writes
+  nothing, so the log stays an audit trail instead of 14k no-op rows a day.
 - Write-back (later): when an order's paint is fully consumed, add tag on `fld9jhixbr09YeZuN`;
   needs `data.records:write` scope and a decision on which tag.
 
