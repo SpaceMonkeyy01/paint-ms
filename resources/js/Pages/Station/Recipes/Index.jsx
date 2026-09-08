@@ -53,8 +53,11 @@ function ColourCard({ colour }) {
 
     return (
         <div className="overflow-hidden rounded-xl border border-gray-200/70 bg-white shadow-sm">
-            {/* header */}
-            <div className="flex items-center gap-3 border-b border-gray-100 px-4 py-3">
+            {/* header → full history & analytics */}
+            <Link
+                href={route('station.recipes.show', { colour: colour.colour_ref })}
+                className="flex items-center gap-3 border-b border-gray-100 px-4 py-3 transition hover:bg-indigo-50/40 active:bg-indigo-50"
+            >
                 <span
                     className="h-12 w-12 shrink-0 rounded-lg ring-1 ring-inset ring-black/10"
                     style={{ background: colour.hex ?? '#e5e7eb' }}
@@ -66,7 +69,8 @@ function ColourCard({ colour }) {
                         {colour.hex && <span className="ms-2 uppercase">{colour.hex}</span>}
                     </div>
                 </div>
-            </div>
+                <span className="text-sm font-medium text-indigo-600">analytics →</span>
+            </Link>
 
             {/* latest formulation */}
             <div className="px-4 py-3">

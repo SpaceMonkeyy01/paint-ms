@@ -55,6 +55,48 @@ test('mixes group by colour with the newest recipe first', function () {
         ->and($c['history'])->toHaveCount(1);
 });
 
+test('colour detail page aggregates every batch with consistency and cost', function () {
+    $this->actingAs(makeUser(Role::Painter));
+    $white = makeItem();          // rate 2.5 Rs/g
+    $blue = makeItem();
+    $order = makeOrder();
+
+    makeMix($order, 'PANTONE 7463 C', [
+        ['item_id' => $white->id, 'grams' => 700],
+        ['item_id' => $blue->id, 'grams' => 300],
+    ], '#002554');
+    $this->travel(1)->hour();
+    makeMix($order, 'PANTONE 7463 C', [
+        ['item_id' => $white->id, 'grams' => 650],
+        ['item_id' => $blue->id, 'grams' => 350],
+    ]);
+
+    $props = $this->get(route('station.recipes.show', ['colour' => 'PANTONE 7463 C']))
+        ->assertOk()
+        ->viewData('page')['props'];
+
+    expect($props['summary']['mix_count'])->toBe(2)
+        ->and($props['summary']['total_grams'])->toBe(2000.0)
+        ->and($props['summary']['total_cost'])->toBe(5000.0)   // 2000 g × 2.5 Rs, snapshot values
+        ->and($props['summary']['cost_per_kg'])->toBe(2500.0)
+        ->and($props['summary']['avg_batch_grams'])->toBe(1000.0);
+
+    $whiteRow = collect($props['components'])->firstWhere('code', $white->code);
+    expect($whiteRow['used_in'])->toBe(2)
+        ->and($whiteRow['avg_pct'])->toBe(67.5)
+        ->and($whiteRow['min_pct'])->toBe(65.0)
+        ->and($whiteRow['max_pct'])->toBe(70.0);
+
+    expect($props['batches'])->toHaveCount(2)
+        ->and($props['batches'][0]['cost'])->toBe(2500.0);
+});
+
+test('unknown colour on the detail page is a 404', function () {
+    $this->actingAs(makeUser(Role::Painter));
+    $this->get(route('station.recipes.show', ['colour' => 'PANTONE NOPE C']))->assertNotFound();
+    $this->get(route('station.recipes.show'))->assertNotFound();
+});
+
 test('search filters the library by colour reference', function () {
     $this->actingAs(makeUser(Role::Painter));
     $item = makeItem();

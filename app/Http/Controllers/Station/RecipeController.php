@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Station;
 
+use App\Enums\TransactionType;
 use App\Http\Controllers\Controller;
 use App\Models\ColourBatch;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -44,6 +47,75 @@ class RecipeController extends Controller
             ->values();
 
         return Inertia::render('Station/Recipes/Index', ['colours' => $colours, 'q' => $q]);
+    }
+
+    /**
+     * All batches of one colour with the analysis the index can't show:
+     * per-component consistency across mixes, totals, and per-batch cost
+     * (summed from the linked consumption rows — snapshot values, rule 4).
+     */
+    public function show(Request $request): Response
+    {
+        $colour = trim((string) $request->query('colour', ''));
+        abort_if($colour === '', 404);
+
+        $batches = ColourBatch::query()
+            ->where('colour_ref', $colour)
+            ->with(['components.item:id,code,name', 'order:id,code'])
+            ->orderByDesc('mixed_at')->orderByDesc('id')
+            ->limit(200)
+            ->get();
+
+        abort_if($batches->isEmpty(), 404);
+
+        $costs = Transaction::query()
+            ->whereIn('colour_batch_id', $batches->pluck('id'))
+            ->where('type', TransactionType::Consumption->value)
+            ->select('colour_batch_id', DB::raw('SUM(value) as cost'))
+            ->groupBy('colour_batch_id')
+            ->pluck('cost', 'colour_batch_id');
+
+        $n = $batches->count();
+        $components = $batches->flatMap(fn ($b) => $b->components)
+            ->groupBy('item_id')
+            ->map(function ($group) use ($n) {
+                $pcts = $group->pluck('pct')->reject(fn ($p) => $p === null)->map(fn ($p) => (float) $p);
+                return [
+                    'item' => $group->first()->item?->name,
+                    'code' => $group->first()->item?->code,
+                    'used_in' => $group->count(),
+                    'of' => $n,
+                    'avg_pct' => $pcts->isNotEmpty() ? round($pcts->avg(), 1) : null,
+                    'min_pct' => $pcts->isNotEmpty() ? round($pcts->min(), 1) : null,
+                    'max_pct' => $pcts->isNotEmpty() ? round($pcts->max(), 1) : null,
+                    'avg_grams' => round((float) $group->avg('grams'), 1),
+                ];
+            })
+            ->sortByDesc('avg_pct')
+            ->values();
+
+        $totalCost = round((float) $costs->sum(), 2);
+        $totalGrams = (float) $batches->sum('batch_grams');
+
+        return Inertia::render('Station/Recipes/Show', [
+            'colour' => [
+                'colour_ref' => $colour,
+                'hex' => $batches->firstWhere('hex', '!=', null)?->hex,
+            ],
+            'summary' => [
+                'mix_count' => $n,
+                'total_grams' => $totalGrams,
+                'total_cost' => $totalCost,
+                'avg_batch_grams' => $n > 0 ? round($totalGrams / $n, 1) : 0,
+                'cost_per_kg' => $totalGrams > 0 ? round($totalCost / $totalGrams * 1000, 2) : null,
+                'first_mixed_at' => $batches->last()->mixed_at->toIso8601String(),
+                'last_mixed_at' => $batches->first()->mixed_at->toIso8601String(),
+            ],
+            'components' => $components,
+            'batches' => $batches->map(fn ($b) => $this->batchRow($b) + [
+                'cost' => round((float) ($costs[$b->id] ?? 0), 2),
+            ])->values(),
+        ]);
     }
 
     private function batchRow(ColourBatch $b): array
