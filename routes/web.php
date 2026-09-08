@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Station\ConsumptionController;
 use App\Http\Controllers\Station\MixController;
 use App\Http\Controllers\Station\RecipeController;
+use App\Http\Controllers\Station\StationSlotController;
 use App\Http\Controllers\Store\IssueController;
 use App\Http\Controllers\Store\ReceiptController;
 use App\Http\Controllers\Store\StockController;
@@ -39,6 +40,8 @@ Route::middleware(['auth', 'role:painter'])->prefix('station')->name('station.')
     Route::post('/mix', [MixController::class, 'store'])->name('mix.store');
     Route::get('/pantones', [MixController::class, 'pantones'])->name('pantones');
     Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes');
+    Route::patch('/slots/{slot}', [StationSlotController::class, 'update'])->name('slots.update');
+    Route::post('/slots', [StationSlotController::class, 'store'])->name('slots.store');
     Route::get('/recipes/colour', [RecipeController::class, 'show'])->name('recipes.show'); // ?colour=PANTONE 7463 C
     Route::get('/{order}', [ConsumptionController::class, 'show'])->name('consume.show');
     Route::post('/{order}', [ConsumptionController::class, 'store'])->name('consume.store');

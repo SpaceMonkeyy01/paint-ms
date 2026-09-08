@@ -7,6 +7,7 @@ use App\Http\Requests\Station\StoreMixRequest;
 use App\Models\Item;
 use App\Models\Order;
 use App\Models\PantoneColour;
+use App\Models\StationSlot;
 use App\Services\MixService;
 use App\Services\StockService;
 use Illuminate\Http\JsonResponse;
@@ -40,11 +41,22 @@ class MixController extends Controller
             ])
             ->groupBy('issue_pool');
 
+        $loadedSlots = StationSlot::where('is_active', true)->whereNotNull('item_id')
+            ->with('item:id,code,name,issue_pool')
+            ->orderBy('position')->get()
+            ->map(fn (StationSlot $s) => [
+                'slot' => $s->slot,
+                'item_id' => $s->item->id,
+                'item_name' => $s->item->name,
+                'issue_pool' => $s->item->issue_pool,
+            ]);
+
         return Inertia::render('Station/Mix/Create', [
             'orders' => $orders,
             'q' => $q,
             'selectedOrderId' => (int) $request->query('order') ?: null,
             'itemsByPool' => $itemsByPool,
+            'loadedSlots' => $loadedSlots,
         ]);
     }
 

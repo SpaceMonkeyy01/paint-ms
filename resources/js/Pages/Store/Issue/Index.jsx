@@ -12,7 +12,7 @@ const STATUS_STYLE = {
     OK: 'bg-emerald-50 text-emerald-700 ring-emerald-600/20',
 };
 
-export default function Index({ board, recentIssues }) {
+export default function Index({ board, slots, classPools, recentIssues }) {
     const { flash } = usePage().props;
 
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -23,23 +23,44 @@ export default function Index({ board, recentIssues }) {
     const [pool, setPool] = useState('');
     const [itemId, setItemId] = useState('');
     const [grams, setGrams] = useState('');
+    const [slotId, setSlotId] = useState('');
 
     const pools = Object.keys(board).sort();
     const allItems = useMemo(() => Object.values(board).flat(), [board]);
     const itemById = (id) => allItems.find((i) => i.id === Number(id));
     const poolItems = board[pool] ?? [];
+    const slotById = (id) => slots.find((s) => s.id === Number(id));
+
+    // item_id -> slot codes currently loaded with it (for board badges)
+    const slotsByItem = useMemo(() => {
+        const map = {};
+        slots.forEach((s) => {
+            if (s.item_id) (map[s.item_id] ??= []).push(s.slot);
+        });
+        return map;
+    }, [slots]);
+
+    // rack slots this item may go into (class pools must include its pool)
+    const eligibleSlots = (item) =>
+        item ? slots.filter((s) => (classPools[s.class] ?? []).includes(item.issue_pool)) : [];
 
     const pickItem = (item) => {
         setPool(item.issue_pool);
         setItemId(String(item.id));
+        setSlotId('');
     };
 
     const addLine = (e) => {
         e.preventDefault();
         if (!itemId || !grams || Number(grams) <= 0) return;
-        setData('lines', [...data.lines, { item_id: Number(itemId), grams: Number(grams) }]);
+        setData('lines', [...data.lines, {
+            item_id: Number(itemId),
+            grams: Number(grams),
+            slot_id: slotId ? Number(slotId) : null,
+        }]);
         setItemId('');
         setGrams('');
+        setSlotId('');
     };
 
     const removeLine = (idx) => setData('lines', data.lines.filter((_, i) => i !== idx));
@@ -73,7 +94,7 @@ export default function Index({ board, recentIssues }) {
                         </thead>
                         <tbody>
                             {pools.map((p) => (
-                                <PoolRows key={p} pool={p} items={board[p]} onPick={pickItem} />
+                                <PoolRows key={p} pool={p} items={board[p]} onPick={pickItem} slotsByItem={slotsByItem} />
                             ))}
                         </tbody>
                     </table>
@@ -103,6 +124,23 @@ export default function Index({ board, recentIssues }) {
                             </option>
                         ))}
                     </select>
+                    {itemId && eligibleSlots(itemById(itemId)).length > 0 && (
+                        <select
+                            value={slotId}
+                            onChange={(e) => setSlotId(e.target.value)}
+                            className="w-full rounded-lg border-gray-300 py-3"
+                        >
+                            <option value="">Into slot… (optional — re-loads the slot)</option>
+                            {eligibleSlots(itemById(itemId)).map((s) => {
+                                const holds = allItems.find((i) => i.id === s.item_id);
+                                return (
+                                    <option key={s.id} value={s.id}>
+                                        {s.slot}{holds ? ` — now ${holds.name}` : ' — empty'}
+                                    </option>
+                                );
+                            })}
+                        </select>
+                    )}
                     <div className="flex gap-3">
                         <input
                             type="number"
@@ -130,9 +168,17 @@ export default function Index({ board, recentIssues }) {
                         <ul className="divide-y">
                             {data.lines.map((l, idx) => {
                                 const item = itemById(l.item_id);
+                                const slot = l.slot_id ? slotById(l.slot_id) : null;
                                 return (
                                     <li key={idx} className="flex items-center justify-between py-2">
-                                        <span>{item?.name} <span className="text-gray-400">({item?.issue_pool})</span></span>
+                                        <span>
+                                            {item?.name} <span className="text-gray-400">({item?.issue_pool})</span>
+                                            {slot && (
+                                                <span className="ms-1.5 rounded bg-indigo-50 px-1.5 py-0.5 text-xs font-semibold text-indigo-700">
+                                                    → {slot.slot}
+                                                </span>
+                                            )}
+                                        </span>
                                         <span className="flex items-center gap-3">
                                             <strong className="text-lg">{fmt(l.grams, 2)} g</strong>
                                             <button type="button" onClick={() => removeLine(idx)} className="px-2 text-2xl leading-none text-red-500">
@@ -185,7 +231,7 @@ export default function Index({ board, recentIssues }) {
     );
 }
 
-function PoolRows({ pool, items, onPick }) {
+function PoolRows({ pool, items, onPick, slotsByItem }) {
     return (
         <>
             <tr className="border-b bg-gray-50/40">
@@ -199,6 +245,11 @@ function PoolRows({ pool, items, onPick }) {
                 >
                     <td className="px-4 py-3 font-medium">
                         {i.name} <span className="text-gray-400">({i.code})</span>
+                        {(slotsByItem[i.id] ?? []).map((code) => (
+                            <span key={code} className="ms-1.5 rounded bg-indigo-50 px-1.5 py-0.5 text-xs font-semibold text-indigo-700">
+                                {code}
+                            </span>
+                        ))}
                     </td>
                     <td className="px-3 py-3 text-right tabular-nums">{fmt(i.station_on_hand)}</td>
                     <td className="px-3 py-3 text-right tabular-nums text-gray-500">{fmt(i.stock_on_hand)}</td>

@@ -13,7 +13,8 @@ class StoreConsumptionRequest extends FormRequest
 
         return [
             'readings' => ['required', 'array', 'min:1'],
-            'readings.*.slot' => ['required', 'string', 'max:10', 'regex:/^[WPA]\d{2}$/'],
+            // W/P/A = rack slots; X = ad-hoc lines for items not loaded in any slot
+            'readings.*.slot' => ['required', 'string', 'max:10', 'regex:/^[WPAX]\d{2}$/'],
             'readings.*.item_id' => ['required', 'integer', Rule::exists('items', 'id')->where('is_active', true)],
             // one of grams / litres per line; litres needs density (enforced in LedgerService, rule 7)
             'readings.*.grams' => ['nullable', 'required_without:readings.*.litres', 'numeric', 'gt:0', 'lt:1000000'],

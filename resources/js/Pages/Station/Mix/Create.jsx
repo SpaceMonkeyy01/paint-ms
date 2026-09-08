@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 const fmt = (g, dp = 0) =>
     Number(g).toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp });
 
-export default function Create({ orders, q, selectedOrderId, itemsByPool }) {
+export default function Create({ orders, q, selectedOrderId, itemsByPool, loadedSlots }) {
     const form = useForm({
         order_id: selectedOrderId ?? '',
         colour_ref: '',
@@ -72,6 +72,17 @@ export default function Create({ orders, q, selectedOrderId, itemsByPool }) {
 
     const filled = form.data.components.filter((c) => c.item_id && Number(c.grams) > 0);
     const total = filled.reduce((a, c) => a + Number(c.grams), 0);
+
+    // tap a loaded slot to add it as a component (reusing an empty row if one exists)
+    const addFromSlot = (s) => {
+        const row = { item_id: String(s.item_id), pool: s.issue_pool, grams: '' };
+        const emptyIdx = form.data.components.findIndex((c) => !c.item_id && !c.grams);
+        if (emptyIdx >= 0) {
+            form.setData('components', form.data.components.map((c, i) => (i === emptyIdx ? row : c)));
+        } else {
+            form.setData('components', [...form.data.components, row]);
+        }
+    };
 
     const submit = (e) => {
         e.preventDefault();
@@ -232,6 +243,21 @@ export default function Create({ orders, q, selectedOrderId, itemsByPool }) {
                         <div className="text-sm font-medium text-gray-500">3 · Components from the slots</div>
                         <span className="text-sm font-semibold tabular-nums text-gray-700">total {fmt(total, 1)} g</span>
                     </div>
+
+                    {loadedSlots.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5">
+                            {loadedSlots.map((s) => (
+                                <button
+                                    key={s.slot}
+                                    type="button"
+                                    onClick={() => addFromSlot(s)}
+                                    className="rounded-full bg-indigo-50 px-3 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-600/20 transition hover:bg-indigo-100"
+                                >
+                                    {s.slot} · {s.item_name}
+                                </button>
+                            ))}
+                        </div>
+                    )}
 
                     {form.data.components.map((c, idx) => {
                         const item = itemById(c.item_id);

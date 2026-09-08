@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Station\StoreConsumptionRequest;
 use App\Models\Item;
 use App\Models\Order;
+use App\Models\StationSlot;
 use App\Services\LedgerService;
 use App\Services\SlotTemplate;
 use App\Services\StationBoardService;
@@ -94,10 +95,27 @@ class ConsumptionController extends Controller
                 'occurred_at' => $t->occurred_at->toIso8601String(),
             ]);
 
+        // the physical rack: each slot with the item currently loaded in it
+        $slots = StationSlot::where('is_active', true)->with('item')
+            ->orderBy('position')->get()
+            ->map(fn (StationSlot $s) => [
+                'id' => $s->id,
+                'slot' => $s->slot,
+                'class' => $s->class,
+                'item' => $s->item ? [
+                    'id' => $s->item->id,
+                    'code' => $s->item->code,
+                    'name' => $s->item->name,
+                    'issue_pool' => $s->item->issue_pool,
+                    'density_kg_per_l' => $s->item->density_kg_per_l,
+                    'station_on_hand' => (float) ($station[$s->item->id] ?? 0),
+                ] : null,
+            ]);
+
         return Inertia::render('Station/Consume/Show', [
             'order' => $order->only(['id', 'code', 'finish', 'colour_note', 'due_date']),
             'pools' => $stock->orderReconciliation($order)->values(),
-            'slotTemplate' => SlotTemplate::for($order->finish),
+            'slots' => $slots,
             'classPools' => SlotTemplate::CLASS_POOLS,
             'itemsByPool' => $itemsByPool,
             'batches' => $batches,

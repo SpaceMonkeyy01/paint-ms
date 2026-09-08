@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         }
 
         $this->call(PantoneColourSeeder::class);
+        $this->call(StationSlotSeeder::class);
         $this->call(LegacyImportSeeder::class);
     }
 }

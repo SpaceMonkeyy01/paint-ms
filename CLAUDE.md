@@ -52,7 +52,10 @@ costing) and **Paint Consumption Tool** (station: scale-weight consumption, g→
 
 ```
 app/Enums/          Role, TransactionType, IssueType
-app/Models/         Item, Order, BomLine, BomCategory, Transaction, ColourBatch, ColourBatchComponent
+app/Models/         Item, Order, BomLine, BomCategory, Transaction, ColourBatch, ColourBatchComponent,
+                    StationSlot (the physical rack: slot → currently loaded item; painters consume
+                    from loaded slots without re-picking, per the legacy Paint Consumption Tool),
+                    PantoneColour
 app/Services/       StockService (stock list, LOW/OUT, station stock, per-order pool reconciliation),
                     MixService (station's primary flow: one save = colour batch recipe + consumption
                     rows for the order — never let these be entered separately),
