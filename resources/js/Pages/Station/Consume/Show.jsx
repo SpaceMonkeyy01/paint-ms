@@ -81,6 +81,11 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
                     <Link href={route('station.consume.index')} className="text-indigo-600">&larr;</Link>
                     <h2 className="text-xl font-semibold leading-tight text-gray-800">{order.code}</h2>
                     {order.finish && <span className="rounded bg-gray-100 px-2 py-0.5 text-sm">{order.finish}</span>}
+                    {order.due_date && (
+                        <span className="rounded bg-amber-50 px-2 py-0.5 text-sm text-amber-800 ring-1 ring-inset ring-amber-600/20">
+                            due {new Date(order.due_date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' })}
+                        </span>
+                    )}
                 </div>
             }
         >

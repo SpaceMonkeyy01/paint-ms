@@ -9,6 +9,7 @@ use App\Models\Item;
 use App\Models\Order;
 use App\Services\LedgerService;
 use App\Services\SlotTemplate;
+use App\Services\StationBoardService;
 use App\Services\StockService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -17,30 +18,38 @@ use Inertia\Response;
 
 class ConsumptionController extends Controller
 {
-    public function index(Request $request): Response
+    public function index(Request $request, StationBoardService $board): Response
     {
         $q = trim((string) $request->query('q', ''));
 
-        $sumOf = fn (TransactionType $type) => fn ($t) => $t->where('type', $type->value);
+        // With a search: flat result list. Without: the kanban board.
+        if ($q !== '') {
+            $sumOf = fn (TransactionType $type) => fn ($t) => $t->where('type', $type->value);
 
-        $orders = Order::query()
-            ->withSum('bomLines as bom_grams', 'allocated_qty')
-            ->withSum(['transactions as consumed_grams' => $sumOf(TransactionType::Consumption)], 'qty')
-            ->withSum(['transactions as wasted_grams' => $sumOf(TransactionType::Wastage)], 'qty')
-            ->when($q !== '', fn ($query) => $query->whereRaw('LOWER(code) LIKE ?', ['%'.mb_strtolower($q).'%']))
-            ->when($q === '', fn ($query) => $query->has('bomLines')) // default list: orders with a paint BOM
-            ->orderByDesc('id')
-            ->limit(30)
-            ->get()
-            ->map(fn (Order $o) => [
-                'id' => $o->id,
-                'code' => $o->code,
-                'finish' => $o->finish,
-                'bom_grams' => (float) $o->bom_grams,
-                'used_grams' => abs((float) $o->consumed_grams) + abs((float) $o->wasted_grams),
-            ]);
+            $orders = Order::query()
+                ->withSum('bomLines as bom_grams', 'allocated_qty')
+                ->withSum(['transactions as consumed_grams' => $sumOf(TransactionType::Consumption)], 'qty')
+                ->withSum(['transactions as wasted_grams' => $sumOf(TransactionType::Wastage)], 'qty')
+                ->whereRaw('LOWER(code) LIKE ?', ['%'.mb_strtolower($q).'%'])
+                ->orderByDesc('id')
+                ->limit(30)
+                ->get()
+                ->map(fn (Order $o) => [
+                    'id' => $o->id,
+                    'code' => $o->code,
+                    'finish' => $o->finish,
+                    'bom_grams' => (float) $o->bom_grams,
+                    'used_grams' => abs((float) $o->consumed_grams) + abs((float) $o->wasted_grams),
+                ]);
 
-        return Inertia::render('Station/Consume/Index', ['orders' => $orders, 'q' => $q]);
+            return Inertia::render('Station/Consume/Index', ['orders' => $orders, 'lanes' => null, 'q' => $q]);
+        }
+
+        return Inertia::render('Station/Consume/Index', [
+            'orders' => null,
+            'lanes' => $board->lanes(),
+            'q' => $q,
+        ]);
     }
 
     public function show(Order $order, StockService $stock): Response
@@ -86,7 +95,7 @@ class ConsumptionController extends Controller
             ]);
 
         return Inertia::render('Station/Consume/Show', [
-            'order' => $order->only(['id', 'code', 'finish', 'colour_note']),
+            'order' => $order->only(['id', 'code', 'finish', 'colour_note', 'due_date']),
             'pools' => $stock->orderReconciliation($order)->values(),
             'slotTemplate' => SlotTemplate::for($order->finish),
             'classPools' => SlotTemplate::CLASS_POOLS,
