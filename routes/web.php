@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Station\ConsumptionController;
 use App\Http\Controllers\Station\MixController;
+use App\Http\Controllers\Station\RecipeController;
 use App\Http\Controllers\Store\IssueController;
 use App\Http\Controllers\Store\ReceiptController;
 use App\Http\Controllers\Store\StockController;
@@ -37,6 +38,7 @@ Route::middleware(['auth', 'role:painter'])->prefix('station')->name('station.')
     Route::get('/mix', [MixController::class, 'create'])->name('mix.create');
     Route::post('/mix', [MixController::class, 'store'])->name('mix.store');
     Route::get('/pantones', [MixController::class, 'pantones'])->name('pantones');
+    Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes');
     Route::get('/{order}', [ConsumptionController::class, 'show'])->name('consume.show');
     Route::post('/{order}', [ConsumptionController::class, 'store'])->name('consume.store');
 });

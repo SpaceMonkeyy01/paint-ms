@@ -58,12 +58,20 @@ export default function AuthenticatedLayout({ header, children }) {
                                     </>
                                 )}
                                 {['admin', 'painter'].includes(user.role) && (
-                                    <NavLink
-                                        href={route('station.consume.index')}
-                                        active={route().current('station.*')}
-                                    >
-                                        Station
-                                    </NavLink>
+                                    <>
+                                        <NavLink
+                                            href={route('station.consume.index')}
+                                            active={route().current('station.consume.*') || route().current('station.mix.*')}
+                                        >
+                                            Station
+                                        </NavLink>
+                                        <NavLink
+                                            href={route('station.recipes')}
+                                            active={route().current('station.recipes')}
+                                        >
+                                            Formulations
+                                        </NavLink>
+                                    </>
                                 )}
                                 {user.role === 'admin' && (
                                     <>
@@ -212,12 +220,20 @@ export default function AuthenticatedLayout({ header, children }) {
                             </>
                         )}
                         {['admin', 'painter'].includes(user.role) && (
-                            <ResponsiveNavLink
-                                href={route('station.consume.index')}
-                                active={route().current('station.*')}
-                            >
-                                Station
-                            </ResponsiveNavLink>
+                            <>
+                                <ResponsiveNavLink
+                                    href={route('station.consume.index')}
+                                    active={route().current('station.consume.*') || route().current('station.mix.*')}
+                                >
+                                    Station
+                                </ResponsiveNavLink>
+                                <ResponsiveNavLink
+                                    href={route('station.recipes')}
+                                    active={route().current('station.recipes')}
+                                >
+                                    Formulations
+                                </ResponsiveNavLink>
+                            </>
                         )}
                         {user.role === 'admin' && (
                             <>
