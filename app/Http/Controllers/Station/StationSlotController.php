@@ -6,17 +6,58 @@ use App\Http\Controllers\Controller;
 use App\Models\Item;
 use App\Models\StationSlot;
 use App\Services\SlotTemplate;
+use App\Services\StockService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
+use Inertia\Inertia;
+use Inertia\Response;
 
 /**
- * Slot rack management. Both store (on refill) and painters (at the station)
- * may load/swap what sits in a slot; the rack itself is flexible (add slots).
+ * Slot rack management. The rack is configured HERE (and by store refills that
+ * target a slot) — the consumption and mix screens only read the loaded rack.
  */
 class StationSlotController extends Controller
 {
+    /** The rack manager page: configure what sits in each slot. */
+    public function index(StockService $stock): Response
+    {
+        $station = $stock->stationStockByItem();
+
+        $slots = StationSlot::where('is_active', true)->with('item')
+            ->orderBy('position')->get()
+            ->map(fn (StationSlot $s) => [
+                'id' => $s->id,
+                'slot' => $s->slot,
+                'class' => $s->class,
+                'item' => $s->item ? [
+                    'id' => $s->item->id,
+                    'code' => $s->item->code,
+                    'name' => $s->item->name,
+                    'issue_pool' => $s->item->issue_pool,
+                    'station_on_hand' => (float) ($station[$s->item->id] ?? 0),
+                ] : null,
+            ]);
+
+        $itemsByPool = Item::where('is_active', true)->whereNotNull('issue_pool')
+            ->orderBy('name')->get()
+            ->map(fn (Item $i) => [
+                'id' => $i->id,
+                'code' => $i->code,
+                'name' => $i->name,
+                'issue_pool' => $i->issue_pool,
+                'station_on_hand' => (float) ($station[$i->id] ?? 0),
+            ])
+            ->groupBy('issue_pool');
+
+        return Inertia::render('Station/Slots/Index', [
+            'slots' => $slots,
+            'classPools' => SlotTemplate::CLASS_POOLS,
+            'itemsByPool' => $itemsByPool,
+        ]);
+    }
+
     /** Load or swap the item in a slot (null unloads it). */
     public function update(Request $request, StationSlot $slot): RedirectResponse
     {
@@ -57,5 +98,13 @@ class StationSlotController extends Controller
         ]);
 
         return back()->with('success', "Slot {$code} added.");
+    }
+
+    /** Remove a slot from the rack (deactivates — ledger history keeps its code). */
+    public function destroy(StationSlot $slot): RedirectResponse
+    {
+        $slot->update(['is_active' => false, 'item_id' => null]);
+
+        return back()->with('success', "Slot {$slot->slot} removed from the rack.");
     }
 }

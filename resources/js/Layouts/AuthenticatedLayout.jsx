@@ -71,6 +71,12 @@ export default function AuthenticatedLayout({ header, children }) {
                                         >
                                             Formulations
                                         </NavLink>
+                                        <NavLink
+                                            href={route('station.slots.index')}
+                                            active={route().current('station.slots.*')}
+                                        >
+                                            Slots
+                                        </NavLink>
                                     </>
                                 )}
                                 {user.role === 'admin' && (
@@ -232,6 +238,12 @@ export default function AuthenticatedLayout({ header, children }) {
                                     active={route().current('station.recipes')}
                                 >
                                     Formulations
+                                </ResponsiveNavLink>
+                                <ResponsiveNavLink
+                                    href={route('station.slots.index')}
+                                    active={route().current('station.slots.*')}
+                                >
+                                    Slots
                                 </ResponsiveNavLink>
                             </>
                         )}

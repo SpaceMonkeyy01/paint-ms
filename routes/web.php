@@ -40,8 +40,10 @@ Route::middleware(['auth', 'role:painter'])->prefix('station')->name('station.')
     Route::post('/mix', [MixController::class, 'store'])->name('mix.store');
     Route::get('/pantones', [MixController::class, 'pantones'])->name('pantones');
     Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes');
+    Route::get('/slots', [StationSlotController::class, 'index'])->name('slots.index');
     Route::patch('/slots/{slot}', [StationSlotController::class, 'update'])->name('slots.update');
     Route::post('/slots', [StationSlotController::class, 'store'])->name('slots.store');
+    Route::delete('/slots/{slot}', [StationSlotController::class, 'destroy'])->name('slots.destroy');
     Route::get('/recipes/colour', [RecipeController::class, 'show'])->name('recipes.show'); // ?colour=PANTONE 7463 C
     Route::get('/{order}', [ConsumptionController::class, 'show'])->name('consume.show');
     Route::post('/{order}', [ConsumptionController::class, 'store'])->name('consume.store');

@@ -83,6 +83,35 @@ test('adding a slot takes the next free code in its class', function () {
     expect(StationSlot::where('class', 'W')->pluck('slot')->all())->toBe(['W01', 'W02', 'W03']);
 });
 
+test('the slot management page renders the rack with loaded items', function () {
+    $this->actingAs(makeUser(Role::Painter));
+    $this->seed(StationSlotSeeder::class);
+    $item = makeItem();
+    StationSlot::firstWhere('slot', 'W01')->update(['item_id' => $item->id]);
+
+    $slots = collect($this->get(route('station.slots.index'))
+        ->assertOk()->viewData('page')['props']['slots']);
+
+    expect($slots)->toHaveCount(8)
+        ->and($slots->firstWhere('slot', 'W01')['item']['id'])->toBe($item->id);
+});
+
+test('removing a slot deactivates it and hides it everywhere', function () {
+    $this->actingAs(makeUser(Role::Painter));
+    $this->seed(StationSlotSeeder::class);
+    $slot = StationSlot::firstWhere('slot', 'A04');
+
+    $this->delete(route('station.slots.destroy', $slot))
+        ->assertRedirect()->assertSessionHas('success');
+
+    expect($slot->fresh()->is_active)->toBeFalse();
+
+    $order = makeOrder();
+    $slots = collect($this->get(route('station.consume.show', $order))
+        ->assertOk()->viewData('page')['props']['slots']);
+    expect($slots->pluck('slot'))->not->toContain('A04');
+});
+
 test('ad-hoc X-slot readings are accepted by the consumption endpoint', function () {
     $this->actingAs(makeUser(Role::Painter));
     $item = makeItem();

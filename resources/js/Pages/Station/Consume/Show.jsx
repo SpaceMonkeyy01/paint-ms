@@ -1,7 +1,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import InputError from '@/Components/InputError';
 import ProgressBar from '@/Components/ProgressBar';
-import { Head, Link, router, useForm, usePage } from '@inertiajs/react';
+import { Head, Link, useForm, usePage } from '@inertiajs/react';
 import { useMemo, useState } from 'react';
 
 const fmt = (g, dp = 0) =>
@@ -14,39 +14,22 @@ const CLASS_STYLE = {
     X: 'bg-gray-100 text-gray-600',
 };
 
-const CLASS_NAME = { W: 'Colour', P: 'Primer', A: 'Additive' };
-
 export default function Show({ order, pools, slots, classPools, itemsByPool, batches, recent }) {
     const { flash } = usePage().props;
 
-    // per-slot entry (qty/unit/batch) keyed by slot id — slots themselves are
-    // persistent rack config from the server, loaded with their current items
+    // per-slot entry (qty/unit/batch) keyed by slot id — the rack itself is
+    // configured on the Slots page, this screen only reads it
     const [entries, setEntries] = useState({});
     // ad-hoc lines for items not loaded in any slot
     const [extras, setExtras] = useState([]);
-    const [swapping, setSwapping] = useState(null); // slot id with the item picker open
 
     const consumeForm = useForm({ readings: [] });
 
     const allItems = useMemo(() => Object.values(itemsByPool).flat(), [itemsByPool]);
     const itemById = (id) => allItems.find((i) => i.id === Number(id));
 
-    const itemsForClass = (cls) =>
-        (classPools[cls] ?? []).flatMap((pool) => itemsByPool[pool] ?? []);
-
     const entry = (id) => entries[id] ?? { qty: '', unit: 'g', colour_batch_id: '' };
     const setEntry = (id, patch) => setEntries({ ...entries, [id]: { ...entry(id), ...patch } });
-
-    const loadSlot = (slot, itemId) => {
-        router.patch(route('station.slots.update', slot.id), { item_id: itemId || null }, {
-            preserveScroll: true,
-            preserveState: true,
-            onSuccess: () => setSwapping(null),
-        });
-    };
-
-    const addSlot = (cls) =>
-        router.post(route('station.slots.store'), { class: cls }, { preserveScroll: true, preserveState: true });
 
     const slotGrams = (slot) => {
         const e = entry(slot.id);
@@ -193,7 +176,12 @@ export default function Show({ order, pools, slots, classPools, itemsByPool, bat
                                             </span>
                                         </span>
                                     ) : (
-                                        <span className="flex-1 text-sm text-gray-400">empty — load an item</span>
+                                        <span className="flex-1 text-sm text-gray-400">
+                                            empty —{' '}
+                                            <Link href={route('station.slots.index')} className="text-indigo-600">
+                                                load it in Slots
+                                            </Link>
+                                        </span>
                                     )}
                                     {grams > 0 && (
                                         <span className="text-sm font-semibold tabular-nums text-gray-700">
@@ -201,30 +189,7 @@ export default function Show({ order, pools, slots, classPools, itemsByPool, bat
                                             {litres !== null && ` · ${litres.toLocaleString('en-US', { maximumFractionDigits: 3 })} L`}
                                         </span>
                                     )}
-                                    <button
-                                        type="button"
-                                        onClick={() => setSwapping(swapping === s.id ? null : s.id)}
-                                        className="text-sm text-indigo-600"
-                                    >
-                                        {s.item ? 'swap' : 'load'}
-                                    </button>
                                 </div>
-
-                                {(swapping === s.id || !s.item) && (
-                                    <select
-                                        value={s.item?.id ?? ''}
-                                        onChange={(ev) => loadSlot(s, ev.target.value)}
-                                        className="w-full rounded-lg border-gray-300 py-2.5 text-sm"
-                                    >
-                                        <option value="">— empty slot —</option>
-                                        {itemsForClass(s.class).map((i) => (
-                                            <option key={i.id} value={i.id}>
-                                                {i.name} ({i.code}) — {fmt(i.station_on_hand)} g at station
-                                                {i.density_kg_per_l ? '' : ' · no density'}
-                                            </option>
-                                        ))}
-                                    </select>
-                                )}
 
                                 {s.item && s.item.station_on_hand <= 0 && (
                                     <p className="text-sm font-medium text-red-600">
@@ -341,24 +306,13 @@ export default function Show({ order, pools, slots, classPools, itemsByPool, bat
                         </div>
                     ))}
 
-                    <div className="flex gap-2">
-                        <button
-                            type="button"
-                            onClick={() => setExtras([...extras, { pool: '', item_id: '', qty: '', unit: 'g' }])}
-                            className="flex-1 rounded-lg border border-dashed border-gray-300 py-2 text-sm text-gray-500"
-                        >
-                            + other item (not in a slot)
-                        </button>
-                        {['W', 'P', 'A'].map((cls) => (
-                            <button
-                                key={cls} type="button" onClick={() => addSlot(cls)}
-                                className="rounded-lg border border-dashed border-gray-300 px-3 py-2 text-sm text-gray-500"
-                                title={`Add a ${CLASS_NAME[cls]} slot to the rack`}
-                            >
-                                + {cls}
-                            </button>
-                        ))}
-                    </div>
+                    <button
+                        type="button"
+                        onClick={() => setExtras([...extras, { pool: '', item_id: '', qty: '', unit: 'g' }])}
+                        className="w-full rounded-lg border border-dashed border-gray-300 py-2 text-sm text-gray-500"
+                    >
+                        + other item (not in a slot)
+                    </button>
 
                     <InputError message={consumeForm.errors.readings} />
 
