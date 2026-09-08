@@ -53,10 +53,14 @@ costing) and **Paint Consumption Tool** (station: scale-weight consumption, g→
 ```
 app/Enums/          Role, TransactionType, IssueType
 app/Models/         Item, Order, BomLine, BomCategory, Transaction, ColourBatch, ColourBatchComponent
-app/Services/       StockService (stock list, LOW/OUT, per-order pool reconciliation),
+app/Services/       StockService (stock list, LOW/OUT, station stock, per-order pool reconciliation),
+                    MixService (station's primary flow: one save = colour batch recipe + consumption
+                    rows for the order — never let these be entered separately),
                     BomStringParser (the only BOM string parser) — add services here, keep controllers thin
 docs/               airtable-sync.md — source of truth for the order/BOM feed
-database/seeders/   LegacyImportSeeder + data/ (real legacy data; idempotent on natural keys)
+database/seeders/   LegacyImportSeeder + data/ (real legacy data; idempotent on natural keys),
+                    PantoneColourSeeder ← database/data/pantone_colours.csv (Pantone Solid Coated book,
+                    community HEX/Lab approximations — reference data, not covered by the extract rule)
 tools/              extract_seed_data.py — xlsx → CSV, prints stock reconciliation vs legacy
 resources/js/Pages/ Inertia pages, grouped by role: Store/, Station/, Admin/
 ```

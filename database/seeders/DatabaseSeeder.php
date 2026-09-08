@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             );
         }
 
+        $this->call(PantoneColourSeeder::class);
         $this->call(LegacyImportSeeder::class);
     }
 }

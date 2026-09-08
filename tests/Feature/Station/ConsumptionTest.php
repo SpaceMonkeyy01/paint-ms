@@ -127,28 +127,6 @@ test('over-BOM consumption goes through with a warning, never blocks (rule 6)', 
     expect((float) $order->transactions()->where('type', 'consumption')->sum('qty'))->toBe(-150.0);
 });
 
-test('colour batch entry stores components with computed percentages', function () {
-    $this->actingAs(makeUser(Role::Painter));
-    $tintA = makeItem();
-    $tintB = makeItem();
-    $order = makeOrder();
-
-    $this->post(route('station.colour-batch.store', $order), [
-        'colour_ref' => 'PANTONE 7463 C',
-        'components' => [
-            ['item_id' => $tintA->id, 'grams' => 750],
-            ['item_id' => $tintB->id, 'grams' => 250],
-        ],
-    ])->assertRedirect()->assertSessionHas('success');
-
-    $batch = ColourBatch::firstWhere('order_id', $order->id);
-    expect($batch->colour_ref)->toBe('PANTONE 7463 C')
-        ->and($batch->batch_grams)->toBe(1000.0)
-        ->and($batch->ref)->toStartWith('CLR-')
-        ->and($batch->components)->toHaveCount(2)
-        ->and((float) $batch->components->firstWhere('item_id', $tintA->id)->pct)->toBe(75.0);
-});
-
 test('a colour batch from another order cannot be linked', function () {
     $this->actingAs(makeUser(Role::Painter));
     $item = makeItem();

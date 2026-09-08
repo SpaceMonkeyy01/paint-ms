@@ -20,6 +20,13 @@ export default function Index({ orders, q }) {
             <Head title="Station" />
 
             <div className="mx-auto max-w-3xl space-y-4 px-4 py-6">
+                <Link
+                    href={route('station.mix.create')}
+                    className="block rounded-xl bg-indigo-600 py-4 text-center text-xl font-bold text-white shadow-sm transition hover:bg-indigo-500"
+                >
+                    + Create Mix
+                </Link>
+
                 <form onSubmit={submit}>
                     <input
                         type="search"

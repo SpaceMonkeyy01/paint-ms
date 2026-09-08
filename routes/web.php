@@ -3,8 +3,8 @@
 use App\Http\Controllers\Admin\CostingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Station\ColourBatchController;
 use App\Http\Controllers\Station\ConsumptionController;
+use App\Http\Controllers\Station\MixController;
 use App\Http\Controllers\Store\IssueController;
 use App\Http\Controllers\Store\ReceiptController;
 use App\Http\Controllers\Store\StockController;
@@ -33,9 +33,12 @@ Route::middleware(['auth', 'role:store'])->prefix('store')->name('store.')->grou
 
 Route::middleware(['auth', 'role:painter'])->prefix('station')->name('station.')->group(function () {
     Route::get('/', [ConsumptionController::class, 'index'])->name('consume.index');
+    // literal paths before the {order} wildcard
+    Route::get('/mix', [MixController::class, 'create'])->name('mix.create');
+    Route::post('/mix', [MixController::class, 'store'])->name('mix.store');
+    Route::get('/pantones', [MixController::class, 'pantones'])->name('pantones');
     Route::get('/{order}', [ConsumptionController::class, 'show'])->name('consume.show');
     Route::post('/{order}', [ConsumptionController::class, 'store'])->name('consume.store');
-    Route::post('/{order}/colour-batch', [ColourBatchController::class, 'store'])->name('colour-batch.store');
 });
 
 Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->group(function () {

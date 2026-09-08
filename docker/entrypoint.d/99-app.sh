@@ -12,6 +12,10 @@ if [ "$USERS" = "0" ]; then
     $ARTISAN db:seed --force
 fi
 
+# Pantone reference book — its seeder exits instantly once populated,
+# so this also backfills databases seeded before the table existed.
+$ARTISAN db:seed --class=PantoneColourSeeder --force
+
 # Laravel scheduler in the same container (airtable:sync-orders every 15 min).
 # Needs an always-on instance; on a free plan it sleeps with the service.
 $ARTISAN schedule:work >/dev/null 2>&1 &

@@ -74,27 +74,6 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
         });
     };
 
-    // ---- colour batch entry ----
-    const [showBatchForm, setShowBatchForm] = useState(false);
-    const batchForm = useForm({ colour_ref: '', notes: '', components: [{ item_id: '', grams: '' }] });
-    const tintItems = itemsForClass('W');
-
-    const submitBatch = (e) => {
-        e.preventDefault();
-        batchForm.transform((d) => ({
-            ...d,
-            components: d.components
-                .filter((c) => c.item_id && Number(c.grams) > 0)
-                .map((c) => ({ item_id: Number(c.item_id), grams: Number(c.grams) })),
-        }));
-        batchForm.post(route('station.colour-batch.store', order.id), {
-            onSuccess: () => {
-                batchForm.reset();
-                setShowBatchForm(false);
-            },
-        });
-    };
-
     return (
         <AuthenticatedLayout
             header={
@@ -265,23 +244,22 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
                     </button>
                 </form>
 
-                {/* colour batches */}
+                {/* colour mixes for this order */}
                 <div className="space-y-3 rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm">
                     <div className="flex items-center justify-between">
-                        <div className="text-sm font-medium text-gray-500">Colour batches</div>
-                        <button
-                            type="button"
-                            onClick={() => setShowBatchForm(!showBatchForm)}
+                        <div className="text-sm font-medium text-gray-500">Colour mixes</div>
+                        <Link
+                            href={`${route('station.mix.create')}?order=${order.id}`}
                             className="rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white"
                         >
-                            {showBatchForm ? 'Close' : '+ New batch'}
-                        </button>
+                            + Create Mix
+                        </Link>
                     </div>
 
                     {batches.map((b) => (
                         <div key={b.id} className="rounded border border-gray-200 p-3 text-sm">
                             <div className="flex items-center gap-2 font-medium">
-                                {b.hex && <span className="inline-block h-4 w-4 rounded" style={{ background: b.hex }} />}
+                                {b.hex && <span className="inline-block h-4 w-4 rounded ring-1 ring-inset ring-black/10" style={{ background: b.hex }} />}
                                 {b.ref} — {b.colour_ref}
                                 <span className="ms-auto tabular-nums text-gray-500">{fmt(b.batch_grams)} g</span>
                             </div>
@@ -290,59 +268,8 @@ export default function Show({ order, pools, slotTemplate, classPools, itemsByPo
                             </div>
                         </div>
                     ))}
-
-                    {showBatchForm && (
-                        <form onSubmit={submitBatch} className="space-y-2 border-t pt-3">
-                            <input
-                                value={batchForm.data.colour_ref}
-                                onChange={(e) => batchForm.setData('colour_ref', e.target.value)}
-                                placeholder="Target colour — e.g. PANTONE 7463 C"
-                                className="w-full rounded-lg border-gray-300 py-3"
-                            />
-                            <InputError message={batchForm.errors.colour_ref} />
-
-                            {batchForm.data.components.map((c, i) => (
-                                <div key={i} className="flex gap-2">
-                                    <select
-                                        value={c.item_id}
-                                        onChange={(e) => batchForm.setData('components',
-                                            batchForm.data.components.map((x, j) => j === i ? { ...x, item_id: e.target.value } : x))}
-                                        className="flex-1 rounded-lg border-gray-300 py-2 text-sm"
-                                    >
-                                        <option value="">Tint…</option>
-                                        {tintItems.map((t) => <option key={t.id} value={t.id}>{t.name} ({t.code})</option>)}
-                                    </select>
-                                    <input
-                                        type="number" inputMode="decimal" step="any" min="0"
-                                        value={c.grams}
-                                        onChange={(e) => batchForm.setData('components',
-                                            batchForm.data.components.map((x, j) => j === i ? { ...x, grams: e.target.value } : x))}
-                                        placeholder="g"
-                                        className="w-24 rounded-lg border-gray-300 py-2 text-center"
-                                    />
-                                </div>
-                            ))}
-                            <div className="flex justify-between">
-                                <button
-                                    type="button"
-                                    onClick={() => batchForm.setData('components', [...batchForm.data.components, { item_id: '', grams: '' }])}
-                                    className="text-sm text-indigo-600"
-                                >
-                                    + component
-                                </button>
-                                <span className="text-sm tabular-nums text-gray-500">
-                                    total {fmt(batchForm.data.components.reduce((a, c) => a + Number(c.grams || 0), 0), 1)} g
-                                </span>
-                            </div>
-                            <InputError message={batchForm.errors.components} />
-                            <button
-                                type="submit"
-                                disabled={batchForm.processing}
-                                className="w-full rounded-lg bg-indigo-600 py-3 font-semibold text-white shadow-sm transition hover:bg-indigo-500 disabled:opacity-40"
-                            >
-                                Save batch
-                            </button>
-                        </form>
+                    {batches.length === 0 && (
+                        <p className="py-2 text-center text-sm text-gray-400">No mixes yet for this order.</p>
                     )}
                 </div>
 
