@@ -4,13 +4,40 @@ use App\Enums\Role;
 use App\Models\StationSlot;
 use Database\Seeders\StationSlotSeeder;
 
-test('the default rack seeds once and is idempotent', function () {
+test('the Config-sheet rack seeds once and is idempotent', function () {
     $this->seed(StationSlotSeeder::class);
-    expect(StationSlot::count())->toBe(8)
-        ->and(StationSlot::where('class', 'A')->count())->toBe(4);
+    expect(StationSlot::count())->toBe(41) // W01-25, P01-05, A01-11 per the Config sheet
+        ->and(StationSlot::where('class', 'W')->count())->toBe(25)
+        ->and(StationSlot::where('class', 'P')->count())->toBe(5)
+        ->and(StationSlot::where('class', 'A')->count())->toBe(11);
 
     $this->seed(StationSlotSeeder::class);
-    expect(StationSlot::count())->toBe(8);
+    expect(StationSlot::count())->toBe(41);
+});
+
+test('seeding loads Config items into empty slots, matching compound iFlow codes', function () {
+    $black = makeItem(['code' => '2214', 'density_kg_per_l' => null]);
+    $strongRed = makeItem(['code' => '2245 / 2673', 'density_kg_per_l' => null]);
+
+    $this->seed(StationSlotSeeder::class);
+
+    expect(StationSlot::firstWhere('slot', 'W01')->item_id)->toBe($black->id)
+        ->and(StationSlot::firstWhere('slot', 'W07')->item_id)->toBe($strongRed->id)
+        // unmatched iFlow codes stay empty rather than guessing
+        ->and(StationSlot::firstWhere('slot', 'W13')->item_id)->toBeNull()
+        // Config density backfills a null (rule 7)
+        ->and((float) $strongRed->fresh()->density_kg_per_l)->toBe(1.0157);
+});
+
+test('re-seeding never overwrites an operator assignment', function () {
+    $black = makeItem(['code' => '2214']);
+    $other = makeItem();
+    $this->seed(StationSlotSeeder::class);
+    StationSlot::firstWhere('slot', 'W01')->update(['item_id' => $other->id]);
+
+    $this->seed(StationSlotSeeder::class);
+
+    expect(StationSlot::firstWhere('slot', 'W01')->item_id)->toBe($other->id);
 });
 
 test('a painter can load an item into a slot, and the load persists', function () {
@@ -80,7 +107,8 @@ test('adding a slot takes the next free code in its class', function () {
     $this->post(route('station.slots.store'), ['class' => 'W'])
         ->assertRedirect()->assertSessionHas('success');
 
-    expect(StationSlot::where('class', 'W')->pluck('slot')->all())->toBe(['W01', 'W02', 'W03']);
+    expect(StationSlot::where('class', 'W')->count())->toBe(26)
+        ->and(StationSlot::where('class', 'W')->orderByDesc('id')->value('slot'))->toBe('W26');
 });
 
 test('the slot management page renders the rack with loaded items', function () {
@@ -92,7 +120,7 @@ test('the slot management page renders the rack with loaded items', function () 
     $slots = collect($this->get(route('station.slots.index'))
         ->assertOk()->viewData('page')['props']['slots']);
 
-    expect($slots)->toHaveCount(8)
+    expect($slots)->toHaveCount(41)
         ->and($slots->firstWhere('slot', 'W01')['item']['id'])->toBe($item->id);
 });
 

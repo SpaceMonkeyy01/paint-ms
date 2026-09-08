@@ -15,6 +15,7 @@ class SlotTemplate
     public const CLASS_POOLS = [
         'W' => ['Paint Mixing', 'Paint Stain'],
         'P' => ['Epoxy Set'],
-        'A' => ['Paint Matt Agent', 'Paint Binder', 'Paint Harnder', 'Paint Thinner'],
+        // Miscellaneous: the booth's A slots hold clearcoat/spirit wipe (Config sheet)
+        'A' => ['Paint Matt Agent', 'Paint Binder', 'Paint Harnder', 'Paint Thinner', 'Miscellaneous'],
     ];
 }
