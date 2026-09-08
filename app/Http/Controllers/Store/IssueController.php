@@ -2,60 +2,39 @@
 
 namespace App\Http\Controllers\Store;
 
-use App\Enums\IssueType;
 use App\Enums\TransactionType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Store\StoreIssueRequest;
 use App\Models\Item;
-use App\Models\Order;
+use App\Models\Transaction;
 use App\Services\LedgerService;
 use App\Services\StockService;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
 
+/**
+ * Store → station replenishment. Issues carry no order (rule 3): when a slot
+ * runs low the painter asks for a new container and the store issues it here.
+ * Order attribution happens at the station, on consumption entries.
+ */
 class IssueController extends Controller
 {
-    public function index(Request $request): Response
+    public function index(StockService $stock): Response
     {
-        $q = trim((string) $request->query('q', ''));
+        $warehouse = $stock->stockByItem();
 
-        $orders = Order::query()
-            ->withSum('bomLines as bom_grams', 'allocated_qty')
-            ->withSum(['transactions as issued_grams' => fn ($t) => $t->where('type', TransactionType::Issue->value)], 'qty')
-            ->when($q !== '', fn ($query) => $query->whereRaw('LOWER(code) LIKE ?', ['%'.mb_strtolower($q).'%']))
-            ->orderByDesc('id')
-            ->limit(30)
-            ->get()
-            ->map(fn (Order $o) => [
-                'id' => $o->id,
-                'code' => $o->code,
-                'finish' => $o->finish,
-                'bom_grams' => (float) $o->bom_grams,
-                'issued_grams' => abs((float) $o->issued_grams),
-                'remaining_grams' => max((float) $o->bom_grams - abs((float) $o->issued_grams), 0),
-            ]);
+        $board = $stock->stationList()->map(fn (Item $i) => [
+            'id' => $i->id,
+            'code' => $i->code,
+            'name' => $i->name,
+            'issue_pool' => $i->issue_pool,
+            'station_on_hand' => (float) $i->station_on_hand,
+            'station_status' => $i->station_status,
+            'stock_on_hand' => (float) ($warehouse[$i->id] ?? 0),
+        ]);
 
-        return Inertia::render('Store/Issue/Index', ['orders' => $orders, 'q' => $q]);
-    }
-
-    public function show(Order $order, StockService $stock): Response
-    {
-        $stockByItem = $stock->stockByItem();
-
-        $itemsByPool = Item::where('is_active', true)->whereNotNull('issue_pool')
-            ->orderBy('name')->get()
-            ->map(fn (Item $i) => [
-                'id' => $i->id,
-                'code' => $i->code,
-                'name' => $i->name,
-                'issue_pool' => $i->issue_pool,
-                'stock_on_hand' => (float) ($stockByItem[$i->id] ?? 0),
-            ])
-            ->groupBy('issue_pool');
-
-        $recent = $order->transactions()
+        $recent = Transaction::query()
             ->where('type', TransactionType::Issue->value)
             ->with('item:id,code,name')
             ->orderByDesc('occurred_at')->orderByDesc('id')
@@ -66,30 +45,25 @@ class IssueController extends Controller
                 'item' => $t->item?->name,
                 'grams' => abs($t->qty),
                 'issue_pool' => $t->issue_pool,
-                'issue_type' => $t->issue_type?->value,
+                'remarks' => $t->remarks,
             ]);
 
-        return Inertia::render('Store/Issue/Show', [
-            'order' => $order->only(['id', 'code', 'finish', 'bom_total_cost']),
-            'pools' => $stock->orderReconciliation($order)->values(),
-            'itemsByPool' => $itemsByPool,
+        return Inertia::render('Store/Issue/Index', [
+            'board' => $board->groupBy('issue_pool'),
             'recentIssues' => $recent,
         ]);
     }
 
-    public function store(StoreIssueRequest $request, Order $order, LedgerService $ledger): RedirectResponse
+    public function store(StoreIssueRequest $request, LedgerService $ledger): RedirectResponse
     {
         $data = $request->validated();
 
-        $ledger->issueLines(
-            order: $order,
+        $ledger->issueToStation(
             lines: $data['lines'],
-            issueType: IssueType::from($data['issue_type']),
             enteredBy: $request->user(),
-            authorizedBy: $data['authorized_by'] ?? null,
             remarks: $data['remarks'] ?? null,
         );
 
-        return back()->with('success', count($data['lines']).' line(s) issued to '.$order->code.'.');
+        return back()->with('success', count($data['lines']).' line(s) issued to the station.');
     }
 }

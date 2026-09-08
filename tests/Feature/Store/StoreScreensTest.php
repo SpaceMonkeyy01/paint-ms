@@ -25,51 +25,33 @@ test('store and admin can reach store screens', function () {
     }
 });
 
-test('issue submit writes issue transactions and updates stock', function () {
+test('issue submit replenishes the station with no order attached (rule 3)', function () {
     $this->actingAs($user = makeUser(Role::Store));
     $item = makeItem();
-    $order = makeOrder(['Paint Mixing' => 500.0]);
     ledger()->record(TransactionType::Opening, $item, 1000);
 
-    $this->post(route('store.issue.store', $order), [
-        'issue_type' => 'bom',
+    $this->post(route('store.issue.store'), [
         'lines' => [['item_id' => $item->id, 'grams' => 250]],
+        'remarks' => 'W01 container swap',
     ])->assertRedirect()->assertSessionHas('success');
 
     expect($item->stockOnHand())->toBe(750.0);
 
-    $txn = $order->transactions()->first();
+    $txn = $item->transactions()->where('type', 'issue')->first();
     expect($txn->type)->toBe(TransactionType::Issue)
         ->and($txn->qty)->toBe(-250.0)
+        ->and($txn->order_id)->toBeNull()
         ->and($txn->entered_by_id)->toBe($user->id)
         ->and($txn->issue_pool)->toBe('Paint Mixing');
 });
 
-test('over-BOM submit without reason fails validation and writes nothing', function () {
+test('issue submit without lines fails validation and writes nothing', function () {
     $this->actingAs(makeUser(Role::Store));
     $item = makeItem();
-    $order = makeOrder(['Paint Mixing' => 100.0]);
     ledger()->record(TransactionType::Opening, $item, 1000);
 
-    $this->from(route('store.issue.show', $order))->post(route('store.issue.store', $order), [
-        'issue_type' => 'variance',
-        'lines' => [['item_id' => $item->id, 'grams' => 250]],
-    ])->assertRedirect(route('store.issue.show', $order))->assertSessionHasErrors(['remarks', 'authorized_by']);
-
-    expect($item->stockOnHand())->toBe(1000.0)
-        ->and($order->transactions()->count())->toBe(0);
-});
-
-test('bom submit over the pool allowance is rejected by the ledger', function () {
-    $this->actingAs(makeUser(Role::Store));
-    $item = makeItem();
-    $order = makeOrder(['Paint Mixing' => 100.0]);
-    ledger()->record(TransactionType::Opening, $item, 1000);
-
-    $this->from(route('store.issue.show', $order))->post(route('store.issue.store', $order), [
-        'issue_type' => 'bom',
-        'lines' => [['item_id' => $item->id, 'grams' => 250]],
-    ])->assertRedirect(route('store.issue.show', $order))->assertSessionHasErrors(['issue']);
+    $this->post(route('store.issue.store'), ['lines' => []])
+        ->assertSessionHasErrors(['lines']);
 
     expect($item->stockOnHand())->toBe(1000.0);
 });

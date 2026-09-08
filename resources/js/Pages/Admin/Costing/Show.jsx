@@ -33,11 +33,11 @@ export default function Show({ order, costing, pools, transactions }) {
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                     {[
                         ['BOM cost', costing.bom_cost, ''],
-                        ['Issued', costing.issued_value, ''],
+                        ['Actual cost', costing.actual_value, ''],
                         ['Consumed', costing.consumed_value, ''],
                         ['Wasted', costing.wasted_value, ''],
+                        ['Issued (legacy)', costing.issued_value, ''],
                         ['Repaint', costing.repaint_value, ''],
-                        ['Over-BOM (variance)', costing.variance_value, ''],
                         ['Variance %', costing.variance_pct === null ? null : `${costing.variance_pct > 0 ? '+' : ''}${costing.variance_pct}%`,
                             costing.variance_pct > 0 ? 'text-red-600' : 'text-emerald-600'],
                         ['Rs / sqft', costing.cost_per_sqft, ''],
@@ -61,7 +61,7 @@ export default function Show({ order, costing, pools, transactions }) {
                                 <th className="px-3 py-3 text-right">Issued g</th>
                                 <th className="px-3 py-3 text-right">Consumed g</th>
                                 <th className="px-3 py-3 text-right">Wasted g</th>
-                                <th className="px-3 py-3 text-right">Issue var g</th>
+                                <th className="px-3 py-3 text-right">Used var g</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -73,9 +73,9 @@ export default function Show({ order, costing, pools, transactions }) {
                                     <td className="px-3 py-2.5 text-right tabular-nums">{fmt(p.consumed)}</td>
                                     <td className="px-3 py-2.5 text-right tabular-nums">{fmt(p.wasted)}</td>
                                     <td className={`px-3 py-2.5 text-right font-semibold tabular-nums ${
-                                        p.issue_variance > 0 ? 'text-red-600' : 'text-emerald-600'
+                                        p.used_variance > 0 ? 'text-red-600' : 'text-emerald-600'
                                     }`}>
-                                        {p.issue_variance > 0 ? '+' : ''}{fmt(p.issue_variance)}
+                                        {p.used_variance > 0 ? '+' : ''}{fmt(p.used_variance)}
                                     </td>
                                 </tr>
                             ))}

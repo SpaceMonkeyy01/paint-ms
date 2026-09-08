@@ -1,10 +1,8 @@
 <?php
 
-use App\Enums\IssueType;
 use App\Enums\Role;
 use App\Enums\TransactionType;
 use App\Models\ColourBatch;
-use App\Services\LedgerService;
 use App\Services\StockService;
 use Illuminate\Validation\ValidationException;
 
@@ -21,36 +19,36 @@ test('store users cannot reach station screens, painters and admin can', functio
     }
 });
 
-test('consumption and wastage never move item stock — no double deduction (rule 1)', function () {
+test('consumption never moves warehouse stock — no double deduction (rule 1)', function () {
     $item = makeItem();
     $order = makeOrder(['Paint Mixing' => 500.0]);
     ledger()->record(TransactionType::Opening, $item, 1000);
-    ledger()->record(TransactionType::Issue, $item, 500, $order, IssueType::Bom);
+    ledger()->issueToStation([['item_id' => $item->id, 'grams' => 500]]);
 
-    expect($item->stockOnHand())->toBe(500.0); // issue moved stock
+    expect($item->stockOnHand())->toBe(500.0); // the station issue moved stock
 
     ledger()->consumeSlots($order, [
-        ['slot' => 'W01', 'item_id' => $item->id, 'start_wt' => 500, 'end_wt' => 120, 'wastage' => 30],
+        ['slot' => 'W01', 'item_id' => $item->id, 'grams' => 380],
     ]);
 
-    // scale readings recorded, store stock untouched
+    // consumption recorded against the order, warehouse stock untouched
     expect($item->stockOnHand())->toBe(500.0)
         ->and((float) app(StockService::class)->stockByItem()[$item->id])->toBe(500.0);
 
-    // but the order chain sees them (rule 3)
+    // the order chain tallies used vs BOM (rule 3)
     $pool = app(StockService::class)->orderReconciliation($order->fresh())
         ->firstWhere('issue_pool', 'Paint Mixing');
-    expect($pool['issued'])->toBe(500.0)
-        ->and($pool['consumed'])->toBe(380.0)
-        ->and($pool['wasted'])->toBe(30.0);
+    expect($pool['consumed'])->toBe(380.0)
+        ->and($pool['used'])->toBe(380.0)
+        ->and($pool['remaining'])->toBe(120.0);
 });
 
-test('consumeSlots writes signed consumption rows with slot and scale weights', function () {
+test('consumeSlots writes signed consumption rows with slot and snapshot rate', function () {
     $item = makeItem();
     $order = makeOrder();
 
     $txns = ledger()->consumeSlots($order, [
-        ['slot' => 'P01', 'item_id' => $item->id, 'start_wt' => 800.5, 'end_wt' => 300.25],
+        ['slot' => 'P01', 'item_id' => $item->id, 'grams' => 500.25],
     ], makeUser(Role::Painter));
 
     expect($txns)->toHaveCount(1);
@@ -58,40 +56,75 @@ test('consumeSlots writes signed consumption rows with slot and scale weights', 
     expect($txn->type)->toBe(TransactionType::Consumption)
         ->and($txn->qty)->toBe(-500.25)
         ->and($txn->slot)->toBe('P01')
-        ->and((float) $txn->start_wt)->toBe(800.5)
-        ->and((float) $txn->end_wt)->toBe(300.25)
+        ->and($txn->order_id)->toBe($order->id)
         ->and($txn->rate)->toBe(2.5)      // rule 4 applies at the station too
         ->and($txn->value)->toBe(1250.63);
 });
 
-test('end weight above start weight rejects the whole session', function () {
-    $itemA = makeItem();
-    $itemB = makeItem();
+test('litres convert to grams through density (rule 7)', function () {
+    $item = makeItem(['density_kg_per_l' => 1.2]);
+    $order = makeOrder();
+
+    $txns = ledger()->consumeSlots($order, [
+        ['slot' => 'W01', 'item_id' => $item->id, 'litres' => 0.5],
+    ]);
+
+    expect($txns[0]->qty)->toBe(-600.0); // 0.5 L × 1.2 kg/L × 1000
+});
+
+test('litres without density are rejected — never guess (rule 7)', function () {
+    $item = makeItem(['density_kg_per_l' => null]);
     $order = makeOrder();
 
     expect(fn () => ledger()->consumeSlots($order, [
-        ['slot' => 'W01', 'item_id' => $itemA->id, 'start_wt' => 500, 'end_wt' => 100],
-        ['slot' => 'W02', 'item_id' => $itemB->id, 'start_wt' => 100, 'end_wt' => 500],
+        ['slot' => 'W01', 'item_id' => $item->id, 'litres' => 0.5],
+    ]))->toThrow(ValidationException::class);
+
+    expect($order->transactions()->count())->toBe(0);
+});
+
+test('a bad line rolls the whole session back', function () {
+    $itemA = makeItem();
+    $itemB = makeItem(['density_kg_per_l' => null]);
+    $order = makeOrder();
+
+    expect(fn () => ledger()->consumeSlots($order, [
+        ['slot' => 'W01', 'item_id' => $itemA->id, 'grams' => 100],
+        ['slot' => 'W02', 'item_id' => $itemB->id, 'litres' => 1], // no density
     ]))->toThrow(ValidationException::class);
 
     expect($order->transactions()->count())->toBe(0); // atomic
 });
 
-test('station submit endpoint records consumption and wastage', function () {
+test('station submit endpoint records consumption for the order', function () {
     $this->actingAs($user = makeUser(Role::Painter));
     $item = makeItem();
-    $order = makeOrder();
+    $order = makeOrder(['Paint Mixing' => 500.0]);
 
     $this->post(route('station.consume.store', $order), [
         'readings' => [
-            ['slot' => 'W01', 'item_id' => $item->id, 'start_wt' => 400, 'end_wt' => 150, 'wastage' => 20],
+            ['slot' => 'W01', 'item_id' => $item->id, 'grams' => 250],
         ],
-    ])->assertRedirect()->assertSessionHas('success');
+    ])->assertRedirect()->assertSessionHas('success')->assertSessionMissing('warning');
 
     expect($order->transactions()->where('type', 'consumption')->count())->toBe(1)
-        ->and($order->transactions()->where('type', 'wastage')->count())->toBe(1)
-        ->and((float) $order->transactions()->where('type', 'wastage')->value('qty'))->toBe(-20.0)
+        ->and((float) $order->transactions()->value('qty'))->toBe(-250.0)
         ->and($order->transactions()->first()->entered_by_id)->toBe($user->id);
+});
+
+test('over-BOM consumption goes through with a warning, never blocks (rule 6)', function () {
+    $this->actingAs(makeUser(Role::Painter));
+    $item = makeItem();
+    $order = makeOrder(['Paint Mixing' => 100.0]);
+
+    $this->post(route('station.consume.store', $order), [
+        'readings' => [
+            ['slot' => 'W01', 'item_id' => $item->id, 'grams' => 150],
+        ],
+    ])->assertRedirect()->assertSessionHas('success')->assertSessionHas('warning');
+
+    // the entry was written despite exceeding BOM
+    expect((float) $order->transactions()->where('type', 'consumption')->sum('qty'))->toBe(-150.0);
 });
 
 test('colour batch entry stores components with computed percentages', function () {
@@ -127,7 +160,7 @@ test('a colour batch from another order cannot be linked', function () {
 
     $this->post(route('station.consume.store', $order), [
         'readings' => [
-            ['slot' => 'W01', 'item_id' => $item->id, 'start_wt' => 100, 'end_wt' => 50, 'colour_batch_id' => $foreign->id],
+            ['slot' => 'W01', 'item_id' => $item->id, 'grams' => 50, 'colour_batch_id' => $foreign->id],
         ],
     ])->assertSessionHasErrors(['readings.0.colour_batch_id']);
 

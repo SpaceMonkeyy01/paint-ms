@@ -1,4 +1,5 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import ProgressBar from '@/Components/ProgressBar';
 import { Head, Link, router } from '@inertiajs/react';
 import { useState } from 'react';
 
@@ -25,7 +26,7 @@ export default function Index({ orders, q }) {
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         placeholder="Search order code"
-                        className="w-full rounded-xl border-gray-200 px-4 py-3 text-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 shadow-sm"
+                        className="w-full rounded-xl border-gray-200 px-4 py-3 text-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                         autoFocus
                     />
                 </form>
@@ -35,17 +36,29 @@ export default function Index({ orders, q }) {
                         <li key={o.id}>
                             <Link
                                 href={route('station.consume.show', o.id)}
-                                className="flex items-center justify-between gap-3 px-4 py-4 active:bg-indigo-50"
+                                className="block px-4 py-4 transition hover:bg-indigo-50/40 active:bg-indigo-50"
                             >
-                                <div>
-                                    <div className="text-lg font-semibold text-gray-900">{o.code}</div>
-                                    <div className="text-sm text-gray-500">
-                                        issued {fmt(o.issued_grams)} g · used {fmt(o.consumed_grams)} g
+                                <div className="flex items-center justify-between gap-3">
+                                    <div className="text-lg font-semibold text-gray-900">
+                                        {o.code}
+                                        {o.finish && (
+                                            <span className="ms-2 rounded-md bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-500">
+                                                {o.finish}
+                                            </span>
+                                        )}
                                     </div>
+                                    {o.bom_grams > 0 && o.used_grams > o.bom_grams && (
+                                        <span className="rounded-full bg-red-50 px-3 py-1 text-sm font-medium text-red-700 ring-1 ring-inset ring-red-600/20">
+                                            over BOM
+                                        </span>
+                                    )}
                                 </div>
-                                {o.finish && (
-                                    <span className="rounded bg-gray-100 px-2 py-0.5 text-sm">{o.finish}</span>
-                                )}
+                                <div className="mt-2 flex items-center gap-3">
+                                    <ProgressBar value={o.used_grams} max={o.bom_grams} className="flex-1" />
+                                    <span className="whitespace-nowrap text-xs tabular-nums text-gray-400">
+                                        used {fmt(o.used_grams)} / BOM {fmt(o.bom_grams)} g
+                                    </span>
+                                </div>
                             </Link>
                         </li>
                     ))}

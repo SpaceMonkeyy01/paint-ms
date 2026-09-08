@@ -21,17 +21,23 @@ costing) and **Paint Consumption Tool** (station: scale-weight consumption, g→
 2. **`transactions.qty` is signed.** `opening`/`receipt`/`adjust(+)` add; `issue`/`consumption`/
    `wastage`/`adjust(−)` remove. `TransactionType::sign()` is the source of truth. Never store abs values
    for issues.
-3. **One ledger for store and station.** `issue` = store hands material to an order. `consumption` =
-   painter's scale reading (start_wt − end_wt) at a slot. `wastage` = container gap. All three carry
-   `order_id`, so BOM → issued → consumed → wasted → costed is one chain per order.
+3. **One ledger for store and station.** `issue` = store refills the paint station's slots
+   (**no `order_id`** — containers are replaced as slots run low, not per order). `consumption` =
+   painter's typed entry (grams, or litres × density) at a slot; it carries `order_id` and is the
+   only per-order actual, so the chain is BOM → consumed → costed. Station stock per item is
+   derived: issues in − consumption/wastage out (`StockService::stationStockByItem()`), flags only
+   (OK/LOW/EMPTY) — refill requests stay verbal. Legacy rows (pre-station model) have `order_id`
+   on issues and scale weights on consumptions; keep them readable, never rewrite them.
 4. **Snapshot rates.** Every transaction stores `rate` (Rs/gram at the time) and `value = |qty| × rate`.
    Cost reports sum `value`; never multiply current `items.rate_per_uom` by historical qty.
 5. **BOM categories vs issue pools.** Odoo BOM lines are per *category* (`bom_lines.bom_category`);
    materials are issued per *pool* (`bom_categories.issue_pool`). Reconcile at pool level. Clubbed
    categories (Epoxy Primer + Epoxy Thinner + Epoxy Hardner → "Epoxy Set") are one pool. Categories
    with `ignored = true` ("Paint Miscellaneous cost") are never issued.
-6. **Over-BOM issue needs a reason and an authoriser.** `issue_type = variance` requires `remarks` and
-   `authorized_by`. `bom` issues cannot exceed remaining allowance for the pool.
+6. **BOM control is warn-only, at consumption.** An entry that pushes an order's pool over its BOM
+   allowance is recorded anyway, flashes a warning to the painter, and surfaces on the admin
+   dashboard (`CostingService::overBomOrders()`). Nothing blocks and no authoriser is required.
+   `issue_type` (variance/rework/reissue) survives on legacy rows only.
 7. **Grams are the unit.** Everything in the ledger is grams. Litres are display-only, computed as
    `grams / 1000 / density_kg_per_l`. If density is null, show grams and flag it — never guess density.
 8. **Item identity is `items.code`** (internal/iFlow code, e.g. `2214`, `2245 / 2673`). Never match on
@@ -74,8 +80,8 @@ resources/js/Pages/ Inertia pages, grouped by role: Store/, Station/, Admin/
 
 - Controllers validate with Form Requests, call a service, return Inertia. No business logic in
   controllers or React.
-- Ledger writes go through a single `LedgerService::record(...)` (create it in slice 2) that enforces
-  rules 2, 4, 6. Nothing else creates `Transaction` rows.
+- Ledger writes go through a single `LedgerService::record(...)` that enforces rules 2 and 4.
+  Nothing else creates `Transaction` rows.
 - Money: `decimal`, 2 dp. Quantities: `decimal`, 3 dp. Never float columns.
 - Timestamps in Asia/Karachi for display; store UTC.
 - Screens for `store` and `painter` are single-purpose and touch-friendly: big inputs, numeric keypad,

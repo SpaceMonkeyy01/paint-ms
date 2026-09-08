@@ -15,9 +15,9 @@ class StoreConsumptionRequest extends FormRequest
             'readings' => ['required', 'array', 'min:1'],
             'readings.*.slot' => ['required', 'string', 'max:10', 'regex:/^[WPA]\d{2}$/'],
             'readings.*.item_id' => ['required', 'integer', Rule::exists('items', 'id')->where('is_active', true)],
-            'readings.*.start_wt' => ['required', 'numeric', 'gte:0', 'lt:1000000'],
-            'readings.*.end_wt' => ['required', 'numeric', 'gte:0', 'lte:readings.*.start_wt'],
-            'readings.*.wastage' => ['nullable', 'numeric', 'gte:0', 'lt:1000000'],
+            // one of grams / litres per line; litres needs density (enforced in LedgerService, rule 7)
+            'readings.*.grams' => ['nullable', 'required_without:readings.*.litres', 'numeric', 'gt:0', 'lt:1000000'],
+            'readings.*.litres' => ['nullable', 'numeric', 'gt:0', 'lt:1000'],
             'readings.*.colour_batch_id' => [
                 'nullable', 'integer',
                 Rule::exists('colour_batches', 'id')->where('order_id', $orderId),
@@ -28,7 +28,7 @@ class StoreConsumptionRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'readings.*.end_wt.lte' => 'End weight cannot be above start weight.',
+            'readings.*.grams.required_without' => 'Enter grams (or litres, for items with density).',
             'readings.*.colour_batch_id.exists' => 'That colour batch belongs to a different order.',
         ];
     }

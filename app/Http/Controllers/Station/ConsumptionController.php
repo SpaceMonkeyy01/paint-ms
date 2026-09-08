@@ -24,11 +24,11 @@ class ConsumptionController extends Controller
         $sumOf = fn (TransactionType $type) => fn ($t) => $t->where('type', $type->value);
 
         $orders = Order::query()
-            ->withSum(['transactions as issued_grams' => $sumOf(TransactionType::Issue)], 'qty')
+            ->withSum('bomLines as bom_grams', 'allocated_qty')
             ->withSum(['transactions as consumed_grams' => $sumOf(TransactionType::Consumption)], 'qty')
             ->withSum(['transactions as wasted_grams' => $sumOf(TransactionType::Wastage)], 'qty')
             ->when($q !== '', fn ($query) => $query->whereRaw('LOWER(code) LIKE ?', ['%'.mb_strtolower($q).'%']))
-            ->when($q === '', fn ($query) => $query->has('transactions')) // default list: orders with movement
+            ->when($q === '', fn ($query) => $query->has('bomLines')) // default list: orders with a paint BOM
             ->orderByDesc('id')
             ->limit(30)
             ->get()
@@ -36,8 +36,8 @@ class ConsumptionController extends Controller
                 'id' => $o->id,
                 'code' => $o->code,
                 'finish' => $o->finish,
-                'issued_grams' => abs((float) $o->issued_grams),
-                'consumed_grams' => abs((float) $o->consumed_grams) + abs((float) $o->wasted_grams),
+                'bom_grams' => (float) $o->bom_grams,
+                'used_grams' => abs((float) $o->consumed_grams) + abs((float) $o->wasted_grams),
             ]);
 
         return Inertia::render('Station/Consume/Index', ['orders' => $orders, 'q' => $q]);
@@ -45,6 +45,8 @@ class ConsumptionController extends Controller
 
     public function show(Order $order, StockService $stock): Response
     {
+        $station = $stock->stationStockByItem();
+
         $itemsByPool = Item::where('is_active', true)->whereNotNull('issue_pool')
             ->orderBy('name')->get()
             ->map(fn (Item $i) => [
@@ -52,7 +54,8 @@ class ConsumptionController extends Controller
                 'code' => $i->code,
                 'name' => $i->name,
                 'issue_pool' => $i->issue_pool,
-                'density_kg_per_l' => $i->density_kg_per_l, // null → litres unknown (rule 7)
+                'density_kg_per_l' => $i->density_kg_per_l, // null → litres entry disabled (rule 7)
+                'station_on_hand' => (float) ($station[$i->id] ?? 0),
             ])
             ->groupBy('issue_pool');
 
@@ -93,12 +96,27 @@ class ConsumptionController extends Controller
         ]);
     }
 
-    public function store(StoreConsumptionRequest $request, Order $order, LedgerService $ledger): RedirectResponse
-    {
+    public function store(
+        StoreConsumptionRequest $request,
+        Order $order,
+        LedgerService $ledger,
+        StockService $stock,
+    ): RedirectResponse {
         $readings = $request->validated()['readings'];
 
         $ledger->consumeSlots($order, $readings, $request->user());
 
-        return back()->with('success', count($readings).' slot reading(s) recorded for '.$order->code.'.');
+        // Warn-only BOM control (rule 6): flag pools this entry pushed over allowance.
+        $over = $stock->orderReconciliation($order)
+            ->filter(fn ($p) => $p['bom_qty'] > 0 && $p['used_variance'] > 0.01)
+            ->map(fn ($p) => sprintf('%s +%.0f g', $p['issue_pool'], $p['used_variance']));
+
+        $response = back()->with('success', count($readings).' entr'.(count($readings) === 1 ? 'y' : 'ies').' recorded for '.$order->code.'.');
+
+        if ($over->isNotEmpty()) {
+            $response->with('warning', 'Over BOM: '.$over->implode(', ').' — flagged for admin review.');
+        }
+
+        return $response;
     }
 }

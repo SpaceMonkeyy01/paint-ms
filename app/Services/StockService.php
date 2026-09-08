@@ -22,6 +22,43 @@ class StockService
             ->pluck('qty', 'item_id');
     }
 
+    /**
+     * item_id => grams sitting at the paint station: everything issued in,
+     * minus everything painters have consumed (or, legacy, wasted).
+     * qty signs make this SUM(issue ? -qty : qty) — issues add to the station,
+     * consumption/wastage drain it.
+     */
+    public function stationStockByItem(): Collection
+    {
+        return Transaction::query()
+            ->whereIn('type', [
+                TransactionType::Issue->value,
+                TransactionType::Consumption->value,
+                TransactionType::Wastage->value,
+            ])
+            ->select('item_id', DB::raw("SUM(CASE WHEN type = 'issue' THEN -qty ELSE qty END) as qty"))
+            ->groupBy('item_id')
+            ->pluck('qty', 'item_id');
+    }
+
+    /** Grams below which a slot item is flagged LOW at the station (roughly one small container). */
+    public const STATION_LOW_G = 1000;
+
+    /** Slot board: every poolable item with its station balance and an OK / LOW / EMPTY flag. */
+    public function stationList(): Collection
+    {
+        $station = $this->stationStockByItem();
+
+        return Item::where('is_active', true)->whereNotNull('issue_pool')
+            ->orderBy('issue_pool')->orderBy('name')->get()
+            ->map(function (Item $item) use ($station) {
+                $qty = (float) ($station[$item->id] ?? 0);
+                $item->setAttribute('station_on_hand', $qty);
+                $item->setAttribute('station_status', $qty <= 0 ? 'EMPTY' : ($qty < self::STATION_LOW_G ? 'LOW' : 'OK'));
+                return $item;
+            });
+    }
+
     /** Items with status OK / LOW / OUT, like the legacy Dashboard. */
     public function stockList(): Collection
     {
@@ -38,7 +75,10 @@ class StockService
     }
 
     /**
-     * Per-order reconciliation: for each issue pool, BOM allocated vs issued vs consumed.
+     * Per-order reconciliation: for each issue pool, BOM allocated vs what painters
+     * used (consumption + legacy wastage). Issued is kept for legacy orders, whose
+     * material was issued per order before the station model. Warn-only: `used_variance`
+     * > 0 means over BOM; nothing blocks on it (rule 6).
      * Clubbed categories (Epoxy Set) collapse to the pool total.
      */
     public function orderReconciliation(Order $order): Collection
@@ -66,14 +106,16 @@ class StockService
                 $consumed = abs((float) ($rows->get('consumption')?->qty ?? 0));
                 $wasted = abs((float) ($rows->get('wastage')?->qty ?? 0));
                 $bom = (float) ($allocated[$pool] ?? 0);
+                $used = $consumed + $wasted;
                 return [
                     'issue_pool' => $pool,
                     'bom_qty' => $bom,
                     'issued' => $issued,
                     'consumed' => $consumed,
                     'wasted' => $wasted,
-                    'issue_variance' => $issued - $bom,      // + means over BOM
-                    'remaining' => max($bom - $issued, 0),
+                    'used' => $used,
+                    'used_variance' => $used - $bom,      // + means over BOM
+                    'remaining' => max($bom - $used, 0),
                 ];
             });
     }

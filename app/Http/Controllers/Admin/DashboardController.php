@@ -29,8 +29,8 @@ class DashboardController extends Controller
                         'status' => $i->status,
                     ])->values(),
             ],
-            'pendingIssue' => $costing->pendingIssue(),
-            'exceptions' => $costing->varianceExceptions(),
+            'pendingConsumption' => $costing->pendingConsumption(),
+            'overBom' => $costing->overBomOrders(),
         ]);
     }
 }

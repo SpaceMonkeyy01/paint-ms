@@ -25,8 +25,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'role:store'])->prefix('store')->name('store.')->group(function () {
     Route::get('/issue', [IssueController::class, 'index'])->name('issue.index');
-    Route::get('/issue/{order}', [IssueController::class, 'show'])->name('issue.show');
-    Route::post('/issue/{order}', [IssueController::class, 'store'])->name('issue.store');
+    Route::post('/issue', [IssueController::class, 'store'])->name('issue.store');
     Route::get('/stock', [StockController::class, 'index'])->name('stock');
     Route::get('/receipts', [ReceiptController::class, 'create'])->name('receipts.create');
     Route::post('/receipts', [ReceiptController::class, 'store'])->name('receipts.store');

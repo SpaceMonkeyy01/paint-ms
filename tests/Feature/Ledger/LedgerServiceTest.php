@@ -1,7 +1,7 @@
 <?php
 
-use App\Enums\IssueType;
 use App\Enums\TransactionType;
+use App\Services\StockService;
 use Illuminate\Validation\ValidationException;
 
 test('issue writes signed negative qty and moves stock on hand', function () {
@@ -9,7 +9,7 @@ test('issue writes signed negative qty and moves stock on hand', function () {
     ledger()->record(TransactionType::Opening, $item, 1000);
     expect($item->stockOnHand())->toBe(1000.0);
 
-    ledger()->record(TransactionType::Issue, $item, 200, makeOrder(), IssueType::Bom);
+    ledger()->record(TransactionType::Issue, $item, 200);
 
     expect($item->stockOnHand())->toBe(800.0)
         ->and((float) $item->transactions()->where('type', 'issue')->value('qty'))->toBe(-200.0);
@@ -37,74 +37,65 @@ test('adjust keeps the caller sign in both directions', function () {
     expect($item->stockOnHand())->toBe(20.0);
 });
 
-test('bom issue cannot exceed remaining pool allowance (rule 6)', function () {
-    $item = makeItem();
-    $order = makeOrder(['Paint Mixing' => 500.0]);
-    ledger()->record(TransactionType::Opening, $item, 10000);
+test('issueToStation writes order-less issues atomically (rule 3)', function () {
+    $itemA = makeItem();
+    $itemB = makeItem();
+    ledger()->record(TransactionType::Opening, $itemA, 1000);
+    ledger()->record(TransactionType::Opening, $itemB, 1000);
 
-    ledger()->record(TransactionType::Issue, $item, 400, $order, IssueType::Bom);
+    $txns = ledger()->issueToStation([
+        ['item_id' => $itemA->id, 'grams' => 400],
+        ['item_id' => $itemB->id, 'grams' => 250],
+    ], remarks: 'W01 refill');
 
-    expect(fn () => ledger()->record(TransactionType::Issue, $item, 101, $order, IssueType::Bom))
-        ->toThrow(ValidationException::class);
-
-    // exactly the remaining 100 g is fine
-    ledger()->record(TransactionType::Issue, $item, 100, $order, IssueType::Bom);
-    expect($item->stockOnHand())->toBe(9500.0);
+    expect($txns)->toHaveCount(2)
+        ->and($txns[0]->order_id)->toBeNull()
+        ->and($txns[0]->qty)->toBe(-400.0)
+        ->and($txns[0]->issue_pool)->toBe('Paint Mixing')
+        ->and($itemA->stockOnHand())->toBe(600.0)
+        ->and($itemB->stockOnHand())->toBe(750.0);
 });
 
-test('variance issue requires remarks and authoriser (rule 6)', function () {
+test('station stock is issued minus consumed, warehouse stock untouched by consumption', function () {
     $item = makeItem();
-    $order = makeOrder(['Paint Mixing' => 0.0]);
+    $order = makeOrder();
     ledger()->record(TransactionType::Opening, $item, 1000);
+    ledger()->issueToStation([['item_id' => $item->id, 'grams' => 600]]);
 
-    expect(fn () => ledger()->record(TransactionType::Issue, $item, 50, $order, IssueType::Variance))
-        ->toThrow(ValidationException::class);
+    $stock = app(StockService::class);
+    expect((float) $stock->stationStockByItem()[$item->id])->toBe(600.0)
+        ->and($item->stockOnHand())->toBe(400.0);
 
-    $txn = ledger()->record(
-        TransactionType::Issue, $item, 50, $order, IssueType::Variance,
-        authorizedBy: 'Production Manager', remarks: 'colour re-mix after client change',
-    );
+    ledger()->consumeSlots($order, [
+        ['slot' => 'W01', 'item_id' => $item->id, 'grams' => 250],
+    ]);
 
-    expect($txn->qty)->toBe(-50.0)->and($item->stockOnHand())->toBe(950.0);
+    // consumption drains the station, never the warehouse (rule 1)
+    expect((float) $stock->stationStockByItem()[$item->id])->toBe(350.0)
+        ->and($item->stockOnHand())->toBe(400.0);
 });
 
-test('issueLines is atomic — one over-BOM line rolls the whole submit back', function () {
-    $itemA = makeItem();
-    $itemB = makeItem();
-    $order = makeOrder(['Paint Mixing' => 300.0]);
-    ledger()->record(TransactionType::Opening, $itemA, 1000);
-    ledger()->record(TransactionType::Opening, $itemB, 1000);
+test('station list flags EMPTY and LOW slot items', function () {
+    $empty = makeItem();
+    $low = makeItem();
+    $ok = makeItem();
+    ledger()->record(TransactionType::Opening, $low, 5000);
+    ledger()->record(TransactionType::Opening, $ok, 5000);
+    ledger()->issueToStation([
+        ['item_id' => $low->id, 'grams' => 500],  // below STATION_LOW_G
+        ['item_id' => $ok->id, 'grams' => 2000],
+    ]);
 
-    expect(fn () => ledger()->issueLines($order, [
-        ['item_id' => $itemA->id, 'grams' => 200],
-        ['item_id' => $itemB->id, 'grams' => 200], // pool total 400 > 300
-    ], IssueType::Bom))->toThrow(ValidationException::class);
+    $list = app(StockService::class)->stationList()->keyBy('id');
 
-    expect($itemA->stockOnHand())->toBe(1000.0)
-        ->and($itemB->stockOnHand())->toBe(1000.0)
-        ->and($order->transactions()->count())->toBe(0);
-});
-
-test('issueLines within allowance writes all lines and shrinks the pool', function () {
-    $itemA = makeItem();
-    $itemB = makeItem();
-    $order = makeOrder(['Paint Mixing' => 300.0]);
-    ledger()->record(TransactionType::Opening, $itemA, 1000);
-    ledger()->record(TransactionType::Opening, $itemB, 1000);
-
-    ledger()->issueLines($order, [
-        ['item_id' => $itemA->id, 'grams' => 150],
-        ['item_id' => $itemB->id, 'grams' => 150],
-    ], IssueType::Bom);
-
-    expect($itemA->stockOnHand())->toBe(850.0)
-        ->and($itemB->stockOnHand())->toBe(850.0)
-        ->and(ledger()->remainingAllowance($order, 'Paint Mixing'))->toBe(0.0);
+    expect($list[$empty->id]->station_status)->toBe('EMPTY')
+        ->and($list[$low->id]->station_status)->toBe('LOW')
+        ->and($list[$ok->id]->station_status)->toBe('OK');
 });
 
 test('issue on an item without an issue pool is rejected', function () {
     $item = makeItem(['issue_pool' => null]);
     ledger()->record(TransactionType::Opening, $item, 100);
 
-    ledger()->record(TransactionType::Issue, $item, 10, makeOrder(), IssueType::Bom);
+    ledger()->record(TransactionType::Issue, $item, 10);
 })->throws(ValidationException::class);
