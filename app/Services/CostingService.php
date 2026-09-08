@@ -47,7 +47,7 @@ class CostingService
 
         return $query
             ->withSum('bomLines as bom_grams', 'allocated_qty')
-            ->when($q, fn ($qq) => $qq->where('code', 'like', "%{$q}%"))
+            ->when($q, fn ($qq) => $qq->whereRaw('LOWER(code) LIKE ?', ['%'.mb_strtolower($q).'%']))
             ->orderByDesc('id')
             ->limit($limit)
             ->get()

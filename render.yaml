@@ -1,0 +1,71 @@
+# Render Blueprint — deploy with "New > Blueprint" at https://dashboard.render.com
+# After the first deploy, set APP_KEY and AIRTABLE_TOKEN in the dashboard
+# (both are marked sync: false so Render will prompt for them).
+# See docs/deploy-render.md for the full walkthrough.
+
+databases:
+  - name: paint-ms-db
+    plan: basic-256mb # free plan exists but is deleted after 30 days — don't use it for real data
+    region: singapore
+    databaseName: paint_ms
+    user: paint_ms
+
+services:
+  - type: web
+    name: paint-ms
+    runtime: docker
+    plan: starter # "free" works but sleeps after 15 min idle and stops the Airtable sync scheduler
+    region: singapore
+    healthCheckPath: /up
+    envVars:
+      - key: APP_KEY
+        sync: false
+      - key: AIRTABLE_TOKEN
+        sync: false
+      - key: AIRTABLE_BASE_ID
+        value: appPajKbbSBracppe
+      - key: APP_NAME
+        value: Epic Craftings
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_URL
+        fromService:
+          name: paint-ms
+          type: web
+          envVarKey: RENDER_EXTERNAL_URL
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: LOG_LEVEL
+        value: info
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: paint-ms-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: paint-ms-db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: paint-ms-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: paint-ms-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: paint-ms-db
+          property: password
+      - key: SESSION_DRIVER
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: QUEUE_CONNECTION
+        value: sync
+      - key: BCRYPT_ROUNDS
+        value: "12"

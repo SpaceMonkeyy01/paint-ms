@@ -27,7 +27,7 @@ class ConsumptionController extends Controller
             ->withSum(['transactions as issued_grams' => $sumOf(TransactionType::Issue)], 'qty')
             ->withSum(['transactions as consumed_grams' => $sumOf(TransactionType::Consumption)], 'qty')
             ->withSum(['transactions as wasted_grams' => $sumOf(TransactionType::Wastage)], 'qty')
-            ->when($q !== '', fn ($query) => $query->where('code', 'like', "%{$q}%"))
+            ->when($q !== '', fn ($query) => $query->whereRaw('LOWER(code) LIKE ?', ['%'.mb_strtolower($q).'%']))
             ->when($q === '', fn ($query) => $query->has('transactions')) // default list: orders with movement
             ->orderByDesc('id')
             ->limit(30)

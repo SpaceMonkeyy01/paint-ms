@@ -24,7 +24,7 @@ class IssueController extends Controller
         $orders = Order::query()
             ->withSum('bomLines as bom_grams', 'allocated_qty')
             ->withSum(['transactions as issued_grams' => fn ($t) => $t->where('type', TransactionType::Issue->value)], 'qty')
-            ->when($q !== '', fn ($query) => $query->where('code', 'like', "%{$q}%"))
+            ->when($q !== '', fn ($query) => $query->whereRaw('LOWER(code) LIKE ?', ['%'.mb_strtolower($q).'%']))
             ->orderByDesc('id')
             ->limit(30)
             ->get()
