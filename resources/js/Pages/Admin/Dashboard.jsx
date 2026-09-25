@@ -1,5 +1,5 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { Head, Link } from '@inertiajs/react';
+import { Head, Link, useForm, usePage } from '@inertiajs/react';
 
 const fmt = (n, dp = 0) =>
     Number(n).toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp });
@@ -10,14 +10,57 @@ const STATUS_STYLE = {
     OUT: 'bg-red-50 text-red-700 ring-1 ring-inset ring-red-600/20',
 };
 
-export default function Dashboard({ stock, pendingConsumption, overBom }) {
+/** Pull orders + BOM from Airtable now, rather than waiting for the 15-minute schedule. */
+function ParseButton({ sync }) {
+    const { post, processing } = useForm();
+
+    return (
+        <div className="flex items-center gap-3">
+            <div className="hidden text-right text-xs leading-tight text-gray-400 sm:block">
+                {sync.ago ? (
+                    <>
+                        <div>last parsed {sync.ago}</div>
+                        <div className="tabular-nums">{sync.at}</div>
+                    </>
+                ) : (
+                    <div>never parsed on this server</div>
+                )}
+            </div>
+            <button
+                type="button"
+                onClick={() => post(route('admin.parse'), { preserveScroll: true })}
+                disabled={processing || !sync.configured}
+                title={sync.configured ? 'Pull orders + BOM from Airtable now' : 'AIRTABLE_TOKEN is not set'}
+                className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 disabled:cursor-not-allowed disabled:bg-gray-300"
+            >
+                {processing ? 'Parsing…' : 'Parse'}
+            </button>
+        </div>
+    );
+}
+
+export default function Dashboard({ stock, pendingConsumption, overBom, sync }) {
+    const { flash } = usePage().props;
+
     return (
         <AuthenticatedLayout
-            header={<h2 className="text-xl font-semibold leading-tight text-gray-800">Overview</h2>}
+            header={
+                <div className="flex items-center justify-between gap-4">
+                    <h2 className="text-xl font-semibold leading-tight text-gray-800">Overview</h2>
+                    <ParseButton sync={sync} />
+                </div>
+            }
         >
             <Head title="Overview" />
 
             <div className="mx-auto max-w-5xl space-y-6 px-4 py-6">
+                {flash?.success && (
+                    <div className="rounded-xl bg-emerald-50 px-4 py-3 font-medium text-emerald-800 ring-1 ring-inset ring-emerald-600/20">{flash.success}</div>
+                )}
+                {flash?.warning && (
+                    <div className="rounded-xl bg-amber-50 px-4 py-3 font-medium text-amber-800 ring-1 ring-inset ring-amber-600/20">{flash.warning}</div>
+                )}
+
                 {/* headline cards */}
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                     {[

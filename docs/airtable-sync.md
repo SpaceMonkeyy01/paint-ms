@@ -81,6 +81,10 @@ Rules (encoded in `App\Services\BomStringParser`):
 
 - Command: `php artisan airtable:sync-orders [--view=viwhqbXW8UuDx8ElE] [--all]`. Schedule every
   15 min; the `--all` flag walks the whole table for backfill.
+- The **Parse** button on the admin dashboard (`POST /admin/parse`) runs the same sync on demand,
+  scoped to the default view. Both paths go through `AirtableOrderSync::syncExclusive()`, which
+  holds the `airtable-sync-orders` cache lock, so a manual parse and the schedule never overlap.
+  The run's stats + finish time land in the `airtable.last_run` cache key for the dashboard label.
 - Upsert `orders` on `code`. Store the Airtable record id in `orders.airtable_record_id` (add column).
 - Re-parse `bom_lines` only when `bom_source` changed (compare hash); BOM edits after issue has
   started are allowed but logged (`orders.bom_changed_after_issue_at`) and surfaced on the order.

@@ -23,7 +23,13 @@ class SyncAirtableOrders extends Command
 
         $view = $this->option('all') ? null : ($this->option('view') ?: config('services.airtable.view'));
 
-        $stats = $sync->sync($view);
+        $stats = $sync->syncExclusive($view);
+
+        if ($stats === null) {
+            $this->warn('Another sync is already running — skipped.');
+
+            return self::SUCCESS;
+        }
 
         foreach ($stats as $k => $v) {
             $this->line(sprintf('%-13s %d', $k, $v));

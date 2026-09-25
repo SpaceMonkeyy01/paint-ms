@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Services\AirtableOrderSync;
 use App\Services\CostingService;
 use App\Services\StockService;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -13,6 +16,8 @@ class DashboardController extends Controller
     public function index(StockService $stock, CostingService $costing): Response
     {
         $list = $stock->stockList();
+        $lastRun = Cache::get(AirtableOrderSync::LAST_RUN);
+        $finishedAt = isset($lastRun['finished_at']) ? Carbon::parse($lastRun['finished_at']) : null;
 
         return Inertia::render('Admin/Dashboard', [
             'stock' => [
@@ -31,6 +36,12 @@ class DashboardController extends Controller
             ],
             'pendingConsumption' => $costing->pendingConsumption(),
             'overBom' => $costing->overBomOrders(),
+            'sync' => [
+                'configured' => (bool) config('services.airtable.token'),
+                'ago' => $finishedAt?->diffForHumans(),
+                'at' => $finishedAt?->timezone('Asia/Karachi')->format('d M Y, H:i'),
+                'stats' => $lastRun['stats'] ?? null,
+            ],
         ]);
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AirtableSyncController;
 use App\Http\Controllers\Admin\CostingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
@@ -51,6 +52,7 @@ Route::middleware(['auth', 'role:painter'])->prefix('station')->name('station.')
 
 Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/parse', [AirtableSyncController::class, 'store'])->name('parse');
     Route::get('/costing', [CostingController::class, 'index'])->name('costing.index');
     Route::get('/costing/{order}', [CostingController::class, 'show'])->name('costing.show');
 });

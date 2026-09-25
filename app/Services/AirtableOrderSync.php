@@ -6,6 +6,7 @@ use App\Enums\TransactionType;
 use App\Models\BomCategory;
 use App\Models\BomLine;
 use App\Models\Order;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -27,10 +28,40 @@ class AirtableOrderSync
 
     private const CLOSING_TAGS = ['Done', 'Shipped'];
 
+    /** Shared by the 15-min schedule and the admin Parse button, so the two never overlap. */
+    public const LOCK = 'airtable-sync-orders';
+
+    /** Last run (stats + finished_at), so the UI can say when the feed was last read. */
+    public const LAST_RUN = 'airtable.last_run';
+
     public function __construct(
         private AirtableClient $client,
         private BomStringParser $parser,
     ) {}
+
+    /**
+     * Run a sync under a cross-process lock and remember the outcome.
+     * Returns null when another sync already holds the lock.
+     *
+     * @return array{created: int, updated: int, bom_reparsed: int, unchanged: int, skipped: int, warnings: int}|null
+     */
+    public function syncExclusive(?string $view = null): ?array
+    {
+        $lock = Cache::lock(self::LOCK, 600);
+
+        if (! $lock->get()) {
+            return null;
+        }
+
+        try {
+            $stats = $this->sync($view);
+            Cache::forever(self::LAST_RUN, ['stats' => $stats, 'finished_at' => now()->toIso8601String()]);
+
+            return $stats;
+        } finally {
+            $lock->release();
+        }
+    }
 
     /** @return array{created: int, updated: int, bom_reparsed: int, unchanged: int, skipped: int, warnings: int} */
     public function sync(?string $view = null): array
